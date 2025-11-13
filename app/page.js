@@ -4,6 +4,7 @@ import { AnimatedShowcase } from "@/components/animated-showcase"
 import { TrustedBrands } from "@/components/trusted-brands"
 import { CtaSection } from "@/components/cta-section"
 import { TabbedShowcase } from "@/components/tabbed-showcase"
+import StatsSection from "@/components/stats-section"
 
 export default function Home() {
   return (
@@ -11,9 +12,10 @@ export default function Home() {
       <Header />
       <HeroSection />
       <AnimatedShowcase />
+      <StatsSection />
+      <TabbedShowcase />
       <TrustedBrands />
       <CtaSection />
-      <TabbedShowcase />
     </main>
   )
 }

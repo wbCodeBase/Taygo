@@ -6,12 +6,12 @@ import Image from "next/image"
 const tabs = [
   {
     id: "projects",
-    label: "Projects",
+    label: "CRM & Pipeline",
     color: "#6161FF",
-    logo: "monday work management",
-    heading: "Drive execution at scale",
+    logo: "TAYGO™ work management",
+    heading: "Loan Origination (LOS)",
     description:
-      "Deliver projects, programs, and portfolios with full resource visibility and AI-powered risk detection.",
+      "From borrower application to lender approval, handle every step seamlessly. Collect documents, sync with lenders, and monitor loan progress without leaving TAYGO™.",
     badge: "Prioritize projects",
     testimonial1: {
       company: "HOLT CAT",
@@ -28,9 +28,9 @@ const tabs = [
   },
   {
     id: "sales",
-    label: "Sales",
+    label: "Loan Origination",
     color: "#00A4BD",
-    logo: "monday CRM",
+    logo: "TAYGO™ work management",
     heading: "Accelerate revenue growth",
     description:
       "Free your teams from data entry to focus on sales that nurture. Track all actions and code-free automations.",
@@ -50,9 +50,9 @@ const tabs = [
   },
   {
     id: "marketing",
-    label: "Marketing",
+    label: "Automation & AI",
     color: "#FF6B6B",
-    logo: "monday marketer",
+    logo: "TAYGO™ work management",
     heading: "Scale creative campaigns",
     description:
       "Streamline workflows, manage assets, and track performance across all marketing channels with AI insights.",
@@ -71,9 +71,9 @@ const tabs = [
   },
   {
     id: "it-ops",
-    label: "IT & Ops",
+    label: "Marketing & Comms",
     color: "#9D7BFF",
-    logo: "monday operations",
+    logo: "TAYGO™ work management",
     heading: "Optimize IT workflows",
     description:
       "Manage tickets, track incidents, and automate IT operations with powerful integrations and real-time dashboards.",
@@ -92,9 +92,9 @@ const tabs = [
   },
   {
     id: "product-engineering",
-    label: "Product & Engineering",
+    label: "Integrations",
     color: "#00A65A",
-    logo: "monday dev",
+    logo: "TAYGO™ work management",
     heading: "Launch quality products faster",
     description: "Plan roadmaps, execute sprints, and ship with precision using AI-powered guidance.",
     badge: "Prioritize bugs",
@@ -113,9 +113,9 @@ const tabs = [
   },
   {
     id: "leadership",
-    label: "Leadership",
+    label: "Reports & Insights",
     color: "#FF9F40",
-    logo: "monday strategy",
+    logo: "TAYGO™ work management",
     heading: "Drive strategic alignment",
     description: "Connect strategy to execution with real-time visibility across all teams and initiatives.",
     badge: "Strategic planning",
@@ -157,13 +157,16 @@ export function TabbedShowcase() {
   }
 
   return (
-    <section className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-4 bgwhite bg-[#C4E5E633]">
+      <div className="max-w-6xl mx-auto">
         {/* Title */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-gray-900 mb-4 text-balance">
-            A platform built for a new way of working
+          <h2 className="text-3xl md:text-5xl font-medium text-gray-900 mb-6 text-balance">
+            Everything brokers and loan officers need in one intelligent platform.
           </h2>
+          <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">
+            Explore how TAYGO™ unites CRM, LOS, automation, marketing, and integrations to simplify every part of your mortgage business.
+          </p>
         </div>
 
         {/* Tabs */}
@@ -191,34 +194,24 @@ export function TabbedShowcase() {
           {/* Large Card - 2/3 width with content on left, mockup on right */}
           <div className="lg:col-span-2">
             <div
-              className="rounded-3xl p-10 text-white transition-all duration-700 h-full relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center"
+              className="rounded-3xl pl-10 py-14 text-white transition-all duration-700 h-full relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center"
               style={{
                 backgroundColor: currentTab.color,
               }}
             >
-              {/* Gradient decorative blob */}
-              <div
-                className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-20"
-                style={{
-                  background: `radial-gradient(circle, #ffffff 0%, transparent 70%)`,
-                }}
-              />
 
               {/* Left Side - Content */}
-              <div className="relative z-10 flex-shrink-0 lg:w-2/5">
+              <div className="relative z-10 flex-shrink-0 lg:w-[30%]">
                 {/* Logo */}
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-7 h-7 bg-white/20 rounded flex items-center justify-center">
-                    <div className="w-3.5 h-3.5 bg-white rounded-sm" />
-                  </div>
                   <span className="text-base font-semibold">{currentTab.logo}</span>
                 </div>
 
                 {/* Heading */}
-                <h3 className="text-4xl font-bold mb-4 text-balance">{currentTab.heading}</h3>
+                <h3 className="text-2xl font-medium mb-4 text-balance">{currentTab.heading}</h3>
 
                 {/* Description */}
-                <p className="text-lg mb-6 text-white/90 text-pretty leading-relaxed">{currentTab.description}</p>
+                <p className="text-sm mb-6 text-white/90 text-pretty leading-relaxed">{currentTab.description}</p>
 
                 {/* Button */}
                 <button className="px-7 py-3 bg-white text-gray-900 rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-lg">
@@ -227,29 +220,12 @@ export function TabbedShowcase() {
               </div>
 
               {/* Right Side - Mockup Container */}
-              <div className="relative z-10 flex-1 lg:w-3/5">
-                {/* Top Badge */}
-                <div className="absolute -top-3 right-6 flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded-xl shadow-xl z-20">
-                  <div className="w-5 h-5 bg-white/20 rounded flex items-center justify-center">
-                    <div className="w-2.5 h-2.5 bg-white rounded-sm" />
-                  </div>
-                  <span className="text-sm font-medium text-white">{currentTab.badge}</span>
-                </div>
-
+              <div className="relative z-10 flex-1 lg:w-[70%]">             
                 {/* Mockup */}
-                <div className="bg-white rounded-2xl overflow-hidden shadow-2xl transition-opacity duration-500">
+                <div className="bg-white rounded2xl overflow-hidden shadow-2xl transition-opacity duration-500">
                   {renderMockup()}
                 </div>
 
-                {/* Bottom Badge */}
-                <div className="absolute -bottom-3 left-6 flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded-xl shadow-xl z-20">
-                  <div className="w-5 h-5 bg-white/20 rounded flex items-center justify-center">
-                    <div className="w-2.5 h-2.5 bg-white rounded-sm" />
-                  </div>
-                  <span className="text-sm font-medium text-white">
-                    {activeTab === 1 ? "Write an email" : activeTab === 4 ? "Sprint analysis" : "Analyze risks"}
-                  </span>
-                </div>
               </div>
             </div>
           </div>

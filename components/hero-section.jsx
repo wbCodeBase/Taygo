@@ -1,31 +1,44 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
+// import { useState } from "react"
 
 export function HeroSection() {
-  const [isHovered, setIsHovered] = useState(false)
+  // const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-teal-50/30 pt-32">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#006C5D0D] from-gray-50 via-white to-teal-50/30">
       {/* Background Watermark */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
-        <Image src="/images/hero-watermark.png" alt="" fill className="object-cover" />
+      {/* Hero content here */}
+      <div className="absolute hidden md:block right-10 top-[60%] -translate-y-1/2 pointer-events-none">
+        <Image src="/images/heroWaterRight.png" alt="watermark" height={390} width={270} />
       </div>
+
+      <div className="absolute hidden md:block left-10 top-[60%] -translate-y-1/2 pointer-events-none">
+        <Image
+          src="/images/heroWaterRight.png"
+          alt="watermark"
+          height={400}
+          width={250}
+          className="rotate180 scale-x-[-1]"
+        />
+      </div>
+
+
 
       {/* Decorative gradient orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 pt-32 pb-14 md:pt-10 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           {/* Main Heading */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight text-balance">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-8 leading-tight text-balance">
             The Complete AI-Powered Operating System for the Modern Mortgage Business.
           </h1>
 
           {/* Subheading with teal accent */}
-          <div className="text-xl md:text-2xl font-medium text-teal-700 mb-6 flex flex-wrap items-center justify-center gap-2">
+          <div className="text-md md:text-2xl font-medium text-teal-700 mb-8 flex flex-wrap items-center justify-center gap-2">
             <span>CRM</span>
             <span className="text-gray-400">|</span>
             <span>Loan Origination</span>
@@ -36,31 +49,30 @@ export function HeroSection() {
           </div>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-gray-800 mb-12 max-w-3xl mx-auto text-pretty">
+          <p className="text-md md:text-xl text-gray-800 mb-12 max-w-3xl mx-auto text-pretty">
             Everything your brokers, lenders, and loan officers need powered by AI, all in one platform.
           </p>
 
           {/* Lisa AI Assistant CTA */}
           <div className="flex flex-col items-center gap-6">
             {/* AI Assistant Bubble */}
-            <div
+            {/* <div
               className="relative bg-gradient-to-r from-[#6161FF] via-[#7B68EE] to-[#9370DB] text-white px-8 py-5 rounded-3xl shadow-2xl shadow-[#6161FF]/40 max-w-md animate-float"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              {/* Speech bubble tail */}
               <div className="absolute -bottom-3 left-12 w-6 h-6 bg-gradient-to-br from-[#6161FF] to-[#7B68EE] rotate-45" />
 
               <div className="text-left relative z-10">
                 <div className="text-base font-semibold mb-1 text-white flex items-center gap-2">
-                  Lisa 
+                  Lisa
                   <span className="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                 </div>
                 <p className="text-sm">
                   "Ready to transform your mortgage business? Let me help you set up your magic box today!"
                 </p>
               </div>
-            </div>
+            </div> */}
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <button className="group relative cursor-pointer px-8 py-4 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-xl shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
