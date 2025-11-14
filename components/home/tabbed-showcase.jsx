@@ -157,7 +157,7 @@ export function TabbedShowcase() {
   }
 
   return (
-    <section className="py-20 px-4 bgwhite bg-[#C4E5E633]">
+    <section className="py-20 px-4 bg-[#C4E5E633]">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <div className="text-center mb-12">
