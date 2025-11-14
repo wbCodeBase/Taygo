@@ -170,12 +170,12 @@ const Footer = () => {
                                 <div>
                                     <h3 className="text-md font-medium mb-4">Use cases</h3>
                                     <ul className="space-y-2 text-gray-400 text-sm">
-                                        <li><Link href="software-development-company-in-india" className="text-gray-600 hover:text-gray-700">Software Development</Link></li>
-                                        <li><Link href="application-development-company-india" className="text-gray-600 hover:text-gray-700">Application Development</Link></li>
-                                        <li><Link href="/" className="text-gray-600 hover:text-gray-700">Cloud Services</Link></li>
-                                        <li><Link href="ecommerce-development-company-india" className="text-gray-600 hover:text-gray-700">Ecommerce Development</Link></li>
-                                        <li><Link href="/" className="text-gray-600 hover:text-gray-700">QA Testing</Link></li>
-                                        <li><Link href="hire-dedicated-technical-team-india" className="text-gray-600 hover:text-gray-700">Dedicated Technical-Team</Link></li>
+                                        <li><Link href="software-development-company-in-india" className="text-gray-600 hover:text-gray-700">UX design</Link></li>
+                                        <li><Link href="application-development-company-india" className="text-gray-600 hover:text-gray-700">UX design</Link></li>
+                                        <li><Link href="/" className="text-gray-600 hover:text-gray-700">Wireframing</Link></li>
+                                        <li><Link href="ecommerce-development-company-india" className="text-gray-600 hover:text-gray-700">Diagramming</Link></li>
+                                        <li><Link href="/" className="text-gray-600 hover:text-gray-700">Brainstorming</Link></li>
+                                        <li><Link href="hire-dedicated-technical-team-india" className="text-gray-600 hover:text-gray-700">Online whiteboarding</Link></li>
                                     </ul>
                                 </div>
 
@@ -183,12 +183,12 @@ const Footer = () => {
                                 <div className='sm:ml-12 ml-0'>
                                     <h3 className="text-md font-medium mb-4">Explore</h3>
                                     <ul className="space-y-2 text-gray-400 text-sm">
-                                        <li><div className="text-gray-600 hover:text-gray-700">Node Developer</div></li>
-                                        <li><div className="text-gray-600 hover:text-gray-700">Java Developer</div></li>
-                                        <li><div className="text-gray-600 hover:text-gray-700">C Sharp Developer</div></li>
-                                        <li><div className="text-gray-600 hover:text-gray-700">Next Developer</div></li>
-                                        <li><div className="text-gray-600 hover:text-gray-700">DevOps</div></li>
-                                        <li><div className="text-gray-600 hover:text-gray-700">Django</div></li>
+                                        <li><div className="text-gray-600 hover:text-gray-700">Design</div></li>
+                                        <li><div className="text-gray-600 hover:text-gray-700">Prototyping</div></li>
+                                        <li><div className="text-gray-600 hover:text-gray-700">Developement features</div></li>
+                                        <li><div className="text-gray-600 hover:text-gray-700">Design systems</div></li>
+                                        <li><div className="text-gray-600 hover:text-gray-700">Design process</div></li>
+                                        <li><div className="text-gray-600 hover:text-gray-700">FigJam</div></li>
                                     </ul>
                                 </div>
 

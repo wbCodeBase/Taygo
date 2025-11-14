@@ -15,8 +15,8 @@ export default function Home() {
       <AnimatedShowcase />
       <StatsSection />
       <TabbedShowcase />
-      <LisaCta />
       <TrustedBrands />
+      <LisaCta />
       <CtaSection />
     </main>
   )

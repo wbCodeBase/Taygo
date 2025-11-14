@@ -5,7 +5,7 @@ export default function LisaCta() {
   return (
     <>
 
-      <section className="w-full  bg-[#C4E5E633] py-12 px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-[#C4E5E633] py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Lisa AI Assistant CTA */}
           <div className="relative max-w-6xl mx-auto  bg-gradient-to-r from-[#006C5D] via-[#004e43] to-[#002e28] rounded-2xl overflow-visible shadow-2xl mb-16">
