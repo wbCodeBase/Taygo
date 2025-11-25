@@ -6,12 +6,12 @@ import Image from "next/image"
 const tabs = [
   {
     id: "projects",
-    label: "CRM & Pipeline",
+    label: "Lead Management",
     color: "#6161FF",
-    logo: "TAYGO™ work management",
-    heading: "Loan Origination (LOS)",
+    heading: "Lead Management",
+    title: "Capture, enrich, and convert leads across your entire pipeline.",
     description:
-      "From borrower application to lender approval, handle every step seamlessly. Collect documents, sync with lenders, and monitor loan progress without leaving TAYGO™.",
+      "Taygo centralizes every lead from forms, websites, ads, partners, and inbound channels  enriched automatically with AI to reduce manual data entry.",
     badge: "Prioritize projects",
     testimonial1: {
       company: "HOLT CAT",
@@ -28,12 +28,12 @@ const tabs = [
   },
   {
     id: "sales",
-    label: "Loan Origination",
+    label: "POS & LOS Integration",
     color: "#00A4BD",
-    logo: "TAYGO™ work management",
-    heading: "Accelerate revenue growth",
+    heading: "POS & Loan Applications (1003 Portal)",
+    title: "A self-guided borrower portal that boosts 1003 completion.",
     description:
-      "Free your teams from data entry to focus on sales that nurture. Track all actions and code-free automations.",
+      "Borrowers can start, pause, and complete their full application in a guided, intuitive portal — proactively nudged by your AI agent.",
     badge: "Detect client's sentiment",
     testimonial1: {
       company: "KC Petroleum, LLC",
@@ -50,10 +50,10 @@ const tabs = [
   },
   {
     id: "marketing",
-    label: "Automation & AI",
+    label: "Communication Suite",
     color: "#FF6B6B",
-    logo: "TAYGO™ work management",
-    heading: "Scale creative campaigns",
+    heading: "Communication Suite",
+    title: "Engage borrowers & partners wherever they are - instantly.",
     description:
       "Streamline workflows, manage assets, and track performance across all marketing channels with AI insights.",
     badge: "Campaign analytics",
@@ -71,12 +71,12 @@ const tabs = [
   },
   {
     id: "it-ops",
-    label: "Marketing & Comms",
+    label: "Workflow Automation",
     color: "#9D7BFF",
-    logo: "TAYGO™ work management",
-    heading: "Optimize IT workflows",
+    heading: "Workflow Automation",
+    title: "Visual automation builder for every part of the loan lifecycle.",
     description:
-      "Manage tickets, track incidents, and automate IT operations with powerful integrations and real-time dashboards.",
+      "Create rules, triggers, and automated sequences that streamline work across teams — from leads to funded loans.",
     badge: "Incident management",
     testimonial1: {
       company: "Tech Solutions Co",
@@ -92,11 +92,11 @@ const tabs = [
   },
   {
     id: "product-engineering",
-    label: "Integrations",
+    label: "AI Agent Workforce",
     color: "#00A65A",
-    logo: "TAYGO™ work management",
-    heading: "Launch quality products faster",
-    description: "Plan roadmaps, execute sprints, and ship with precision using AI-powered guidance.",
+    heading: "AI Agent Workforce",
+    title: "Your AI agent reviews, prioritizes, and executes your workflow.",
+    description: "AI agents scan your entire pipeline, point out what needs attention, generate your daily plan, and — once approved — execute follow-ups and updates automatically.",
     badge: "Prioritize bugs",
     testimonial1: {
       company: "VISTRA",
@@ -113,11 +113,11 @@ const tabs = [
   },
   {
     id: "leadership",
-    label: "Reports & Insights",
+    label: "Partner & Realtor Portal",
     color: "#FF9F40",
-    logo: "TAYGO™ work management",
-    heading: "Drive strategic alignment",
-    description: "Connect strategy to execution with real-time visibility across all teams and initiatives.",
+    heading: "Partner & Realtor Portal",
+    title: "Give your partners real-time visibility on shared clients.",
+    description: "Realtors and referral partners get a co-branded portal with updates, milestones, and client activity — without calling you.",
     badge: "Strategic planning",
     testimonial1: {
       company: "Global Enterprises",
@@ -159,7 +159,7 @@ export function TabbedShowcase() {
   return (
     <section className="py-20 px-4 bg-[#C4E5E633]">
       <div className="max-w-6xl mx-auto">
-        {/* Title */}
+        {/* heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-medium text-gray-900 mb-6 text-balance">
             Everything brokers and loan officers need in one intelligent platform.
@@ -175,11 +175,10 @@ export function TabbedShowcase() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(index)}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-500 ${
-                activeTab === index
+              className={`px-2 py-3 rounded-sm text-sm font-medium transition-all duration-500 ${activeTab === index
                   ? "text-white shadow-lg"
                   : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
-              }`}
+                }`}
               style={{
                 backgroundColor: activeTab === index ? tab.color : undefined,
               }}
@@ -194,7 +193,7 @@ export function TabbedShowcase() {
           {/* Large Card - 2/3 width with content on left, mockup on right */}
           <div className="lg:col-span-2">
             <div
-              className="rounded-3xl pl-10 py-14 text-white transition-all duration-700 h-full relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center"
+              className="rounded-sm pl-10 py-14 text-white transition-all duration-700 h-full relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center"
               style={{
                 backgroundColor: currentTab.color,
               }}
@@ -202,25 +201,25 @@ export function TabbedShowcase() {
 
               {/* Left Side - Content */}
               <div className="relative z-10 flex-shrink-0 lg:w-[30%]">
-                {/* Logo */}
+                {/* heading */}
                 <div className="flex items-center gap-2 mb-6">
-                  <span className="text-base font-semibold">{currentTab.logo}</span>
+                  <span className="text-3xl font-semibold">{currentTab.heading}</span>
                 </div>
 
-                {/* Heading */}
-                <h3 className="text-2xl font-medium mb-4 text-balance">{currentTab.heading}</h3>
+                {/* title */}
+                <h3 className="text-base font-medium mb-4 text-balance">{currentTab.title}</h3>
 
                 {/* Description */}
                 <p className="text-sm mb-6 text-white/90 text-pretty leading-relaxed">{currentTab.description}</p>
 
                 {/* Button */}
-                <button className="px-7 py-3 bg-white text-gray-900 rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-lg">
+                <button className="px-7 py-3 cursor-pointer bg-white text-gray-900 rounded-sm font-medium hover:scale-105 transition-transform duration-300 shadow-lg">
                   Get Started →
                 </button>
               </div>
 
               {/* Right Side - Mockup Container */}
-              <div className="relative z-10 flex-1 lg:w-[70%]">             
+              <div className="relative z-10 flex-1 lg:w-[70%]">
                 {/* Mockup */}
                 <div className="bg-white rounded2xl overflow-hidden shadow-2xl transition-opacity duration-500">
                   {renderMockup()}
@@ -233,7 +232,7 @@ export function TabbedShowcase() {
           {/* Right Side - 2 Stacked Cards with matching height */}
           <div className="flex flex-col gap-6 h-full">
             {/* Stat Card */}
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justify-center">
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-sm p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justify-center">
               <div className="mb-4">
                 <div className="text-sm font-bold text-gray-800 uppercase tracking-wide">
                   {currentTab.testimonial1.company}
@@ -244,7 +243,7 @@ export function TabbedShowcase() {
             </div>
 
             {/* Quote Card */}
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justify-between">
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-sm p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justify-between">
               <p className="text-gray-700 mb-6 text-pretty leading-relaxed">{currentTab.testimonial2.quote}</p>
               <div className="flex items-center gap-3">
                 <Image
@@ -275,7 +274,7 @@ function ProjectsMockup() {
         alt="TAYGO CRM Dashboard"
         width={700}
         height={500}
-        className="w-full h-full object-cover object-left"
+        className="w-full h-full rounded-x-sm object-cover object-left"
       />
     </div>
   )

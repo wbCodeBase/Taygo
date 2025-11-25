@@ -2,7 +2,7 @@ export function CtaSection() {
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="relative bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-700 rounded-3xl p-12 md:p-16 overflow-hidden shadow-2xl">
+        <div className="relative bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-700 rounded-sm p-12 md:p-16 overflow-hidden shadow-2xl">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl" />
             <div className="absolute bottom-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl" />

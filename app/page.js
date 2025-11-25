@@ -17,7 +17,7 @@ export default function Home() {
         <Header />
         <HeroSection />
         <AnimatedShowcase />
-        <StatsSection />
+        {/* <StatsSection /> */}
         <TabbedShowcase />
         <TrustedBrands />
         <LisaCta />

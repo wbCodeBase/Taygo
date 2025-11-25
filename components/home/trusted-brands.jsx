@@ -4,9 +4,9 @@ export function TrustedBrands() {
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
           <div className="relative">
-            <div className="absolute left-[15%] right-[15%] -top-6 -bottom-6 bg-purple-300/30 rounded-lg shadow-md" />
-            <div className="absolute left-[10%] right-[10%] -top-4 -bottom-4 bg-purple-200/60 rounded-lg shadow-sm" />
-            <div className="absolute left-[5%] right-[5%] -top-2 -bottom-2 bg-purple-300/50 rounded-lg shadow-md" />
+            <div className="absolute left-[15%] right-[15%] -top-6 -bottom-6 bg-purple-300/30 rounded-sm shadow-md" />
+            <div className="absolute left-[10%] right-[10%] -top-4 -bottom-4 bg-purple-200/60 rounded-sm shadow-sm" />
+            <div className="absolute left-[5%] right-[5%] -top-2 -bottom-2 bg-purple-300/50 rounded-sm shadow-md" />
             
             {/* Main card */}
             <div className="relative bg-indigo-500 rounded-sm shadow-xl px-3 py-4 md:px-16">

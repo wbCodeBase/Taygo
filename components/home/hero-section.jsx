@@ -75,9 +75,10 @@ export function HeroSection() {
             </div> */}
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <button className="group relative cursor-pointer px-8 py-4 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-xl shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
-                <span className="flex items-center gap-2">
-                  Talk to Lisa - Get Started
+              <button className="group relative cursor-pointer px-14 py-5 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
+              {/* <button className="group relative cursor-pointer px-8 py-4 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100"> */}
+                <span className="flex items-center gap-2 text-lg">
+                  Talk to Lisa
                   <svg
                     className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                     fill="none"
@@ -89,9 +90,9 @@ export function HeroSection() {
                 </span>
               </button>
 
-              <button className="px-8 cursor-pointer py-4 bg-white text-[#6161FF] font-semibold rounded-xl border-2 border-[#6161FF]/20 hover:border-[#6161FF]/40 hover:bg-[#6161FF]/5 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-100">
+              {/* <button className="px-8 cursor-pointer py-4 bg-white text-[#6161FF] font-semibold rounded-sm border-2 border-[#6161FF]/20 hover:border-[#6161FF]/40 hover:bg-[#6161FF]/5 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-100">
                 Try It Free
-              </button>
+              </button> */}
             </div>
           </div>
 

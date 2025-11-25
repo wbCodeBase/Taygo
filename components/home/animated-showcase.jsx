@@ -10,7 +10,7 @@ const showcaseData = [
   {
     id: 1,
     query: "Surface top SaaS accounts with up-to-date signals.",
-    image: "/images/showcase-1.png",
+    image: "/images/showcase-1.jpeg",
     bgColor: "#e0e7ff",
     borderColor: "border-indigo-300",
     accentColor: "bg-indigo-600",
@@ -18,7 +18,7 @@ const showcaseData = [
   {
     id: 2,
     query: "Generate brainstorm ideas for our fall activewear campaign.",
-    image: "/images/showcase-2.png",
+    image: "/images/showcase-2.jpeg",
     bgColor: "#1e293b",
     borderColor: "border-slate-600",
     accentColor: "bg-indigo-500",
@@ -26,7 +26,7 @@ const showcaseData = [
   {
     id: 3,
     query: "Surface themes & opportunities from customer interactions.",
-    image: "/images/showcase-3.png",
+    image: "/images/showcase-3.jpeg",
     bgColor: "#ddd6fe",
     borderColor: "border-violet-300",
     accentColor: "bg-violet-600",
@@ -80,48 +80,55 @@ export function AnimatedShowcase() {
     <>
 
       <section className="pb-20 md:-mt-16 hidden md:block lg:-mt-24 mt-10 px-6">
-        <div className="container mx-auto max-w-7xl">
+        <div className="md:ontainer mx-auto max-w7xl">
 
           <div
-            className="relative rounded-3xl px-8 pt-8 shadow-2xl overflow-hidden transition-all duration-700 ease-in-out bg-[#006C5D]"
+            className="relative md:mx-20 rounded-sm px-8 pt-8 shadow-2xl overflow-hidden transition-all duration-700 ease-in-out bg-[#006C5D]"
           // style={{ backgroundColor: currentData.bgColor }}
           >
-            <div className="relative max-w-3xl mx-auto mb-16">
+            <div className="relative max-w-4xl mx-auto mb-16">
               <div onClick={()=> setIsPopupOpen(true)}
-                className={`relative bg-white rounded-2xl shadow-lg border-2 ${currentData.borderColor} transition-all duration-700`}
+                className={`relative bg-white rounded-sm shadow-lg border-2 transition-all duration-700`}
+                // className={`relative bg-white rounded-sm shadow-lg border-2 ${currentData.borderColor} transition-all duration-700`}
               >
                 <input
                   type="text"
                   value={displayedText}
                   readOnly
-                  className="w-full px-6 py-5 text-lg text-gray-900 bg-transparent rounded-2xl outline-none"
+                  className="w-full px-6 py-5 text-lg text-gray-900 bg-transparent rounded-sm outline-none"
                   placeholder="Ask Lisa anything..."
                 />
-                <button className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
-                  <FaArrowCircleRight className="text-white" />
+
+                <button className="absolute cursor-pointer text-white font-semibold text-xs px-4 p-3 right-4 top-1/2 -translate-y-1/2  bg-[#006C5D] rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+                  Ask your query
                 </button>
+
+
+                {/* <button className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+                  <FaArrowCircleRight className="text-white" />
+                </button> */}
 
 
 
               </div>
             </div>
 
-            <div className="relative max-w-6xl mx-auto h-[520px] md:h-[600px] mt-12">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-full bg-white/35 rounded-t-2xl shadow-sm -translate-y-9 pointer-events-none" />
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[87%] h-full bg-white/50 rounded-t-2xl shadow-md -translate-y-6 pointer-events-none" />
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[93%] h-full bg-white/65 rounded-t-2xl shadow-lg -translate-y-3 pointer-events-none" />
+            <div className="relative max-w-7xl mx-auto h-[520px] md:h-[600px] mt-12">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-full bg-white/35 rounded-t-sm shadow-sm -translate-y-9 pointer-events-none" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[87%] h-full bg-white/50 rounded-t-sm shadow-md -translate-y-6 pointer-events-none" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[93%] h-full bg-white/65 rounded-t-sm shadow-lg -translate-y-3 pointer-events-none" />
 
               {displayIndex >= 0 && (
                 <div
                   key={imageKey}
-                  className={`absolute inset-0 rounded-t-2xl overflow-hidden shadow-2xl ${isExiting ? "animate-slideDown" : "animate-slideUp"
+                  className={`absolute inset-0 rounded-sm overflow-hidden shadow-2xl ${isExiting ? "animate-slideDown" : "animate-slideUp"
                     }`}
                 >
                   <Image
                     src={currentData.image || "/placeholder.svg"}
                     alt={`Showcase ${currentData.id}`}
                     fill
-                    className="object-cover object-top rounded-t-2xl scale-105"
+                    className="object-cover object-top rounded-sm"
                     priority
                   />
                 </div>
