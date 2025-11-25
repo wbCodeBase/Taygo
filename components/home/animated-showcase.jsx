@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { FaArrowCircleRight } from "react-icons/fa";
+import { QueryPopup } from "../QueryPopup";
+
 
 const showcaseData = [
   {
@@ -38,6 +40,8 @@ export function AnimatedShowcase() {
   const [isTyping, setIsTyping] = useState(true)
   const [imageKey, setImageKey] = useState(0)
   const [isExiting, setIsExiting] = useState(false)
+  
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const currentData = displayIndex >= 0 ? showcaseData[displayIndex] : showcaseData[0]
 
@@ -83,7 +87,7 @@ export function AnimatedShowcase() {
           // style={{ backgroundColor: currentData.bgColor }}
           >
             <div className="relative max-w-3xl mx-auto mb-16">
-              <div
+              <div onClick={()=> setIsPopupOpen(true)}
                 className={`relative bg-white rounded-2xl shadow-lg border-2 ${currentData.borderColor} transition-all duration-700`}
               >
                 <input
@@ -96,6 +100,8 @@ export function AnimatedShowcase() {
                 <button className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
                   <FaArrowCircleRight className="text-white" />
                 </button>
+
+
 
               </div>
             </div>
@@ -143,6 +149,9 @@ export function AnimatedShowcase() {
           Sorry, your browser doesn’t support embedded videos.
         </video>
       </section>
+
+
+      <QueryPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
 
 
     </>

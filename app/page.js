@@ -1,3 +1,5 @@
+"use client"
+
 import { Header } from "@/components/home/header"
 import { HeroSection } from "@/components/home/hero-section"
 import { AnimatedShowcase } from "@/components/home/animated-showcase"
@@ -8,16 +10,21 @@ import StatsSection from "@/components/home/stats-section"
 import LisaCta from "@/components/home/lisaCta"
 
 export default function Home() {
+
   return (
-    <main className="min-h-screen">
-      <Header />
-      <HeroSection />
-      <AnimatedShowcase />
-      <StatsSection />
-      <TabbedShowcase />
-      <TrustedBrands />
-      <LisaCta />
-      <CtaSection />
-    </main>
-  )
+    <>
+      <main className="min-h-screen">
+        <Header />
+        <HeroSection />
+        <AnimatedShowcase />
+        <StatsSection />
+        <TabbedShowcase />
+        <TrustedBrands />
+        <LisaCta />
+        <CtaSection />
+      </main>
+
+
+</>
+  );
 }
