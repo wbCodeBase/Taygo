@@ -7,7 +7,7 @@ export function HeroSection() {
   // const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#006C5D0D] from-gray-50 via-white to-teal-50/30">
+    <section className="relative md:py-42 pb-8 pt-28 md:min-h- screen flex items-center justify-center overflow-hidden bg-[#006C5D0D] from-gray-50 via-white to-teal-50/30">
       {/* Background Watermark */}
       {/* Hero content here */}
       <div className="absolute hidden md:block right-10 top-[60%] -translate-y-1/2 pointer-events-none">
@@ -30,26 +30,26 @@ export function HeroSection() {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-6 pt-32 pb-14 md:pt-10 relative z-10">
+      <div className="container mx-auto px-6 pt-1 pb14 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           {/* Main Heading */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-8 leading-tight text-balance">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight text-balance">
             The Complete AI-Powered Operating System for the Modern Mortgage Business.
           </h1>
 
           {/* Subheading with teal accent */}
-          <div className="text-md md:text-2xl font-medium text-teal-700 mb-8 flex flex-wrap items-center justify-center gap-2">
+          <div className="text-md md:text-2xl font-medium text-teal-700 my-5 flex flex-wrap items-center justify-center gap-2">
             <span>CRM</span>
             <span className="text-gray-400">|</span>
             <span>Loan Origination</span>
             <span className="text-gray-400">|</span>
             <span>Marketing Automation</span>
             <span className="text-gray-400">|</span>
-            <span>File Management.</span>
+            <span>File Management</span>
           </div>
 
           {/* Description */}
-          <p className="text-md md:text-xl text-gray-800 mb-12 max-w-3xl mx-auto text-pretty">
+          <p className="text-md md:text-xl text-gray-800 max-w-3xl mx-auto text-pretty">
             Everything your brokers, lenders, and loan officers need powered by AI, all in one platform.
           </p>
 
@@ -74,8 +74,8 @@ export function HeroSection() {
               </div>
             </div> */}
 
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <button className="group relative cursor-pointer px-14 py-5 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
+            <div className="flex mt-8 flex-col sm:flex-row items-center gap-4">
+              <button className="group relative cursor-pointer px-8 py-3 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
               {/* <button className="group relative cursor-pointer px-8 py-4 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100"> */}
                 <span className="flex items-center gap-2 text-lg">
                   Talk to Lisa

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { FaArrowCircleRight } from "react-icons/fa";
+// import { FaArrowCircleRight } from "react-icons/fa";
 import { QueryPopup } from "../QueryPopup";
 
 
@@ -17,7 +17,7 @@ const showcaseData = [
   },
   {
     id: 2,
-    query: "Generate brainstorm ideas for our fall activewear campaign.",
+    query: "How to create workflow",
     image: "/images/showcase-2.jpeg",
     bgColor: "#1e293b",
     borderColor: "border-slate-600",
@@ -31,6 +31,30 @@ const showcaseData = [
     borderColor: "border-violet-300",
     accentColor: "bg-violet-600",
   },
+  {
+    id: 1,
+    query: "Surface top SaaS accounts with up-to-date signals.",
+    image: "/images/showcase-4.jpeg",
+    bgColor: "#e0e7ff",
+    borderColor: "border-indigo-300",
+    accentColor: "bg-indigo-600",
+  },
+  {
+    id: 2,
+    query: "Generate brainstorm ideas for our fall activewear campaign.",
+    image: "/images/showcase-5.jpeg",
+    bgColor: "#1e293b",
+    borderColor: "border-slate-600",
+    accentColor: "bg-indigo-500", 
+  },
+  {
+    id: 3,
+    query: "User manual for taygo features and integrations.",
+    image: "/images/showcase-6.jpeg",
+    bgColor: "#ddd6fe",
+    borderColor: "border-violet-300",
+    accentColor: "bg-violet-600",
+  },
 ]
 
 export function AnimatedShowcase() {
@@ -40,7 +64,7 @@ export function AnimatedShowcase() {
   const [isTyping, setIsTyping] = useState(true)
   const [imageKey, setImageKey] = useState(0)
   const [isExiting, setIsExiting] = useState(false)
-  
+
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const currentData = displayIndex >= 0 ? showcaseData[displayIndex] : showcaseData[0]
@@ -87,9 +111,9 @@ export function AnimatedShowcase() {
           // style={{ backgroundColor: currentData.bgColor }}
           >
             <div className="relative max-w-4xl mx-auto mb-16">
-              <div onClick={()=> setIsPopupOpen(true)}
+              <div onClick={() => setIsPopupOpen(true)}
                 className={`relative bg-white rounded-sm shadow-lg border-2 transition-all duration-700`}
-                // className={`relative bg-white rounded-sm shadow-lg border-2 ${currentData.borderColor} transition-all duration-700`}
+              // className={`relative bg-white rounded-sm shadow-lg border-2 ${currentData.borderColor} transition-all duration-700`}
               >
                 <input
                   type="text"
@@ -99,8 +123,8 @@ export function AnimatedShowcase() {
                   placeholder="Ask Lisa anything..."
                 />
 
-                <button className="absolute cursor-pointer text-white font-semibold text-xs px-4 p-3 right-4 top-1/2 -translate-y-1/2  bg-[#006C5D] rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
-                  Ask your query
+                <button className="absolute cursor-pointer text-white font-semibold text-xs px-4 p-3 right-4 top-1/2 -translate-y-1/2  bg-[#006C5D] hover:bg-[#006558] rounded-sm flex items-center justify-center transition-colors">
+                  Ask Taygo
                 </button>
 
 
@@ -140,7 +164,19 @@ export function AnimatedShowcase() {
       </section>
 
 
-      <section className="px-6 md:hidden block mt-6">
+      <section className="px-6 md:hidden block my-10">
+
+
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-5xl font-medium text-gray-900 mb-4 text-balance">
+            Ask Taygo how it works. Get an instant answer.
+          </h2>
+          <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">
+            Type any workflow, issue, or task and see exactly how Taygo handles it with AI.
+          </p>
+        </div>
+
+
         <video
           autoPlay
           loop
@@ -150,11 +186,22 @@ export function AnimatedShowcase() {
           width="100%"
         >
           <source
-            src="https://videos.ctfassets.net/wl95ljfippl8/5ZynZBkhFUmXHtguiDCGvA/df342cf5633e48f789447f70390f9361/HomepageOptimization_ColorBG_V5_1_.mp4"
+            src="/vid/crmShowcaseVid.mp4"
             type="video/mp4"
           />
           Sorry, your browser doesn’t support embedded videos.
         </video>
+
+
+        <div className="flex mt-8 flex-col sm:flex-row items-center gap-4">
+          <button onClick={()=> setIsPopupOpen(true)} className="group relative cursor-pointer px-6 py-2 bg-[#006C5D] hover:bg-[#006558] text-white font-medium rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
+            <span className="flex items-center gap-2 text-md">
+              Ask Taygo
+            </span>
+          </button>
+
+        </div>
+
       </section>
 
 

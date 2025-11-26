@@ -3,6 +3,8 @@
 import { useState } from "react"
 import Image from "next/image"
 
+import taygoLogo from "@/public/logo/taygoLogo.png"
+
 const tabs = [
   {
     id: "projects",
@@ -25,6 +27,15 @@ const tabs = [
       role: "VP of Operations, HOLT CAT",
       avatar: "/placeholder.svg?height=48&width=48",
     },
+
+    features: [
+      "AI-powered lead enrichment & tagging",
+      "Smart routing to teams & branches",
+      "Follow-up sequences (email/SMS/AI agent)",
+      "Lead scoring based on intent and activity",
+      "Multi-source lead capture(web, chat, partner, APIs)",
+    ]
+
   },
   {
     id: "sales",
@@ -47,6 +58,13 @@ const tabs = [
       role: "VP Business Development, KC Petroleum",
       avatar: "/placeholder.svg?height=48&width=48",
     },
+    features: [
+      "Full 1003 application (desktop & mobile)",
+      "Auto-save + resume anytime",
+      "Document upload & task lists",
+      "AI nudges for incomplete fields",
+      "Real-time sync with LOS",
+    ]
   },
   {
     id: "marketing",
@@ -68,6 +86,13 @@ const tabs = [
       role: "Marketing Director",
       avatar: "/placeholder.svg?height=48&width=48",
     },
+    features: [
+      "Unified inbox for email, SMS, chat, calls",
+      "VoIP calling with call logs and recording",
+      "Pre-built message templates",
+      "Mass messaging + campaigns",
+      "Trigger-based communication flows",
+    ]
   },
   {
     id: "it-ops",
@@ -89,6 +114,13 @@ const tabs = [
       role: "IT Operations Manager",
       avatar: "/placeholder.svg?height=48&width=48",
     },
+    features: [
+      "Drag-and-drop automation builder",
+      "Conditional logic",
+      "Task assignments & SLA rules",
+      "Doc chase flows",
+      "Branch-level workflow templates",
+    ]
   },
   {
     id: "product-engineering",
@@ -110,6 +142,13 @@ const tabs = [
       role: "Executive VP, Vistra Platform",
       avatar: "/placeholder.svg?height=48&width=48",
     },
+    features: [
+      "Daily pipeline review",
+      "1-click approval of AI-generated plan",
+      "Autonomous task execution",
+      "Borrower nudges & partner updates",
+      "File summaries, risk detection, next-step suggestions",
+    ]
   },
   {
     id: "leadership",
@@ -130,6 +169,13 @@ const tabs = [
       role: "Chief Operating Officer",
       avatar: "/placeholder.svg?height=48&width=48",
     },
+    features: [
+"Co-branded partner profiles",
+"Shared leads & milestones",
+"Auto updates from your AI agent",
+"Partner activity tracking",
+"Referral pipeline",
+]
   },
 ]
 
@@ -157,11 +203,11 @@ export function TabbedShowcase() {
   }
 
   return (
-    <section className="py-20 px-4 bg-[#C4E5E633]">
+    <section className="md:py-20 py-10 px-4 bg-[#C4E5E633]">
       <div className="max-w-6xl mx-auto">
         {/* heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-medium text-gray-900 mb-6 text-balance">
+          <h2 className="text-2xl md:text-5xl font-medium text-gray-900 mb-6 text-balance">
             Everything brokers and loan officers need in one intelligent platform.
           </h2>
           <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">
@@ -176,8 +222,8 @@ export function TabbedShowcase() {
               key={tab.id}
               onClick={() => setActiveTab(index)}
               className={`px-2 py-3 rounded-sm text-sm font-medium transition-all duration-500 ${activeTab === index
-                  ? "text-white shadow-lg"
-                  : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
+                ? "text-white shadow-lg"
+                : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
                 }`}
               style={{
                 backgroundColor: activeTab === index ? tab.color : undefined,
@@ -231,19 +277,33 @@ export function TabbedShowcase() {
 
           {/* Right Side - 2 Stacked Cards with matching height */}
           <div className="flex flex-col gap-6 h-full">
+
             {/* Stat Card */}
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-sm p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justify-center">
-              <div className="mb-4">
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-sm p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justifycenter">
+              {/* <div className="mb-4">
                 <div className="text-sm font-bold text-gray-800 uppercase tracking-wide">
                   {currentTab.testimonial1.company}
                 </div>
               </div>
               <div className="text-4xl font-bold text-gray-900 mb-1">{currentTab.testimonial1.stat}</div>
-              <div className="text-base text-gray-700">{currentTab.testimonial1.statSuffix}</div>
+              <div className="text-base text-gray-700">{currentTab.testimonial1.statSuffix}</div> */}
+              <div className="flex justify-center items-center mb-6">
+                <Image src={taygoLogo} alt="TAYGO Logo" width={140} height={60} />
+              </div>
+
+              <ul className="list-disc list-outside ml-6 space-y-3 font-semibold text-gray-800">
+                {currentTab?.features?.map((f, i) => (
+                  <li key={i} className="leading-relaxed">
+                    {f}
+                  </li>
+                ))}
+              </ul>
+
+
             </div>
 
             {/* Quote Card */}
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-sm p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justify-between">
+            {/* <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-sm p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justify-between">
               <p className="text-gray-700 mb-6 text-pretty leading-relaxed">{currentTab.testimonial2.quote}</p>
               <div className="flex items-center gap-3">
                 <Image
@@ -258,7 +318,8 @@ export function TabbedShowcase() {
                   <div className="text-sm text-gray-600">{currentTab.testimonial2.role}</div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
           </div>
         </div>
       </div>

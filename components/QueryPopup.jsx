@@ -151,34 +151,34 @@ export function QueryPopup({ isOpen, onClose }) {
                 <p className="text-xs font-medium">Try asking:</p>
                 <div className="flex flex-wrap gap-2">
                   <button
-                    onClick={() => setSearchQuery("show my top mortgage leads")}
+                    onClick={() => setSearchQuery("How can i create workflow")}
                     className={`text-xs px-3 py-1.5 rounded-sm transition-colors ${isDark
                       ? "bg-white/10 hover:bg-white/20 text-white/90"
                       : "bg-gray-100 hover:bg-gray-200 text-gray-700"
                       }`}
                     data-testid="suggestion-leads"
                   >
-                    Show my top mortgage leads
+                    How can i create workflow
                   </button>
                   <button
-                    onClick={() => setSearchQuery("find borrowers ready to close")}
+                    onClick={() => setSearchQuery("Show history of any lead")}
                     className={`text-xs px-3 py-1.5 rounded-sm transition-colors ${isDark
                       ? "bg-white/10 hover:bg-white/20 text-white/90"
                       : "bg-gray-100 hover:bg-gray-200 text-gray-700"
                       }`}
                     data-testid="suggestion-borrowers"
                   >
-                    Find borrowers ready to close
+                    Show history of any lead
                   </button>
                   <button
-                    onClick={() => setSearchQuery("track refinancing opportunities")}
+                    onClick={() => setSearchQuery("How lead enrichment works")}
                     className={`text-xs px-3 py-1.5 rounded-sm transition-colors ${isDark
                       ? "bg-white/10 hover:bg-white/20 text-white/90"
                       : "bg-gray-100 hover:bg-gray-200 text-gray-700"
                       }`}
                     data-testid="suggestion-refinancing"
                   >
-                    Track refinancing opportunities
+                    How lead enrichment works
                   </button>
                 </div>
               </div>
@@ -210,7 +210,7 @@ export function QueryPopup({ isOpen, onClose }) {
                 </div>
               </div>
             ) : currentData ? (
-              <div key={currentData.id} className="pt-16 pb-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div key={currentData.id} className="md:pt-14 md:pb-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <div className="max-w-5xl mx-auto">
                   <div className="relative w-full">
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-full bg-white/20 rounded-sm shadow-sm -translate-y-9 pointer-events-none z-0" />
