@@ -4,6 +4,70 @@ import { useEffect, useRef, useState } from "react"
 import { motion, useInView } from "framer-motion"
 
 
+
+function StatCard({ value, description, color, delay }) {
+    const [count, setCount] = useState(0)
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, margin: "-50px" })
+
+    useEffect(() => {
+        if (!isInView) return
+
+        const targetValue = Number.parseFloat(value.replace(/[^0-9.]/g, ""))
+        const duration = 1200
+        const steps = 60
+        const increment = targetValue / steps
+        const stepDuration = duration / steps
+
+        let current = 0
+        const timer = setInterval(() => {
+            current += increment
+            if (current >= targetValue) {
+                setCount(targetValue)
+                clearInterval(timer)
+            } else {
+                setCount(current)
+            }
+        }, stepDuration)
+
+        return () => clearInterval(timer)
+    }, [isInView, value])
+
+    const formatValue = (val) => {
+        if (value.includes("%")) {
+            return `${val.toFixed(1)}%`
+        } else if (value.includes("K")) {
+            return `${Math.round(val)}K+`
+        }
+        return Math.round(val).toString()
+    }
+
+    return (
+        <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: delay }}
+            className="relative rounded-2xl p-6 text-white overflow-hidden"
+            style={{
+                backgroundColor: color,
+                boxShadow: `0 10px 40px -10px ${color}80, 0 4px 20px -4px rgba(0, 0, 0, 0.2)`,
+            }}
+        >
+            <div className="relative z-10">
+                <div className="text-4xl font-bold mb-3" style={{ color: 'white' }}>
+                    {formatValue(count)}
+                </div>
+                <p className="text-sm opacity-95 leading-relaxed">{description}</p>
+            </div>
+            <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full opacity-10 bg-white blur-2xl"></div>
+        </motion.div>
+    )
+}
+
+
+
+
 function StatBar({ value, description, color, heightPercent, delay }) {
     const [count, setCount] = useState(0)
     const ref = useRef(null)
@@ -136,20 +200,35 @@ export default function Stats3D() {
                     </motion.div>
                 </div>
 
-                <div className="relative">
-                    <img
-                        src="/images/curvedRedArrow.png"
-                        alt="arrow"
-                        className="absolute left-[30%] md:left-[33%] md:-top-40 w-44 h-44 lg:w-72 lg:h-72 opacity-40 z-20"
-                    />
+                <div className="hidden sm:block">
+                    <div className="relative">
+                        <img
+                            src="/images/curvedRedArrow.png"
+                            alt="arrow"
+                            className="absolute left-[30%] md:left-[33%] md:-top-40 w-44 h-44 lg:w-72 lg:h-72 opacity-40 z-20"
+                        />
+                    </div>
+
+                    <div className="flex justify-center items-end gap-8 md:gap-10 min-h-[500px] md:min-h-[500px]">
+                        {stats.map((stat, index) => (
+                            <StatBar key={index} {...stat} />
+                        ))}
+                    </div>
                 </div>
 
-                <div className="flex justify-center items-end gap-8 md:gap-10 min-h-[450px] md:min-h-[500px]">
+
+                <div className="sm:hidden grid gap-4 pb-8 mt-8">
                     {stats.map((stat, index) => (
-                        <StatBar key={index} {...stat} />
+                        <StatCard key={index} {...stat} />
                     ))}
                 </div>
+
+
             </div>
+
+
+
+
 
             <div className="absolute bottom-12 right-12 grid grid-cols-12 gap-1.5 opacity-50">
                 {Array.from({ length: 60 }).map((_, i) => (
