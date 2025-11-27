@@ -6,8 +6,9 @@ import { AnimatedShowcase } from "@/components/home/animated-showcase"
 import { TrustedBrands } from "@/components/home/trusted-brands"
 import { CtaSection } from "@/components/home/cta-section"
 import { TabbedShowcase } from "@/components/home/tabbed-showcase"
-import StatsSection from "@/components/home/stats-section"
+// import StatsSection from "@/components/home/stats-section"
 import LisaCta from "@/components/home/lisaCta"
+import Stats3D from "@/components/home/StatsBarSection"
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Header />
         <HeroSection />
         <AnimatedShowcase />
+        <Stats3D />
         {/* <StatsSection /> */}
         <TabbedShowcase />
         <TrustedBrands />

@@ -207,7 +207,7 @@ export function TabbedShowcase() {
       <div className="max-w-6xl mx-auto">
         {/* heading */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-5xl font-medium text-gray-900 mb-6 text-balance">
+          <h2 className="text-2xl md:text-5xl md:font-semibold font-medium text-gray-900 mb-6 text-balance">
             Everything brokers and loan officers need in one intelligent platform.
           </h2>
           <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">
