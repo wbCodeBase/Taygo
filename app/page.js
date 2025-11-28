@@ -9,6 +9,7 @@ import { TabbedShowcase } from "@/components/home/tabbed-showcase"
 // import StatsSection from "@/components/home/stats-section"
 import LisaCta from "@/components/home/lisaCta"
 import Stats3D from "@/components/home/StatsBarSection"
+import IntegrationTools from "@/components/home/IntegrationTools"
 
 export default function Home() {
 
@@ -20,13 +21,18 @@ export default function Home() {
         <AnimatedShowcase />
         <Stats3D />
         {/* <StatsSection /> */}
+
         <TabbedShowcase />
+
+        <IntegrationTools />
         <TrustedBrands />
+
+
         <LisaCta />
         <CtaSection />
       </main>
 
 
-</>
+    </>
   );
 }

@@ -203,11 +203,11 @@ export function TabbedShowcase() {
   }
 
   return (
-    <section className="md:py-20 py-10 px-4 bg-[#C4E5E633]">
+    <section className="md:py-20 py-10 px-4 bg-gradient-to-b from-white to-[#C4E5E633]"> 
       <div className="max-w-6xl mx-auto">
         {/* heading */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-5xl md:font-semibold font-medium text-gray-900 mb-6 text-balance">
+          <h2 className="text-3xl md:text-5xl md:font-semibold font-medium text-gray-900 mb-6 text-balance">
             Everything brokers and loan officers need in one intelligent platform.
           </h2>
           <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">

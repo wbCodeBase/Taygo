@@ -1,6 +1,6 @@
 export function CtaSection() {
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-16 bg-[#C4E5E633] to-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="relative bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-700 rounded-sm p-12 md:p-16 overflow-hidden shadow-2xl">
           <div className="absolute inset-0 opacity-10">
