@@ -1,7 +1,7 @@
 "use client"
 
 import { Header } from "@/components/home/header"
-import { HeroSection } from "@/components/home/hero-section"
+import { HeroSection } from "@/components/home/heroSection"
 import { AnimatedShowcase } from "@/components/home/animated-showcase"
 import { TrustedBrands } from "@/components/home/trusted-brands"
 import { CtaSection } from "@/components/home/cta-section"
@@ -9,7 +9,8 @@ import { TabbedShowcase } from "@/components/home/tabbed-showcase"
 // import StatsSection from "@/components/home/stats-section"
 import LisaCta from "@/components/home/lisaCta"
 import Stats3D from "@/components/home/StatsBarSection"
-import IntegrationTools from "@/components/home/IntegrationTools"
+import TechStackExpertise from "@/components/home/TechStackExpertise"
+// import IntegrationTools from "@/components/home/IntegrationTools"
 
 export default function Home() {
 
@@ -20,13 +21,15 @@ export default function Home() {
         <HeroSection />
         <AnimatedShowcase />
         <Stats3D />
+        
         {/* <StatsSection /> */}
 
         <TabbedShowcase />
 
-        <IntegrationTools />
-        <TrustedBrands />
+        {/* <IntegrationTools /> */}
+        {/* <TechStackExpertise /> */}
 
+        <TrustedBrands />
 
         <LisaCta />
         <CtaSection />

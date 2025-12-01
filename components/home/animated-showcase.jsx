@@ -45,7 +45,7 @@ const showcaseData = [
     image: "/images/showcase-5.jpeg",
     bgColor: "#1e293b",
     borderColor: "border-slate-600",
-    accentColor: "bg-indigo-500", 
+    accentColor: "bg-indigo-500",
   },
   {
     id: 3,
@@ -103,11 +103,19 @@ export function AnimatedShowcase() {
   return (
     <>
 
-      <section className="pb-20 md:-mt-16 hidden md:block lg:-mt-24 mt-10 px-6">
-        <div className="md:ontainer mx-auto max-w7xl">
+      <section className="pb-20  md:-mt16 hidden md:block lg:-mt24 mt-16 px-6">
+        <div className="mx-auto max-w7xl">
 
-          <div
-            className="relative md:mx-20 rounded-sm px-8 pt-8 shadow-2xl overflow-hidden transition-all duration-700 ease-in-out bg-[#006C5D]"
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 mb-4 text-balance">
+              Ask Taygo how it works. Get an instant answer.
+            </h2>
+            <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">
+              Type any workflow, issue, or task and see exactly how Taygo handles it with AI.
+            </p>
+          </div>
+
+          <div className="relative md:mx-20 rounded-sm px-8 pt-8 shadow-2xl overflow-hidden transition-all duration-700 ease-in-out bg-[#006C5D]"
           // style={{ backgroundColor: currentData.bgColor }}
           >
             <div className="relative max-w-4xl mx-auto mb-16">
@@ -126,12 +134,6 @@ export function AnimatedShowcase() {
                 <button className="absolute cursor-pointer text-white font-semibold text-xs px-4 p-3 right-4 top-1/2 -translate-y-1/2  bg-[#006C5D] hover:bg-[#006558] rounded-sm flex items-center justify-center transition-colors">
                   Ask Taygo
                 </button>
-
-
-                {/* <button className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
-                  <FaArrowCircleRight className="text-white" />
-                </button> */}
-
 
 
               </div>
@@ -194,7 +196,7 @@ export function AnimatedShowcase() {
 
 
         <div className="flex mt-8 flex-col sm:flex-row items-center gap-4">
-          <button onClick={()=> setIsPopupOpen(true)} className="group relative cursor-pointer px-6 py-2 bg-[#006C5D] hover:bg-[#006558] text-white font-medium rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
+          <button onClick={() => setIsPopupOpen(true)} className="group relative cursor-pointer px-6 py-2 bg-[#006C5D] hover:bg-[#006558] text-white font-medium rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
             <span className="flex items-center gap-2 text-md">
               Ask Taygo
             </span>

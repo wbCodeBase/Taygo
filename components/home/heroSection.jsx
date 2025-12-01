@@ -1,16 +1,16 @@
 "use client"
 
-import Image from "next/image"
+import RotatingServiceShowcase from "@/components/home/RotatingServiceShowcase"
 // import { useState } from "react"
 
 export function HeroSection() {
   // const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <section className="relative md:py-42 pb-8 pt-28 md:min-h- screen flex items-center justify-center overflow-hidden bg-[#006C5D0D] from-gray-50 via-white to-teal-50/30">
+    <section className="relative flex-col md:pt-38 pb-8 pt-28 md:min-h- screen flex items-center justify-center overflow-hidden bg-[#006C5D0D] from-gray-50 via-white to-teal-50/30">
       {/* Background Watermark */}
       {/* Hero content here */}
-      <div className="absolute hidden md:block right-10 top-[60%] -translate-y-1/2 pointer-events-none">
+      {/* <div className="absolute hidden md:block right-10 top-[60%] -translate-y-1/2 pointer-events-none">
         <Image src="/images/heroWaterRight.png" alt="watermark" height={390} width={270} />
       </div>
 
@@ -22,7 +22,7 @@ export function HeroSection() {
           width={250}
           className="rotate180 scale-x-[-1]"
         />
-      </div>
+      </div> */}
 
 
 
@@ -30,7 +30,7 @@ export function HeroSection() {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-6 pt-1 pb14 relative z-10">
+      <div className="container mx-auto px-6 pt-1 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           {/* Main Heading */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight text-balance">
@@ -40,16 +40,16 @@ export function HeroSection() {
           {/* Subheading with teal accent */}
           <div className="text-md md:text-2xl font-medium text-teal-700 my-5 flex flex-wrap items-center justify-center gap-2">
             <span>CRM</span>
-            <span className="text-gray-400">|</span>
+            <span>|</span>
             <span>Loan Origination</span>
-            <span className="text-gray-400">|</span>
+            <span>|</span>
             <span>Marketing Automation</span>
-            <span className="text-gray-400">|</span>
+            <span>|</span>
             <span>File Management</span>
           </div>
 
           {/* Description */}
-          <p className="text-md md:text-xl text-gray-800 max-w-3xl mx-auto text-pretty">
+          <p className="text-md md:text-lg text-gray-800 max-w-3xl mx-auto text-pretty">
             Everything your brokers, lenders, and loan officers need powered by AI, all in one platform.
           </p>
 
@@ -74,9 +74,8 @@ export function HeroSection() {
               </div>
             </div> */}
 
-            <div className="flex mt-8 flex-col sm:flex-row items-center gap-4">
+            {/* <div className="flex mt-8 flex-col sm:flex-row items-center gap-4">
               <button className="group relative cursor-pointer px-8 py-3 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
-              {/* <button className="group relative cursor-pointer px-8 py-4 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100"> */}
                 <span className="flex items-center gap-2 text-lg">
                   Talk to Lisa
                   <svg
@@ -90,14 +89,16 @@ export function HeroSection() {
                 </span>
               </button>
 
-              {/* <button className="px-8 cursor-pointer py-4 bg-white text-[#6161FF] font-semibold rounded-sm border-2 border-[#6161FF]/20 hover:border-[#6161FF]/40 hover:bg-[#6161FF]/5 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-100">
-                Try It Free
-              </button> */}
-            </div>
-          </div>
+            </div> */}
 
+
+          </div>
         </div>
+
       </div>
+
+      <RotatingServiceShowcase />
+
 
       <style jsx>{`
         @keyframes float {
