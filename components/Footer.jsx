@@ -25,7 +25,7 @@ const Footer = () => {
 
                             <div className="space-y-8 col-span-2">
                                 <div>
-                                   <Link href="/"> <Image src={whiteLogo} alt="Taygo Logo" className="w-32 h-auto mb-4" /> </Link>
+                                    <Link href="/"> <Image src={whiteLogo} alt="Taygo Logo" className="w-32 h-auto mb-4" /> </Link>
                                     <p className="text-md text-gray-300">Ultimate productivity by automating Lead Management, Call System, Web Presence and Customer Communication with TAYGO™.</p>
                                 </div>
 
@@ -61,19 +61,20 @@ const Footer = () => {
                                 <h3 className="text-lg font-semibold mb-4">On Our Site</h3>
                                 <ul className="space-y-2 text-md">
                                     <li><Link href="https://www.taygo.com/bn/app/contactus-y7f" className="text-gray-300 hover:text-white">Contact Us</Link></li>
-                                    <li><Link href="#" className="text-gray-300 hover:text-white">Support</Link></li>
-                                    <li><Link href="#" className="text-gray-300 hover:text-white">Terms & Conditions</Link></li>
+                                    {/* <li><Link href="#" className="text-gray-300 hover:text-white">Support</Link></li> */}
+                                    <li><Link href="https://cloud.taygo.com/terms-of-services" className="text-gray-300 hover:text-white">Terms of service</Link></li>
+                                    <li><Link href="https://cloud.taygo.com/privacy-policy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
+
                                 </ul>
                             </div>
 
-                            {/* Industries Section */}
+                            {/* Resources */}
                             <div className='sm:ml-12 ml-0'>
                                 <h3 className="text-lg font-semibold mb-4">Resources</h3>
                                 <ul className="space-y-2 text-md">
                                     <li><Link href="https://cloud.taygo.com/features" className="text-gray-300 hover:text-white">Features</Link></li>
                                     <li><Link href="https://cloud.taygo.com/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
                                     <li><Link href="#" className="text-gray-300 hover:text-white">Blogs</Link></li>
-                                    <li><Link href="#" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
                                 </ul>
                             </div>
 

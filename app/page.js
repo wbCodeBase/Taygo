@@ -28,7 +28,7 @@ export default function Home() {
 
         {/* <IntegrationTools /> */}
 
-        <TechStackExpertise />
+        {/* <TechStackExpertise /> */}
 
         {/* <TrustedBrands /> */}
 

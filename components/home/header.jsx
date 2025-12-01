@@ -12,19 +12,20 @@ export function Header() {
   const closeMenu = () => setIsMenuOpen(false)
 
   const navLinks = [
-    { href: "#products", label: "Products" },
+    { href: "/", label: "Home" },
     { href: "#features", label: "Features" },
-    { href: "#ai-hub", label: "Taygo AI Hub" },
-    { href: "#integrations", label: "Integrations" },
-    { href: "#solutions", label: "Solutions" },
-    { href: "#resources", label: "Resources" },
+    // { href: "#ai-hub", label: "Taygo AI Hub" },
+    // { href: "#integrations", label: "Integrations" },
+    // { href: "#solutions", label: "Solutions" },
+    // { href: "#resources", label: "Resources" },
     { href: "#pricing", label: "Pricing" },
+    { href: "#contact-us", label: "Contact Us" },
   ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between md:px-16">
           {/* Logo - Always Visible */}
 
           <Link href="/" className="flex items-center gap-2">
@@ -45,13 +46,27 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA Button */}
-          <button className="hidden lg:block bg-white text-teal-600 border-2 border-teal-600 hover:bg-teal-50 font-semibold px-4 xl:px-6 py-2 rounded-lg transition-all text-sm xl:text-base">
+          {/* <button className="hidden lg:block cursor-pointer bg-white text-teal-600 border-2 border-teal-600 hover:bg-teal-50 font-semibold px-4 xl:px-6 py-2 rounded-lg transition-all text-sm xl:text-base">
             Get Started
+          </button> */}
+
+
+
+          <button className="hidden lg:block relative cursor-pointer bg-gradient-to-r from-teal-600 to-teal-700 text-white font-semibold px-4 xl:px-6 py-2.5 rounded-sm text-sm xl:text-base overflow-hidden group shadow-lg shadow-teal-600/25 hover:shadow-2xl hover:shadow-teal-600/40 transition-all duration-500 border border-teal-500/20">
+            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+              <span className="absolute inset-0 bg-gradient-to-br from-transparent via-white/25 to-transparent -translate-x-full -translate-y-full group-hover:translate-x-full group-hover:translate-y-full transition-transform duration-1000 ease-out" style={{ transform: 'rotate(-12deg) scale(1.5)' }}></span>
+            </span>
+            <span className="relative z-10 flex items-center gap-2.5 group-hover:gap-3.5 transition-all duration-300">
+              <span className="tracking-wide">Get Started</span>
+              <svg className="w-4 h-4 transition-all duration-500 group-hover:translate-x-1 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </span>
           </button>
 
           <button
             onClick={toggleMenu}
-            className="lg:hidden flex flex-col items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors relative z-50"
+            className="lg:hidden flex flex-col items-center justify-center w-10 h-10 rounded-sm hover:bg-gray-100 transition-colors relative z-50"
             aria-label="Toggle menu"
           >
             <span
