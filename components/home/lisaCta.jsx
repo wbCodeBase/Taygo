@@ -8,7 +8,7 @@ export default function LisaCta() {
       <section className="w-full bg-[#C4E5E633] py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Lisa AI Assistant CTA */}
-          <div className="relative max-w-6xl mx-auto  bg-gradient-to-r from-[#006C5D] via-[#004e43] to-[#002e28] rounded-sm overflow-visible shadow-2xl mb-16">
+          <div className="relative max-w-6xl mx-auto  bg-linear-to-r from-[#006C5D] via-[#004e43] to-[#002e28] rounded-sm overflow-visible shadow-2xl">
             <div className="grid md:grid-cols-3 gap-6 md:gap-12 items-end p-8 md:p-12">
 
               {/* Lisa Image - extends above container */}

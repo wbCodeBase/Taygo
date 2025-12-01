@@ -85,20 +85,7 @@ export default function TechStackMarquee() {
 
         </div>
 
-        <div className='mt-6'>
-          <span> Awards & Certifications </span>
-
-          <div className='flex flex-wrap gap-6 justify-around items-center mt-6'>
-            <Image src={clutch} className='sm:w-24 w-20 h-auto' alt="Clutch icon" />
-            <Image src={androidEnterprise} className='sm:w-24 w-20 h-auto' alt="Android Enterprise icon" />
-            <Image src={awsPartner} className='sm:w-24 w-20 h-auto' alt="awsPartner icon" />
-            <Image src={goodFirm} className='sm:w-24 w-20 h-auto' alt="goodFirm icon" />
-            <Image src={MicrosoftMin} className='sm:w-24 w-20 h-auto' alt="MicrosoftMin icon" />
-            <Image src={googlePartner} className='sm:w-24 w-20 h-auto' alt="MicrosoftMin icon" />
-          </div>
-
-        </div>
-
+       
       </section>
     </>
   )
