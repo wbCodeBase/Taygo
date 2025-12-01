@@ -29,7 +29,7 @@ export default function Home() {
         {/* <IntegrationTools /> */}
         {/* <TechStackExpertise /> */}
 
-        <TrustedBrands />
+        {/* <TrustedBrands /> */}
 
         <LisaCta />
         <CtaSection />
