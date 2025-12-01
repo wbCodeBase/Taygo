@@ -4,7 +4,8 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send } from "lucide-react";
 import TaygoIcon from "@/public/logo/taygoIcon.png";
-import ChatUserAbhi from "@/public/images/chatUserAbhi.png";
+// import ChatUserAbhi from "@/public/images/chatUserAbhi.png";
+import ChatUserAbhi from "@/public/images/userAvatar.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -417,7 +418,7 @@ function TypingAnimation() {
           >
             {m.from === "lisa" && (
               <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full border bg-gray-300 flex items-center justify-center mr-2">
+                <div className="w-10 h-10 rounded-full border bg-gray-200 flex items-center justify-center mr-2">
                 {/* <div className="w-10 h-10 rounded-full border bg-[#d9f3f0] text-white flex items-center justify-center mr-2"> */}
                   {/* <BrainCircuit className="w-4 h-4" /> */}
                   
@@ -438,7 +439,7 @@ function TypingAnimation() {
 
                 <div className="w-10 h-10 rounded-full bg-gray-200 ml-2 p-0 flex items-center justify-center">
                   {/* <User className="w-4 h-4" /> */}
-                  <Image src={ChatUserAbhi} alt="User Icon" width={32} height={32} className="rounded-full w-9 h-9" />
+                  <Image src={ChatUserAbhi} alt="User Icon" width={32} height={32} className="rounded-full w-10 h-10" />
                 </div>
               </div>
             )}
@@ -448,7 +449,7 @@ function TypingAnimation() {
         {/* LISA TYPING */}
         {isTyping && (
           <div className="flex items-start">
-            <div className="w-10 h-10 rounded-full border bg-gray-300 text-white flex items-center justify-center mr-2">
+            <div className="w-10 h-10 rounded-full border bg-gray-200 text-white flex items-center justify-center mr-2">
               {/* <BrainCircuit className="w-4 h-4" /> */}
                   <Image src="/images/lisa.png" alt="Lisa Icon" width={29} height={29} className="rounded-full" />
             </div>

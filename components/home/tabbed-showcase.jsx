@@ -9,7 +9,8 @@ const tabs = [
   {
     id: "projects",
     label: "Lead Management",
-    color: "#6161FF",
+    color: "#006C5D",
+    // color: "#6161FF",
     heading: "Lead Management",
     title: "Capture, enrich, and convert leads across your entire pipeline.",
     description:
@@ -40,7 +41,8 @@ const tabs = [
   {
     id: "sales",
     label: "POS & LOS Integration",
-    color: "#00A4BD",
+    color: "#006C5D",
+    // color: "#00A4BD",
     heading: "POS & Loan Applications (1003 Portal)",
     title: "A self-guided borrower portal that boosts 1003 completion.",
     description:
@@ -69,7 +71,8 @@ const tabs = [
   {
     id: "marketing",
     label: "Communication Suite",
-    color: "#FF6B6B",
+    color: "#006C5D",
+    // color: "#FF6B6B",
     heading: "Communication Suite",
     title: "Engage borrowers & partners wherever they are - instantly.",
     description:
@@ -97,7 +100,8 @@ const tabs = [
   {
     id: "it-ops",
     label: "Workflow Automation",
-    color: "#9D7BFF",
+    color: "#006C5D",
+    // color: "#9D7BFF",
     heading: "Workflow Automation",
     title: "Visual automation builder for every part of the loan lifecycle.",
     description:
@@ -125,7 +129,8 @@ const tabs = [
   {
     id: "product-engineering",
     label: "AI Agent Workforce",
-    color: "#00A65A",
+    color: "#006C5D",
+    // color: "#00A65A",
     heading: "AI Agent Workforce",
     title: "Your AI agent reviews, prioritizes, and executes your workflow.",
     description: "AI agents scan your entire pipeline, point out what needs attention, generate your daily plan, and — once approved — execute follow-ups and updates automatically.",
@@ -153,7 +158,8 @@ const tabs = [
   {
     id: "leadership",
     label: "Partner & Realtor Portal",
-    color: "#FF9F40",
+    color: "#006C5D",
+    // color: "#FF9F40",
     heading: "Partner & Realtor Portal",
     title: "Give your partners real-time visibility on shared clients.",
     description: "Realtors and referral partners get a co-branded portal with updates, milestones, and client activity — without calling you.",
@@ -246,7 +252,7 @@ export function TabbedShowcase() {
             >
 
               {/* Left Side - Content */}
-              <div className="relative z-10 flex-shrink-0 lg:w-[30%]">
+              <div className="relative z-10 shrink-0 lg:w-[30%]">
                 {/* heading */}
                 <div className="flex items-center gap-2 mb-6">
                   <span className="text-3xl font-semibold">{currentTab.heading}</span>

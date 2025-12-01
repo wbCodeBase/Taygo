@@ -9,7 +9,7 @@ import { TabbedShowcase } from "@/components/home/tabbed-showcase"
 // import StatsSection from "@/components/home/stats-section"
 import LisaCta from "@/components/home/lisaCta"
 import Stats3D from "@/components/home/StatsBarSection"
-import TechStackExpertise from "@/components/home/TechStackExpertise"
+// import TechStackExpertise from "@/components/home/TechStackExpertise"
 // import IntegrationTools from "@/components/home/IntegrationTools"
 
 export default function Home() {
