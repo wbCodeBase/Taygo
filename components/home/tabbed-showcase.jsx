@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 
 import taygoLogo from "@/public/logo/taygoLogo.png"
@@ -185,9 +185,25 @@ const tabs = [
   },
 ]
 
-export function TabbedShowcase() {
-  const [activeTab, setActiveTab] = useState(0)
-  const currentTab = tabs[activeTab]
+export function TabbedShowcase() {  
+
+    const [activeTab, setActiveTab] = useState(0);
+  const currentTab = tabs[activeTab];
+
+  // Auto-switch tabs every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % tabs.length);
+    }, 5000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
+    const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
+
 
   const renderMockup = () => {
     switch (activeTab) {
@@ -226,7 +242,7 @@ export function TabbedShowcase() {
           {tabs.map((tab, index) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(index)}
+              onClick={() => handleTabClick(index)}
               className={`px-2 py-3 rounded-sm text-sm font-medium transition-all duration-500 ${activeTab === index
                 ? "text-white shadow-lg"
                 : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
