@@ -3,7 +3,7 @@
 import { Header } from "@/components/home/header"
 import { HeroSection } from "@/components/home/heroSection"
 import { AnimatedShowcase } from "@/components/home/animated-showcase"
-import { TrustedBrands } from "@/components/home/trusted-brands"
+// import { TrustedBrands } from "@/components/home/trusted-brands"
 import { CtaSection } from "@/components/home/cta-section"
 import { TabbedShowcase } from "@/components/home/tabbed-showcase"
 // import StatsSection from "@/components/home/stats-section"
@@ -28,7 +28,7 @@ export default function Home() {
 
         {/* <IntegrationTools /> */}
 
-        {/* <TechStackExpertise /> */}
+        <TechStackExpertise />
 
         {/* <TrustedBrands /> */}
 

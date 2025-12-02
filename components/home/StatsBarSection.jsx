@@ -174,7 +174,7 @@ export default function Stats3D() {
     ]
 
     return (
-        <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-white to-[#C4E5E633] pt-12 px-4 md:px-8">
+        <section className="relative border-b min-hscreen w-full overflow-hidden bg-gradient-to-b from-white to-[#C4E5E633] pt-12 px-4 md:px-8">
             <div className="absolute inset-0 w-full h-full opacity-40 pointer-events-none">
                 <img src="/images/ClipPathGroup.png" alt="ClipPathGroup" className="w-full h-full object-cover" />
             </div>
@@ -188,12 +188,12 @@ export default function Stats3D() {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        <h1 className="text-3xl md:text-5xl md:font-semibold font-medium mb-6 text-gray-900 leading-tight">
+                        <h1 className="text-3xl md:text-4xl text-center md:text-left font-semibold mb-6 text-gray-900 leading-tight">
                             Trusted by the Best
                             <br />
                             in Lending.
                         </h1>
-                        <p className="text-base md:text-md text-gray-800 max-w-md leading-relaxed">
+                        <p className="text-base md:text-md text-center md:text-left text-gray-800 max-w-md">
                             From first lead to final funding, the mortgage industry relies on{" "}
                             <span className="font-bold">TAYGO™</span> to keep every deal moving.
                         </p>

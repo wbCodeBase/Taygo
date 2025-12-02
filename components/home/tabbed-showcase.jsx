@@ -229,7 +229,7 @@ export function TabbedShowcase() {
       <div className="max-w-6xl mx-auto">
         {/* heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl md:font-semibold font-medium text-gray-900 mb-6 text-balance">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 text-balance">
             Everything brokers and loan officers need in one intelligent platform.
           </h2>
           <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">
@@ -261,7 +261,7 @@ export function TabbedShowcase() {
           {/* Large Card - 2/3 width with content on left, mockup on right */}
           <div className="lg:col-span-2">
             <div
-              className="rounded-sm pl-10 py-14 text-white transition-all duration-700 h-full relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center"
+              className="rounded-sm md:pl-10 pl-6 py-14 text-white transition-all duration-700 h-full relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center"
               style={{
                 backgroundColor: currentTab.color,
               }}

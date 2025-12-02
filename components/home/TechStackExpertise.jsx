@@ -1,6 +1,6 @@
 import React from 'react'
 import TechStackMarquee from '@/components/home/TechStackMarquee';
-import { AiOutlineStar } from "react-icons/ai";
+// import { AiOutlineStar } from "react-icons/ai";
 
 
 
@@ -8,23 +8,19 @@ const TechStackExpertise = () => {
     return (
         <>
 
-            <section className="container mx-auto max-w-5xl xl:max-w-7xl px-4 md:px-6 py-8">
+            <section className="container mx-auto max-w-5xl xl:max-w-7xl px-4 md:px-6 py-16">
 
-                <div>
-                    <h2 className='font-semibold text-3xl my-2'>Technologies That Speaks Your Business Language</h2>
-                    <p className='text-md text-gray-800'>Whether you require a complex enterprise software solution or seamless software integration, As a best software development company in India, we will convert your ideas into reality with our long-standing, industry-proven IT consulting and software development services.", keywordToSlug</p>
+                {/* heading */}
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 text-balance">
+                        Your AI agent works wherever your data lives
+                    </h2>
+                    <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">
+                        Integrated with top mortgage platforms for smooth, automated workflows.
+                    </p>
                 </div>
 
-                <section className="flex flex-wrap justify-center gap-10 py-2 mt-6">
-
-                    <div className='lg:w-[46%] w-full'>
-                        <h3 className='font-semibold text-2xl'>We done our best here</h3>
-                        <p className='mt-2 text-md'>At our core, we believe in using the right technology for each specific task. By understanding your unique needs, we create robust and high-tech software solutions that operate smoothly and efficiently.</p>
-                        <p className='mt-2 text-md'>Our goal is to not only meet but exceed your expectations, ensuring that every solution we deliver is perfectly aligned with your business objectives and designed for success.</p>
-                        <ul className="text-md mt-4 font-medium flex flex-col gap-3">
-                            <li className='flex items-center gap-2'> <span className='text-orange-500'> <AiOutlineStar /> </span> <span> Api Integration/Maintenance </span></li>
-                        </ul>
-                    </div>
+                <section className="flex items-center justify-center py-2 mt-6">
 
                     <TechStackMarquee />
 

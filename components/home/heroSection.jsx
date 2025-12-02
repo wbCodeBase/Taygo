@@ -1,120 +1,145 @@
-"use client"
-
-import RotatingServiceShowcase from "@/components/home/RotatingServiceShowcase"
-// import { useState } from "react"
+import { Sparkles, TrendingUp, Zap, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { SyncedCRMDashboard } from './SyncedCRMDashboard';
 
 export function HeroSection() {
-  // const [isHovered, setIsHovered] = useState(false)
+  const features = [
+    { icon: Sparkles, text: 'Mortgage CRM', gradient: 'from-teal to-teal-light' },
+    { icon: TrendingUp, text: 'Lead Management', gradient: 'from-teal to-teal-light' },
+    { icon: Zap, text: 'Auto Follow-ups', gradient: 'from-teal to-teal-light' },
+    { icon: Sparkles, text: 'Document Processing', gradient: 'from-teal to-teal-light' },
+  ];
 
   return (
-    <section className="relative flex-col md:pt-38 pb-8 pt-28 md:min-h- screen flex items-center justify-center overflow-hidden bg-[#006C5D0D] from-gray-50 via-white to-teal-50/30">
-      {/* Background Watermark */}
-      {/* Hero content here */}
-      {/* <div className="absolute hidden md:block right-10 top-[60%] -translate-y-1/2 pointer-events-none">
-        <Image src="/images/heroWaterRight.png" alt="watermark" height={390} width={270} />
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-50 via-white to-teal-50/30 overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute top-20 right-20 w-72 h-72 bg-teal/5 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 left-20 w-96 h-96 bg-indigo/5 rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
       </div>
 
-      <div className="absolute hidden md:block left-10 top-[60%] -translate-y-1/2 pointer-events-none">
-        <Image
-          src="/images/heroWaterRight.png"
-          alt="watermark"
-          height={400}
-          width={250}
-          className="rotate180 scale-x-[-1]"
-        />
-      </div> */}
+      <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-20 md:mt-12">
+        {/* Top Section - Full Width Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 max-w-5xl mx-auto"
+        >
+          {/* Badge */}
+          {/* <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-teal/10 text-[#0D9488] px-4 py-2 rounded-full border border-teal/20 mb-6"
+          >
+            <Sparkles className="w-4 h-4" />
+            <span className="text-sm" style={{ fontWeight: 500 }}>AI-Powered Platform</span>
+          </motion.div> */}
 
+          {/* Main Headline */}
+          <div className="space-y-4 my-8">
+            <h1 className="lg:text-5xl text-4xl text-gray-900 leading-tight" style={{ fontWeight: 700 }}>
+              Meet{' '}
+              <span className="bg-gradient-to-r from-[#0D9488] to-[#14B8A6] bg-clip-text text-transparent">
+                Lisa
+              </span>
+              {', '}
+              Your AI Mortgage Agent
 
-
-      {/* Decorative gradient orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl" />
-
-      <div className="container mx-auto px-6 pt-1 relative z-10">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* Main Heading */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight text-balance">
-            The Complete AI-Powered Operating System for the Modern Mortgage Business.
-          </h1>
-
-          {/* Subheading with teal accent */}
-          <div className="text-md md:text-2xl font-medium text-teal-700 my-5 flex flex-wrap items-center justify-center gap-2">
-            <span>CRM</span>
-            <span>|</span>
-            <span>Loan Origination</span>
-            <span>|</span>
-            <span>Marketing Automation</span>
-            <span>|</span>
-            <span>File Management</span>
+              
+            </h1>
+            <h2 className="text-2xl lg:text-3xl text-gray-700 leading-tight">
+              Automate Your Entire Mortgage CRM Workflow
+            </h2>
           </div>
 
           {/* Description */}
-          <p className="text-md md:text-lg text-gray-800 max-w-3xl mx-auto text-pretty">
-            Everything your brokers, lenders, and loan officers need powered by AI, all in one platform.
+          <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            The Complete AI-Powered Operating System for the Modern Mortgage Business.
           </p>
 
-          {/* Lisa AI Assistant CTA */}
-          <div className="flex flex-col items-center gap-6">
-            {/* AI Assistant Bubble */}
-            {/* <div
-              className="relative bg-gradient-to-r from-[#6161FF] via-[#7B68EE] to-[#9370DB] text-white px-8 py-5 rounded-3xl shadow-2xl shadow-[#6161FF]/40 max-w-md animate-float"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <div className="absolute -bottom-3 left-12 w-6 h-6 bg-gradient-to-br from-[#6161FF] to-[#7B68EE] rotate-45" />
-
-              <div className="text-left relative z-10">
-                <div className="text-base font-semibold mb-1 text-white flex items-center gap-2">
-                  Lisa
-                  <span className="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+          {/* Feature Pills */}
+          <div className="flex flex-wrap gap-3 justify-center mb-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 + index * 0.1 }}
+                className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-gray-200"
+              >
+                <div className={`w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-700 ${feature.gradient} rounded-full flex items-center justify-center`}>
+                  <feature.icon className="w-4 h-4 text-white" />
                 </div>
-                <p className="text-sm">
-                  "Ready to transform your mortgage business? Let me help you set up your magic box today!"
-                </p>
-              </div>
-            </div> */}
-
-            {/* <div className="flex mt-8 flex-col sm:flex-row items-center gap-4">
-              <button className="group relative cursor-pointer px-8 py-3 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
-                <span className="flex items-center gap-2 text-lg">
-                  Talk to Lisa
-                  <svg
-                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </span>
-              </button>
-
-            </div> */}
-
-
+                <span className="text-sm text-gray-700" style={{ fontWeight: 500 }}>{feature.text}</span>
+              </motion.div>
+            ))}
           </div>
-        </div>
 
+          {/* CTA Button */}
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-[#0D9488] hover:bg-[#0c8077] text-white px-8 py-4 rounded-xl transition-all shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 inline-flex items-center gap-2 mb-8"
+            style={{ fontWeight: 600 }}
+          >
+            Get Started Free
+            <ArrowRight className="w-5 h-5" />
+          </motion.button>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200 max-w-2xl mx-auto">
+            <div>
+              <div className="text-3xl text-gray-900" style={{ fontWeight: 700 }}>80%</div>
+              <div className="text-sm text-gray-600 mt-1">Tasks Automated</div>
+            </div>
+            <div>
+              <div className="text-3xl text-gray-900" style={{ fontWeight: 700 }}>3x</div>
+              <div className="text-sm text-gray-600 mt-1">More Closings</div>
+            </div>
+            <div>
+              <div className="text-3xl text-gray-900" style={{ fontWeight: 700 }}>24/7</div>
+              <div className="text-sm text-gray-600 mt-1">Lead Response</div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Bottom Section - Full Width CRM Dashboard */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="w-full"
+        >
+          <SyncedCRMDashboard />
+        </motion.div>
       </div>
-
-      <RotatingServiceShowcase />
-
-
-      <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
-        }
-
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-      `}</style>
-    </section>
-  )
+    </div>
+  );
 }

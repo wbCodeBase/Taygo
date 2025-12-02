@@ -2,12 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 
 // Certifications
-import clutch from "@/public/certification/clutch.svg";
-import androidEnterprise from "@/public/certification/androidEnterprise.svg";
-import awsPartner from "@/public/certification/aws-partner.png";
-import goodFirm from "@/public/certification/goodFirm.svg";
-import MicrosoftMin from "@/public/certification/Microsoft-min.png";
-import googlePartner from "@/public/certification/googlePartner.png";
 
 // Backend Tech Logos
 import redis from "@/public/techLogos/redis.png";
@@ -74,18 +68,35 @@ const toolsAndDbs = [
 export default function TechStackMarquee() {
   return (
     <>
-      <section className='lg:w-[46%] w-full'>
-        <div className="flex flex-col gap-2 overflow-hidden py-2">
+      <section className='lg:max-w-4xl w-full'>
+        <div className="flex flex-col gap-4 overflow-hidden py-2 text-gray-600">
 
-          <MarqueeRow direction="right" techArr={frontend} />
+          <div className='flex justify-between items-center rounded-lg border'>
+            <div className='text-xl text-nowrap font-medium  px-4 py-6 rounded-l-lg bg-[#006C5D] w-54 text-white'>Social Media</div>
+            <MarqueeRow direction="right" techArr={frontend} />
+          </div>
 
-          <MarqueeRow direction="left" techArr={backend} />
 
-          <MarqueeRow direction="right" techArr={toolsAndDbs} />
+          <div className='flex justify-between items-center rounded-lg border'>
+            <div className='text-xl text-nowrap font-medium  px-4 py-6 rounded-l-lg bg-[#006C5D] w-54 text-white'>Point of Sales</div>
+            <MarqueeRow direction="left" techArr={backend} />
+          </div>
+
+
+          <div className='flex justify-between items-center rounded-lg border'>
+            <div className='text-xl text-nowrap font-medium  px-4 py-6 border bg-[#006C5D] rounded-l-lg w-54 text-white'>Price Engine</div>
+            <MarqueeRow direction="right" techArr={frontend} />
+          </div>
+
+
+          <div className='flex justify-between items-center rounded-lg border'>
+            <div className='text-xl text-nowrap font-medium  px-4 py-6 border bg-[#006C5D] rounded-l-lg w-[15rem] text-white'>Real Estate</div>
+            <MarqueeRow direction="right" techArr={toolsAndDbs} />
+          </div>
 
         </div>
 
-       
+
       </section>
     </>
   )

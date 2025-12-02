@@ -50,7 +50,7 @@ const IntegrationOrbit = () => {
       <div className="max-w-6xl w-full relative z-10">
         {/* Header */}
         <div className="text-center my-8 mb-12">
-          <h2 className="text-3xl md:text-5xl md:font-semibold font-medium text-gray-900 mb-6 text-balance">
+          <h2 className="text-3xl md:text-4xl md:font-semibold font-medium text-gray-900 mb-6 text-balance">
             Your AI agent works wherever your data lives
           </h2>
           <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">

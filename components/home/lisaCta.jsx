@@ -27,10 +27,10 @@ export default function LisaCta() {
               {/* Content */}
               <div className="order-2 md:col-span-2 md:order-2 text-white space-y-6">
                 <div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+                  <h2 className="text-3xl md:text-5xl font-bold mb-2">
                     Meet Lisa
                   </h2>
-                  <p className="text-xl md:text-2xl font-semibold mb-4">
+                  <p className="text-xl md:text-xl font-medium md:font-semibold mb-4">
                     Your 24/7 AI Mortgage Assistant
                   </p>
                   <p className="text-sm md:text-base text-white/90 leading-relaxed">
@@ -78,7 +78,7 @@ export default function LisaCta() {
               {/* Content */}
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-semibold text-gray-900 mb-4">
                     Set up your digital shop with TAYGO™
                   </h2>
                   <p className="text-base md:text-lg text-gray-700">
