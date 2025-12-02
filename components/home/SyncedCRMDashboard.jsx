@@ -1,6 +1,9 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { User, Phone, Mail, DollarSign, TrendingUp, Users, CheckCircle, Clock, Sparkles, Send, BarChart3, PhoneCall, MailOpen, X, Check } from 'lucide-react';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
+
+import ChatUserAbhi from "@/public/images/userAvatar.png";
 
 
 export function SyncedCRMDashboard() {
@@ -162,7 +165,7 @@ export function SyncedCRMDashboard() {
           className="col-span-2 bg-gray-900 p-4 flex flex-col"
         >
           <div className="mb-8">
-            <h3 className="text-white text-sm" style={{ fontWeight: 600 }}>TAYGO CRM</h3>
+            <h3 className="text-white text-md" style={{ fontWeight: 600 }}>TAYGO CRM</h3>
             <p className="text-gray-400 text-xs mt-1">Mortgage Dashboard</p>
           </div>
 
@@ -342,7 +345,7 @@ export function SyncedCRMDashboard() {
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-white rounded-xl p-4 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+                      className="bg-white rounded-sm p-4 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
@@ -391,15 +394,15 @@ export function SyncedCRMDashboard() {
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-white rounded-xl p-4 shadow-sm border border-gray-200"
+                      className="bg-white rounded-sm p-4 shadow-sm border border-gray-200"
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
                           <div className={`w-12 h-12 rounded-full flex items-center justify-center ${callingLeads.includes(lead.id)
-                              ? 'bg-blue-100'
-                              : calledLeads.includes(lead.id)
-                                ? 'bg-green-100'
-                                : 'bg-gray-100'
+                            ? 'bg-blue-100'
+                            : calledLeads.includes(lead.id)
+                              ? 'bg-green-100'
+                              : 'bg-gray-100'
                             }`}>
                             {callingLeads.includes(lead.id) ? (
                               <motion.div
@@ -468,14 +471,14 @@ export function SyncedCRMDashboard() {
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-white rounded-xl p-4 shadow-sm border border-gray-200"
+                      className="bg-white rounded-sm p-4 shadow-sm border border-gray-200"
                     >
                       <div className="flex items-start gap-4">
                         <div className={`w-12 h-12 rounded-full flex items-center justify-center ${sendingEmails.includes(lead.id)
-                            ? 'bg-blue-100'
-                            : sentEmails.includes(lead.id)
-                              ? 'bg-green-100'
-                              : 'bg-gray-100'
+                          ? 'bg-blue-100'
+                          : sentEmails.includes(lead.id)
+                            ? 'bg-green-100'
+                            : 'bg-gray-100'
                           }`}>
                           {sendingEmails.includes(lead.id) ? (
                             <motion.div
@@ -557,18 +560,22 @@ export function SyncedCRMDashboard() {
                 >
                   {message.sender === 'lisa' && (
                     <div className="w-7 h-7 bg-gradient-to-br from-[#0D9488] to-[#14B8A6] rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white text-xs" style={{ fontWeight: 600 }}>L</span>
+                      {/* <span className="text-white text-xs" style={{ fontWeight: 600 }}>L</span> */}
+
+                      <Image src="/images/lisa.png" alt="Lisa Icon" width={23} height={23} className="rounded-full" />
                     </div>
                   )}
                   <div className={`rounded-lg p-3 max-w-[200px] ${message.sender === 'lisa'
-                      ? 'bg-white border border-gray-200'
-                      : 'bg-gray-200'
+                    ? 'bg-white border border-gray-200'
+                    : 'bg-gray-200'
                     }`}>
                     <p className="text-xs text-gray-900">{message.text}</p>
                   </div>
                   {message.sender === 'user' && (
                     <div className="w-7 h-7 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-xs text-gray-700" style={{ fontWeight: 600 }}>U</span>
+                      {/* <span className="text-xs text-gray-700" style={{ fontWeight: 600 }}>U</span> */}
+
+                      <Image src={ChatUserAbhi} alt="User Icon" width={29} height={29} className="rounded-full" />
                     </div>
                   )}
                 </motion.div>
@@ -582,7 +589,9 @@ export function SyncedCRMDashboard() {
                 className="flex gap-2"
               >
                 <div className="w-7 h-7 bg-gradient-to-br from-[#0D9488] to-[#14B8A6] rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xs" style={{ fontWeight: 600 }}>L</span>
+                  {/* <span className="text-white text-xs" style={{ fontWeight: 600 }}>L</span> */}
+
+                  <Image src="/images/lisa.png" alt="Lisa Icon" width={23} height={23} className="rounded-full" />
                 </div>
                 <div className="bg-white rounded-lg p-2 border border-gray-200">
                   <div className="flex gap-1">
