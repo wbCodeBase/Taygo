@@ -22,7 +22,7 @@ export function Header() {
           </nav>
 
           {/* CTA Button */}
-          <button className="bg-[#0D9488] hover:bg-[#0c8077] text-white px-6 py-2.5 rounded-lg transition-all hover:shadow-lg hover:shadow-teal-500/30 flex items-center gap-2">
+          <button className="bg-[#0D9488] hover:bg-[#0c8077] text-white px-6 py-2.5 rounded-sm transition-all hover:shadow-lg hover:shadow-teal-500/30 flex items-center gap-2">
             Get Started
             <ArrowRight className="w-4 h-4" />
           </button>
