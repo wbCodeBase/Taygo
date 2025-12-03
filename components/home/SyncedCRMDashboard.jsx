@@ -33,55 +33,6 @@ export function SyncedCRMDashboard() {
     { id: 7, sender: 'lisa', text: 'Emails sent! ✓ 3 meetings scheduled for tomorrow.', delay: 3000 },
   ];
 
-  // useEffect(() => {
-  //   if (chatStep < chatScript.length) {
-  //     const timer = setTimeout(() => {
-  //       const currentMessage = chatScript[chatStep];
-  //       setMessages(prev => [...prev, currentMessage]);
-
-  //       // Update CRM view based on chat content
-  //       if (chatStep === 0) {
-  //         // Show leads when Lisa mentions new leads
-  //         setTimeout(() => setCurrentView('leads'), 800);
-  //       } else if (chatStep === 2) {
-  //         // Show calling screen
-  //         setTimeout(() => {
-  //           setCurrentView('calling');
-  //           // Simulate calling each lead
-  //           leads.forEach((lead, index) => {
-  //             setTimeout(() => {
-  //               setCallingLeads(prev => [...prev, lead.id]);
-  //             }, index * 600);
-  //             setTimeout(() => {
-  //               setCallingLeads(prev => prev.filter(id => id !== lead.id));
-  //               setCalledLeads(prev => [...prev, lead.id]);
-  //             }, index * 600 + 2000);
-  //           });
-  //         }, 300);
-  //       } else if (chatStep === 4) {
-  //         // Show email view
-  //         setTimeout(() => setCurrentView('email'), 800);
-  //       } else if (chatStep === 5) {
-  //         // Simulate sending emails
-  //         setTimeout(() => {
-  //           leads.slice(0, 4).forEach((lead, index) => {
-  //             setTimeout(() => {
-  //               setSendingEmails(prev => [...prev, lead.id]);
-  //             }, index * 500);
-  //             setTimeout(() => {
-  //               setSendingEmails(prev => prev.filter(id => id !== lead.id));
-  //               setSentEmails(prev => [...prev, lead.id]);
-  //             }, index * 500 + 1500);
-  //           });
-  //         }, 300);
-  //       }
-
-  //       setChatStep(chatStep + 1);
-  //     }, chatScript[chatStep].delay);
-
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [chatStep]);
 
 
   useEffect(() => {

@@ -46,7 +46,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 max-w-5xl mx-auto"
+          className="text-center mb-6 max-w-5xl mx-auto"
         >
           {/* Badge */}
           {/* <motion.div
@@ -60,7 +60,7 @@ export function HeroSection() {
           </motion.div> */}
 
           {/* Main Headline */}
-          <div className="space-y-4 my-8">
+          <div className="space-y-4 my-4">
             <h1 className="lg:text-5xl text-4xl text-gray-900 leading-tight" style={{ fontWeight: 700 }}>
               {/* Meet{' '} */}
               <span className="bg-gradient-to-r from-[#0D9488] to-[#14B8A6] bg-clip-text text-transparent">
@@ -76,7 +76,7 @@ export function HeroSection() {
           </div>
 
           {/* Description */}
-          <p className="text-lg text-gray-600 leading-relaxed mb-8">
+          <p className="text-lg text-gray-600 leading-relaxed">
             Everything your brokers, lenders, and loan officers need powered by AI, all in one platform.
           </p>
 
@@ -98,7 +98,7 @@ export function HeroSection() {
             ))}
           </div> */}
 
-           <div className="text-md md:text-2xl font-medium text-teal-700 my-10 flex flex-wrap items-center justify-center gap-2">
+           <div className="text-md md:text-2xl font-medium text-teal-700 my-3 flex flex-wrap items-center justify-center gap-2">
             <span>CRM</span>
             <span>|</span>
             <span>Loan Origination</span>
@@ -115,7 +115,7 @@ export function HeroSection() {
             transition={{ delay: 0.8 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#0D9488] hover:bg-[#0c8077] text-white px-8 py-4 cursor-pointer rounded-sm transition-all shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 inline-flex items-center gap-2 my-8"
+            className="bg-[#0D9488] hover:bg-[#0c8077] text-white px-8 py-4 cursor-pointer rounded-sm transition-all shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 inline-flex items-center gap-2 my-4"
             style={{ fontWeight: 600 }}
           >
             View Demo
@@ -123,7 +123,7 @@ export function HeroSection() {
           </motion.button>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200 max-w-2xl mx-auto">
+          {/* <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200 max-w-2xl mx-auto">
             <div>
               <div className="text-3xl text-gray-900" style={{ fontWeight: 700 }}>80%</div>
               <div className="text-sm text-gray-600 mt-1">Tasks Automated</div>
@@ -136,7 +136,7 @@ export function HeroSection() {
               <div className="text-3xl text-gray-900" style={{ fontWeight: 700 }}>24/7</div>
               <div className="text-sm text-gray-600 mt-1">Lead Response</div>
             </div>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Bottom Section - Full Width CRM Dashboard */}
