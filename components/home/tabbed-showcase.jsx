@@ -41,7 +41,7 @@ const tabs = [
   {
     id: "sales",
     label: "POS & LOS Integration",
-    color: "#006C5D",
+    color: "#2B5BA9",
     // color: "#00A4BD",
     heading: "POS & Loan Applications (1003 Portal)",
     title: "A self-guided borrower portal that boosts 1003 completion.",
@@ -71,7 +71,7 @@ const tabs = [
   {
     id: "marketing",
     label: "Communication Suite",
-    color: "#006C5D",
+    color: "#AE3A82",
     // color: "#FF6B6B",
     heading: "Communication Suite",
     title: "Engage borrowers & partners wherever they are - instantly.",
@@ -100,7 +100,7 @@ const tabs = [
   {
     id: "it-ops",
     label: "Workflow Automation",
-    color: "#006C5D",
+    color: "#7B69E5",
     // color: "#9D7BFF",
     heading: "Workflow Automation",
     title: "Visual automation builder for every part of the loan lifecycle.",
@@ -129,7 +129,7 @@ const tabs = [
   {
     id: "product-engineering",
     label: "AI Agent Workforce",
-    color: "#006C5D",
+    color: "#1B4244",
     // color: "#00A65A",
     heading: "AI Agent Workforce",
     title: "Your AI agent reviews, prioritizes, and executes your workflow.",
@@ -158,7 +158,7 @@ const tabs = [
   {
     id: "leadership",
     label: "Partner & Realtor Portal",
-    color: "#006C5D",
+    color: "#3E4FB4",
     // color: "#FF9F40",
     heading: "Partner & Realtor Portal",
     title: "Give your partners real-time visibility on shared clients.",
