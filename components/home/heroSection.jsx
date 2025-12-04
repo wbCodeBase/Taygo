@@ -99,9 +99,9 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 + index * 0.1 }}
-                className="flex items-center gap-3 bg-white z-10 px-3 py-2 rounded-sm shadow-md border border-gray-200"
+                className="flex items-center gap-3 bg-white z-10 px-3 py-2 rounded-xs shadow-md border border-gray-200"
               >
-                {/* <div className={`w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-700 ${feature.gradient} rounded-sm flex items-center justify-center`}>
+                {/* <div className={`w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-700 ${feature.gradient} rounded-xs flex items-center justify-center`}>
                   <feature.icon className="w-4 h-4 text-white" />
                 </div> */}
                 <span className="text-md text-gray-700" style={{ fontWeight: 500 }}>{feature.text}</span>
@@ -126,7 +126,7 @@ export function HeroSection() {
             transition={{ delay: 0.8 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#0D9488] hover:bg-[#0c8077] text-white px-8 py-4 cursor-pointer rounded-sm transition-all shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 inline-flex items-center gap-2 my-4"
+            className="bg-[#0D9488] hover:bg-[#0c8077] text-white px-8 py-4 cursor-pointer rounded-xs transition-all shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 inline-flex items-center gap-2 my-4"
             style={{ fontWeight: 600 }}
           >
             View Demo

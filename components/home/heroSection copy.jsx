@@ -75,7 +75,7 @@ export function HeroSection() {
             </div> */}
 
             {/* <div className="flex mt-8 flex-col sm:flex-row items-center gap-4">
-              <button className="group relative cursor-pointer px-8 py-3 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-sm shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
+              <button className="group relative cursor-pointer px-8 py-3 bg-[#6161FF] hover:bg-[#5252E8] text-white font-semibold rounded-xs shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
                 <span className="flex items-center gap-2 text-lg">
                   Talk to Lisa
                   <svg

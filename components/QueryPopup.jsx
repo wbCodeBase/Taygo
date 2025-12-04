@@ -111,7 +111,7 @@ export function QueryPopup({ isOpen, onClose }) {
         data-testid="modal-query-popup"
       >
         <div
-          className="relative w-full max-w-6xl max-h-[90vh] flex flex-col rounded-sm shadow-2xl animate-in zoom-in-95 duration-300 overflow-hidden"
+          className="relative w-full max-w-6xl max-h-[90vh] flex flex-col rounded-xs shadow-2xl animate-in zoom-in-95 duration-300 overflow-hidden"
           style={{ backgroundColor: modalBgColor }}
           onClick={(e) => e.stopPropagation()}
         >
@@ -131,7 +131,7 @@ export function QueryPopup({ isOpen, onClose }) {
                 Your Intelligent Mortgage Assistant
               </h2>
               <div
-                className={`relative bg-white rounded-sm shadow-lg border transition-all duration-500 ${currentData ? currentData.borderColor : "border-gray-300"
+                className={`relative bg-white rounded-xs shadow-lg border transition-all duration-500 ${currentData ? currentData.borderColor : "border-gray-300"
                   }`}
               >
                 <div className="flex items-center gap-3 px-5 py-3.5">
@@ -152,7 +152,7 @@ export function QueryPopup({ isOpen, onClose }) {
                 <div className="flex flex-wrap gap-2">
                   <button
                     onClick={() => setSearchQuery("How can i create workflow")}
-                    className={`text-xs px-3 py-1.5 rounded-sm transition-colors ${isDark
+                    className={`text-xs px-3 py-1.5 rounded-xs transition-colors ${isDark
                       ? "bg-white/10 hover:bg-white/20 text-white/90"
                       : "bg-gray-100 hover:bg-gray-200 text-gray-700"
                       }`}
@@ -162,7 +162,7 @@ export function QueryPopup({ isOpen, onClose }) {
                   </button>
                   <button
                     onClick={() => setSearchQuery("Show history of any lead")}
-                    className={`text-xs px-3 py-1.5 rounded-sm transition-colors ${isDark
+                    className={`text-xs px-3 py-1.5 rounded-xs transition-colors ${isDark
                       ? "bg-white/10 hover:bg-white/20 text-white/90"
                       : "bg-gray-100 hover:bg-gray-200 text-gray-700"
                       }`}
@@ -172,7 +172,7 @@ export function QueryPopup({ isOpen, onClose }) {
                   </button>
                   <button
                     onClick={() => setSearchQuery("How lead enrichment works")}
-                    className={`text-xs px-3 py-1.5 rounded-sm transition-colors ${isDark
+                    className={`text-xs px-3 py-1.5 rounded-xs transition-colors ${isDark
                       ? "bg-white/10 hover:bg-white/20 text-white/90"
                       : "bg-gray-100 hover:bg-gray-200 text-gray-700"
                       }`}
@@ -213,12 +213,12 @@ export function QueryPopup({ isOpen, onClose }) {
               <div key={currentData.id} className="md:pt-14 md:pb-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <div className="max-w-5xl mx-auto">
                   <div className="relative w-full">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-full bg-white/20 rounded-sm shadow-sm -translate-y-9 pointer-events-none z-0" />
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[87%] h-full bg-white/35 rounded-sm shadow-md -translate-y-6 pointer-events-none z-[1]" />
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[93%] h-full bg-white/50 rounded-sm shadow-lg -translate-y-3 pointer-events-none z-[2]" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-full bg-white/20 rounded-xs shadow-sm -translate-y-9 pointer-events-none z-0" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[87%] h-full bg-white/35 rounded-xs shadow-md -translate-y-6 pointer-events-none z-[1]" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[93%] h-full bg-white/50 rounded-xs shadow-lg -translate-y-3 pointer-events-none z-[2]" />
 
                     <div
-                      className="relative rounded-sm overflow-hidden shadow-2xl bg-white w-full z-[3]"
+                      className="relative rounded-xs overflow-hidden shadow-2xl bg-white w-full z-[3]"
                       data-testid={`showcase-image-${currentData.id}`}
                     >
                       {imageLoading && !imageError && (

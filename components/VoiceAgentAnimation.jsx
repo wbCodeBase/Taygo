@@ -130,7 +130,7 @@ export default function VoiceAgentAnimation({ isActive = true }) {
             {leftWaveData.map((bar, idx) => (
               <motion.div
                 key={`wave-${idx}`}
-                className="w-1 bg-blue-400 rounded-sm"
+                className="w-1 bg-blue-400 rounded-xs"
                 initial={{ height: 3 }}
                 animate={{ height: bar.height }}
                 transition={{
@@ -181,7 +181,7 @@ export default function VoiceAgentAnimation({ isActive = true }) {
         </div>
 
         {/* Conversation Messages */}
-        <div className="overflow-hidden rounded-lg bg-gray-50 p-3 max-h-60">
+        <div className="overflow-hidden rounded-md bg-gray-50 p-3 max-h-60">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentTranscriptIndex}
@@ -194,7 +194,7 @@ export default function VoiceAgentAnimation({ isActive = true }) {
               {/* Previous message for context */}
               {currentTranscriptIndex > 0 && (
                 <div className={`flex ${conversationData[currentTranscriptIndex - 1].speaker === "Sarah" ? "justify-start" : "justify-end"}`}>
-                  <div className={`px-3 py-2 rounded-lg max-w-[80%] text-sm ${conversationData[currentTranscriptIndex - 1].speaker === "Sarah"
+                  <div className={`px-3 py-2 rounded-md max-w-[80%] text-sm ${conversationData[currentTranscriptIndex - 1].speaker === "Sarah"
                       ? "bg-blue-100 text-blue-800"
                       : "bg-gray-200 text-gray-800"
                     }`}>
@@ -205,7 +205,7 @@ export default function VoiceAgentAnimation({ isActive = true }) {
 
               {/* Current message */}
               <div className={`flex ${conversationData[currentTranscriptIndex].speaker === "Sarah" ? "justify-start" : "justify-end"}`}>
-                <div className={`px-3 py-2 rounded-lg max-w-[80%] text-sm ${conversationData[currentTranscriptIndex].speaker === "Sarah"
+                <div className={`px-3 py-2 rounded-md max-w-[80%] text-sm ${conversationData[currentTranscriptIndex].speaker === "Sarah"
                     ? "bg-blue-100 text-blue-800"
                     : "bg-gray-200 text-gray-800"
                   }`}>

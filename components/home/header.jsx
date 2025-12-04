@@ -6,7 +6,7 @@ import Image from "next/image"
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px1 py-4">
+      <div className="max-w-7xl mx-auto px-3 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
@@ -26,7 +26,7 @@ export function Header() {
           </nav>
 
           {/* CTA Button */}
-          <button className="bg-[#0D9488] hover:bg-[#0c8077] text-white px-6 py-2.5 rounded-sm transition-all hover:shadow-lg hover:shadow-teal-500/30 flex items-center gap-2">
+          <button className="bg-[#0D9488] hover:bg-[#0c8077] cursor-pointer text-white px-6 py-2.5 rounded-xs transition-all hover:shadow-lg hover:shadow-teal-500/30 flex items-center gap-2">
             Get Started
             <ArrowRight className="w-4 h-4" />
           </button>

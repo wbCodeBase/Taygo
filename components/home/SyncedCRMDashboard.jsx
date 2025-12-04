@@ -107,7 +107,7 @@ export function SyncedCRMDashboard() {
 
 
   return (
-    <div className="relative bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
+    <div className="relative bg-white rounded-xs shadow-2xl border border-gray-200 overflow-hidden">
       <div className="grid grid-cols-12 h-[600px]">
         {/* Sidebar */}
         <motion.div
@@ -123,7 +123,7 @@ export function SyncedCRMDashboard() {
           <nav className="space-y-2 flex-1">
             <button
               onClick={() => setCurrentView('analytics')}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${currentView === 'analytics' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors ${currentView === 'analytics' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
                 }`}
             >
               <BarChart3 className="w-4 h-4" />
@@ -131,7 +131,7 @@ export function SyncedCRMDashboard() {
             </button>
             <button
               onClick={() => setCurrentView('leads')}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${currentView === 'leads' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors ${currentView === 'leads' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
                 }`}
             >
               <Users className="w-4 h-4" />
@@ -139,7 +139,7 @@ export function SyncedCRMDashboard() {
             </button>
             <button
               onClick={() => setCurrentView('calling')}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${currentView === 'calling' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors ${currentView === 'calling' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
                 }`}
             >
               <Phone className="w-4 h-4" />
@@ -147,7 +147,7 @@ export function SyncedCRMDashboard() {
             </button>
             <button
               onClick={() => setCurrentView('email')}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${currentView === 'email' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors ${currentView === 'email' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
                 }`}
             >
               <Mail className="w-4 h-4" />
@@ -185,7 +185,7 @@ export function SyncedCRMDashboard() {
                     className="bg-white rounded-xl p-6 shadow-sm border border-gray-200"
                   >
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-blue-100 rounded-xs flex items-center justify-center">
                         <Users className="w-6 h-6 text-blue-600" />
                       </div>
                       <div>
@@ -206,7 +206,7 @@ export function SyncedCRMDashboard() {
                     className="bg-white rounded-xl p-6 shadow-sm border border-gray-200"
                   >
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-12 h-12 bg-teal/10 rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-teal/10 rounded-xs flex items-center justify-center">
                         <PhoneCall className="w-6 h-6 text-teal" />
                       </div>
                       <div>
@@ -227,7 +227,7 @@ export function SyncedCRMDashboard() {
                     className="bg-white rounded-xl p-6 shadow-sm border border-gray-200"
                   >
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-purple-100 rounded-xs flex items-center justify-center">
                         <DollarSign className="w-6 h-6 text-purple-600" />
                       </div>
                       <div>
@@ -257,9 +257,9 @@ export function SyncedCRMDashboard() {
                         initial={{ x: -20, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: 0.4 + index * 0.1 }}
-                        className="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                        className="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-xs transition-colors"
                       >
-                        <div className={`w-10 h-10 ${activity.color} rounded-lg flex items-center justify-center`}>
+                        <div className={`w-10 h-10 ${activity.color} rounded-xs flex items-center justify-center`}>
                           <activity.icon className="w-5 h-5" />
                         </div>
                         <div className="flex-1">
@@ -296,7 +296,7 @@ export function SyncedCRMDashboard() {
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-white rounded-sm p-4 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+                      className="bg-white rounded-xs p-4 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3">
@@ -345,7 +345,7 @@ export function SyncedCRMDashboard() {
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-white rounded-sm p-4 shadow-sm border border-gray-200"
+                      className="bg-white rounded-xs p-4 shadow-sm border border-gray-200"
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
@@ -422,7 +422,7 @@ export function SyncedCRMDashboard() {
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-white rounded-sm p-4 shadow-sm border border-gray-200"
+                      className="bg-white rounded-xs p-4 shadow-sm border border-gray-200"
                     >
                       <div className="flex items-start gap-4">
                         <div className={`w-12 h-12 rounded-full flex items-center justify-center ${sendingEmails.includes(lead.id)
@@ -469,7 +469,7 @@ export function SyncedCRMDashboard() {
                             )}
                           </div>
                           <p className="text-xs text-gray-500 mb-2">{lead.email}</p>
-                          <div className="bg-gray-50 rounded-lg p-3 text-xs">
+                          <div className="bg-gray-50 rounded-xs p-3 text-xs">
                             <p className="text-gray-700" style={{ fontWeight: 600 }}>Subject: Pre-Approval Application for {lead.loanAmount}</p>
                             <p className="text-gray-600 mt-1">Hi {lead.name.split(' ')[0]}, Great news! You're pre-qualified for a mortgage...</p>
                           </div>
@@ -516,7 +516,7 @@ export function SyncedCRMDashboard() {
                       <Image src="/images/lisa.png" alt="Lisa Icon" width={23} height={23} className="rounded-full" />
                     </div>
                   )}
-                  <div className={`rounded-lg p-3 max-w-[200px] ${message.sender === 'lisa'
+                  <div className={`rounded-xs p-3 max-w-[200px] ${message.sender === 'lisa'
                     ? 'bg-white border border-gray-200'
                     : 'bg-gray-200'
                     }`}>
@@ -544,7 +544,7 @@ export function SyncedCRMDashboard() {
 
                   <Image src="/images/lisa.png" alt="Lisa Icon" width={23} height={23} className="rounded-full" />
                 </div>
-                <div className="bg-white rounded-lg p-2 border border-gray-200">
+                <div className="bg-white rounded-xs p-2 border border-gray-200">
                   <div className="flex gap-1">
                     <motion.div
                       className="w-1.5 h-1.5 bg-[#0D9488] rounded-full"
@@ -572,9 +572,9 @@ export function SyncedCRMDashboard() {
               <input
                 type="text"
                 placeholder="Ask Lisa..."
-                className="flex-1 px-3 py-2 text-xs bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D9488]"
+                className="flex-1 px-3 py-2 text-xs bg-gray-50 border border-gray-200 rounded-xs focus:outline-none focus:ring-2 focus:ring-[#0D9488]"
               />
-              <button className="bg-[#0D9488] text-white p-2 rounded-lg hover:bg-[#0c8077] transition-colors">
+              <button className="bg-[#0D9488] text-white p-2 rounded-xs hover:bg-[#0c8077] transition-colors">
                 <Send className="w-4 h-4" />
               </button>
             </div>

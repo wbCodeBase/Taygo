@@ -82,7 +82,7 @@ export default function IntegrationsSection() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 sm:px-6 cursor-pointer py-2.5 rounded-sm font-medium text-sm tracking-wide transition-all duration-300 ease-out ${activeCategory === category
+              className={`px-4 sm:px-6 cursor-pointer py-2.5 rounded-xs font-medium text-sm tracking-wide transition-all duration-300 ease-out ${activeCategory === category
                   ? "bg-slate-900 text-white shadow-lg hover:shadow-xl hover:bg-slate-800"
                   : "bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:text-slate-900 hover:bg-slate-50"
                 }`}
@@ -102,9 +102,9 @@ export default function IntegrationsSection() {
               style={{
                 animationDelay: isTransitioning ? "0ms" : `${index * 50}ms`,
               }}
-              className="group animate-in fade-in slide-in-from-bottom-4 flex flex-col items-center justify-center p-5 rounded-sm border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:border-slate-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+              className="group animate-in fade-in slide-in-from-bottom-4 flex flex-col items-center justify-center p-5 rounded-xs border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:border-slate-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
             >
-              <div className="w-18 h-18 sm:w-24 sm:h-24 rounded-sm bg-linear-to-br from-slate-100 to-slate-50 group-hover:from-slate-200 group-hover:to-slate-100 transition-all duration-300 flex items-center justify-center mb-5 shadow-sm group-hover:shadow-md">
+              <div className="w-18 h-18 sm:w-24 sm:h-24 rounded-xs bg-linear-to-br from-slate-100 to-slate-50 group-hover:from-slate-200 group-hover:to-slate-100 transition-all duration-300 flex items-center justify-center mb-5 shadow-sm group-hover:shadow-md">
                 <img
                   src={`${tech.logoPath}?height=64&width=64`}
                   alt={tech.name}

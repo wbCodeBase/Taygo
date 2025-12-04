@@ -48,7 +48,7 @@ function StatCard({ value, description, color, delay }) {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: delay }}
-            className="relative rounded-2xl p-6 text-white overflow-hidden"
+            className="relative rounded-xl p-6 text-white overflow-hidden"
             style={{
                 backgroundColor: color,
                 boxShadow: `0 10px 40px -10px ${color}80, 0 4px 20px -4px rgba(0, 0, 0, 0.2)`,
@@ -121,7 +121,7 @@ function StatBar({ value, description, color, heightPercent, delay }) {
                 initial={{ height: 0 }}
                 animate={isInView ? { height: `${heightPercent}px` } : { height: 0 }}
                 transition={{ duration: 0.8, delay: delay + 0.1, ease: "easeOut" }}
-                className="relative w-28 md:w-32 lg:w-36 rounded-t-lg text-white flex flex-col justify-center items-center p-4 md:p-5 text-center overflow-hidden"
+                className="relative w-28 md:w-32 lg:w-36 rounded-t-xs text-white flex flex-col justify-center items-center p-4 md:p-5 text-center overflow-hidden"
                 style={{
                     backgroundColor: color,
                     boxShadow: `

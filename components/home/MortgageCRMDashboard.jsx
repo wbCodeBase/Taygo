@@ -219,7 +219,7 @@ export function MortgageCRMDashboard() {
               <div className="w-6 h-6 bg-gradient-to-br from-[#0D9488] to-[#14B8A6] rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-white text-xs" style={{ fontWeight: 600 }}>L</span>
               </div>
-              <div className="bg-white rounded-lg rounded-tl-sm p-3 flex-1 shadow-sm border border-gray-200">
+              <div className="bg-white rounded-md rounded-tl-sm p-3 flex-1 shadow-sm border border-gray-200">
                 <p className="text-xs text-gray-900">
                   I've qualified Sarah Mitchell and John Davidson. Both ready for pre-approval. Should I send the applications?
                 </p>
@@ -232,7 +232,7 @@ export function MortgageCRMDashboard() {
               transition={{ delay: 1.4 }}
               className="flex gap-2 justify-end"
             >
-              <div className="bg-gray-200 rounded-lg rounded-tr-sm p-3 max-w-[200px] shadow-sm">
+              <div className="bg-gray-200 rounded-md rounded-tr-sm p-3 max-w-[200px] shadow-sm">
                 <p className="text-xs text-gray-900">
                   Yes, and schedule calls
                 </p>
@@ -248,7 +248,7 @@ export function MortgageCRMDashboard() {
               <div className="w-6 h-6 bg-gradient-to-br from-[#0D9488] to-[#14B8A6] rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-white text-xs" style={{ fontWeight: 600 }}>L</span>
               </div>
-              <div className="bg-white rounded-lg rounded-tl-sm p-3 flex-1 shadow-sm border border-gray-200">
+              <div className="bg-white rounded-md rounded-tl-sm p-3 flex-1 shadow-sm border border-gray-200">
                 <p className="text-xs text-gray-900 mb-2">Done! ✓</p>
                 <div className="bg-teal/5 rounded p-2 text-xs space-y-1 border border-teal/20">
                   <p className="text-gray-700">• Applications sent</p>
@@ -266,7 +266,7 @@ export function MortgageCRMDashboard() {
               <div className="w-6 h-6 bg-gradient-to-br from-[#0D9488] to-[#14B8A6] rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-white text-xs" style={{ fontWeight: 600 }}>L</span>
               </div>
-              <div className="bg-white rounded-lg rounded-tl-sm p-2 shadow-sm border border-gray-200">
+              <div className="bg-white rounded-md rounded-tl-sm p-2 shadow-sm border border-gray-200">
                 <div className="flex gap-1">
                   <motion.div
                     className="w-1.5 h-1.5 bg-[#0D9488] rounded-full"
@@ -296,9 +296,9 @@ export function MortgageCRMDashboard() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Ask Lisa..."
-                className="flex-1 px-3 py-2 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent"
+                className="flex-1 px-3 py-2 text-sm bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0D9488] focus:border-transparent"
               />
-              <button className="bg-[#0D9488] text-white p-2 rounded-lg hover:bg-[#0c8077] transition-colors">
+              <button className="bg-[#0D9488] text-white p-2 rounded-md hover:bg-[#0c8077] transition-colors">
                 <Send className="w-4 h-4" />
               </button>
             </div>

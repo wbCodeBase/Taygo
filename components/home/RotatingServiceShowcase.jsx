@@ -171,7 +171,7 @@ const FRAMES = [
 //   };
 
 //   return (
-//     <div className="w-full h-full flex flex-col bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+//     <div className="w-full h-full flex flex-col bg-white rounded-md shadow-sm border border-gray-200 overflow-hidden">
 //       {/* Messages area - No fixed height, just flex-1 */}
 //       <div className="flex-1 relative overflow-hidden bg-linear-to-br from-gray-50 to-white">
 //         {/* Gradient fade at top */}
@@ -203,7 +203,7 @@ const FRAMES = [
 //                       >
 //                         <BrainCircuit className="h-4 w-4" />
 //                       </motion.div>
-//                       <div className="bg-cyan-50 rounded-lg text-sm text-left p-3 max-w-[75%]">
+//                       <div className="bg-cyan-50 rounded-md text-sm text-left p-3 max-w-[75%]">
 //                         <p className="text-gray-800">{message.content}</p>
 //                         {message.list && (
 //                           <ul className="mt-2 space-y-1 pl-4 list-disc text-gray-700 text-xs">
@@ -222,7 +222,7 @@ const FRAMES = [
 //                   {/* User Message */}
 //                   {message.type === 'user' && (
 //                     <div className="flex items-start justify-end mb-3">
-//                       <div className="bg-gray-100 text-sm text-left rounded-lg p-3 max-w-[75%] mr-2">
+//                       <div className="bg-gray-100 text-sm text-left rounded-md p-3 max-w-[75%] mr-2">
 //                         <p className="text-gray-800">{message.content}</p>
 //                       </div>
 //                       <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center shrink-0">
@@ -241,7 +241,7 @@ const FRAMES = [
 //                       >
 //                         <BrainCircuit className="h-4 w-4" />
 //                       </motion.div>
-//                       <div className="bg-cyan-50 rounded-lg py-2 px-4 flex items-center">
+//                       <div className="bg-cyan-50 rounded-md py-2 px-4 flex items-center">
 //                         <div className="flex space-x-1">
 //                           {[0, 1, 2].map((dot) => (
 //                             <motion.div
@@ -276,7 +276,7 @@ const FRAMES = [
 //         animate={{ opacity: 1 }}
 //         transition={{ delay: 0.2 }}
 //       >
-//         <div className="flex items-center bg-white rounded-lg border border-gray-200 shadow-sm">
+//         <div className="flex items-center bg-white rounded-md border border-gray-200 shadow-sm">
 //           <div className="flex-1 pl-4 pr-2 py-2.5">
 //             <motion.div
 //               className="flex items-center text-sm"
@@ -304,7 +304,7 @@ const FRAMES = [
 //             </motion.button>
 
 //             <motion.button
-//               className="rounded-lg p-2 bg-cyan-600 text-white flex items-center justify-center"
+//               className="rounded-md p-2 bg-cyan-600 text-white flex items-center justify-center"
 //               whileHover={{ scale: 1.05, backgroundColor: "#0891b2" }}
 //               whileTap={{ scale: 0.95 }}
 //               animate={{ 
@@ -425,7 +425,7 @@ function TypingAnimation() {
                   <Image src="/images/lisa.png" alt="Lisa Icon" width={29} height={29} className="rounded-full"/>
                 </div>
 
-                <div className="bg-[#4777C5] text-white text-left p-2 rounded-md text-sm shadow-sm max-w-[85%]">
+                <div className="bg-[#4777C5] text-white text-left p-2 rounded-xs text-sm shadow-sm max-w-[85%]">
                   {m.text}
                 </div>
               </div>
@@ -433,7 +433,7 @@ function TypingAnimation() {
 
             {m.from === "user" && (
               <div className="flex items-start justify-end">
-                <div className="bg-[#D073AD] text-white p-2 rounded-md text-sm shadow-sm max-w-[90%]">
+                <div className="bg-[#D073AD] text-white p-2 rounded-xs text-sm shadow-sm max-w-[90%]">
                   {m.text}
                 </div>
 
@@ -454,7 +454,7 @@ function TypingAnimation() {
                   <Image src="/images/lisa.png" alt="Lisa Icon" width={29} height={29} className="rounded-full" />
             </div>
 
-            <div className="bg-[#4777C5] p-3 rounded-md flex space-x-1 shadow-sm">
+            <div className="bg-[#4777C5] p-3 rounded-xs flex space-x-1 shadow-sm">
               {[0, 1, 2].map((d) => (
                 <motion.span
                   key={d}
@@ -476,7 +476,7 @@ function TypingAnimation() {
       
         <div className="absolute bottom-0 left-0 right-0 px-4 py-3 flex items-center space-x-3">
 
-          <div className="flex w-full bg-white rounded-md px-4 py-2 text-sm text-gray-700">
+          <div className="flex w-full bg-white rounded-xs px-4 py-2 text-sm text-gray-700">
             {userTypingText || (
               <span className="text-gray-400">Typing…</span>
             )}
@@ -532,7 +532,7 @@ export default function RotatingServiceShowcase() {
                 <div className="mt-4 justify-center flex">
                   <Link
                     href={activeService.button.link}
-                    className="inline-block px-6 py-3 bg[#006C5D] bg-[#6161FF] hover:bg-[#5252E8] text-white font-medium rounded-sm hover:bg[#005047] transition-colors duration-300"
+                    className="inline-block px-6 py-3 bg[#006C5D] bg-[#6161FF] hover:bg-[#5252E8] text-white font-medium rounded-xs hover:bg[#005047] transition-colors duration-300"
                   >
                     {activeService.button.text}
                   </Link>
@@ -659,8 +659,8 @@ export default function RotatingServiceShowcase() {
 //   }, [chatStep, isTyping]);
 
 //   return (
-//     <div className="w-full h-full bg-linear-to-br from-gray-50 to-gray-100 rounded-md flex items-center justify-center">
-//       <div className="w-full h-full mx-auto bg-white rounded-md shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+//     <div className="w-full h-full bg-linear-to-br from-gray-50 to-gray-100 rounded-xs flex items-center justify-center">
+//       <div className="w-full h-full mx-auto bg-white rounded-xs shadow-sm border border-gray-200 overflow-hidden flex flex-col">
 //         {/* Chat Header */}
 //         {/* <div className="bg-linear-to-r from-cyan-500 to-cyan-600 p-3 sm:p-4 text-white flex items-center justify-between">
 //           <div className="flex items-center">
@@ -731,7 +731,7 @@ export default function RotatingServiceShowcase() {
 //                 >
 //                   <BrainCircuit className="h-4 w-4" />
 //                 </motion.div>
-//                 <div className="bg-cyan-50 rounded-md text-sm text-left p-2 max-w-[85%]">
+//                 <div className="bg-cyan-50 rounded-xs text-sm text-left p-2 max-w-[85%]">
 //                   <p className="text-gray-800">👋 Hi there! I'm WeOne's AI Chat Assistant. How can I help you today?</p>
 //                 </div>
 //               </motion.div>
@@ -745,7 +745,7 @@ export default function RotatingServiceShowcase() {
 //                   animate={{ opacity: 1, y: 0 }}
 //                   transition={{ duration: 0.3 }}
 //                 >
-//                   <div className="bg-gray-100 text-sm text-left rounded-md p-2 max-w-[85%] mr-2">
+//                   <div className="bg-gray-100 text-sm text-left rounded-xs p-2 max-w-[85%] mr-2">
 //                     <p className="text-gray-800">I need help with content ideas for my website.</p>
 //                   </div>
 //                   <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center shrink-0">
@@ -769,7 +769,7 @@ export default function RotatingServiceShowcase() {
 //                   >
 //                     <BrainCircuit className="h-4 w-4" />
 //                   </motion.div>
-//                   <div className="bg-cyan-50 rounded-lg py-3 px-4 flex items-center">
+//                   <div className="bg-cyan-50 rounded-md py-3 px-4 flex items-center">
 //                     <motion.div
 //                       className="flex space-x-1"
 //                       initial={{ opacity: 0 }}
@@ -811,7 +811,7 @@ export default function RotatingServiceShowcase() {
 //                   >
 //                     <BrainCircuit className="h-4 w-4" />
 //                   </motion.div>
-//                   <div className="bg-cyan-50 rounded-lg text-left text-sm p-2 max-w-[85%]">
+//                   <div className="bg-cyan-50 rounded-md text-left text-sm p-2 max-w-[85%]">
 //                     <p className="text-gray-800">I'd be happy to help with content ideas for your website!</p>
 
 //                     {/* <ul className="mt-2 space-y-2 pl-5 list-disc text-gray-700">
@@ -852,7 +852,7 @@ export default function RotatingServiceShowcase() {
 
 //         {/* Chat input */}
 //         <div className="p-2 border-t border-teal-700 bg-gray-50">
-//           <div className="flex items-center bg-white rounded-sm border border-gray-200 pr-1 sm:pr-2">
+//           <div className="flex items-center bg-white rounded-xs border border-gray-200 pr-1 sm:pr-2">
 //             <div className="flex-1 pl-3 sm:pl-4 pr-1 sm:pr-2 py-3">
 //               <motion.div
 //                 className="flex items-center text-xs sm:text-sm"
@@ -881,7 +881,7 @@ export default function RotatingServiceShowcase() {
 //               </motion.button>
 
 //               <motion.button
-//                 className={`rounded-md p-2 ${chatStep === 1 && inputText ? 'bg-teal-600 text-white' : 'bg-teal-700 text-white'} flex items-center justify-center`}
+//                 className={`rounded-xs p-2 ${chatStep === 1 && inputText ? 'bg-teal-600 text-white' : 'bg-teal-700 text-white'} flex items-center justify-center`}
 //                 whileHover={{ scale: 1.05 }}
 //                 whileTap={{ scale: 0.95 }}
 //                 animate={{ scale: chatStep === 1 && inputText.length > 10 ? [1, 1.05, 1] : 1 }}
@@ -966,7 +966,7 @@ export default function RotatingServiceShowcase() {
 
 //         <motion.div
 //           key={activeService.id}
-//           className={`light-card p-3 sm:p-6 relative overflow-hidden flex flex-col sm:flex-row gap-6 sm:gap-12 rounded-lg shadow-lg border border-gray-200 transition-all duration-500 ease-in-out ${activeService.bgLight} ${activeService.textColor}`}
+//           className={`light-card p-3 sm:p-6 relative overflow-hidden flex flex-col sm:flex-row gap-6 sm:gap-12 rounded-md shadow-lg border border-gray-200 transition-all duration-500 ease-in-out ${activeService.bgLight} ${activeService.textColor}`}
 //           initial={{ opacity: 0, y: 20 }}
 //           animate={{ opacity: 1, y: 0 }}
 //           exit={{ opacity: 0, y: -20 }}
@@ -999,12 +999,12 @@ export default function RotatingServiceShowcase() {
 //               {activeService.features.map((feature, idx) => (
 //                 <motion.div
 //                   key={idx}
-//                   className={`p-3 rounded-lg ${activeService.bgLight} border ${activeService.borderColor} flex flex-col items-center text-center`}
+//                   className={`p-3 rounded-md ${activeService.bgLight} border ${activeService.borderColor} flex flex-col items-center text-center`}
 //                   initial={{ opacity: 0, y: 10 }}
 //                   animate={{ opacity: 1, y: 0 }}
 //                   transition={{ duration: 0.3, delay: 0.2 + (idx * 0.1) }}
 //                 >
-//                   <div className={`w-8 h-8 rounded-lg bg-white flex items-center justify-center mb-2 ${activeService.textColor}`}>
+//                   <div className={`w-8 h-8 rounded-md bg-white flex items-center justify-center mb-2 ${activeService.textColor}`}>
 //                     {feature.icon}
 //                   </div>
 //                   <div className="font-medium text-gray-900 text-sm">{feature.title}</div>

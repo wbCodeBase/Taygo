@@ -2,7 +2,7 @@ export function CtaSection() {
   return (
     <section className="py-16 bg-[#C4E5E633] to-white">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="relative bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-700 rounded-sm p-12 md:p-16 overflow-hidden shadow-2xl">
+        <div className="relative bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-700 rounded-xs p-12 md:p-16 overflow-hidden shadow-2xl">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl" />
             <div className="absolute bottom-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl" />
@@ -27,7 +27,7 @@ export function CtaSection() {
               experience.
             </p>
 
-            <button className="group cursor-pointer inline-flex items-center gap-2 px-8 py-4 bg-white text-teal-700 font-semibold rounded-sm hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+            <button className="group cursor-pointer inline-flex items-center gap-2 px-8 py-4 bg-white text-teal-700 font-semibold rounded-xs hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
               Read more
               <svg
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform"

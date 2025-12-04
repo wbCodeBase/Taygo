@@ -243,7 +243,7 @@ export function TabbedShowcase() {
             <button
               key={tab.id}
               onClick={() => handleTabClick(index)}
-              className={`px-2 py-3 rounded-sm text-sm font-medium transition-all duration-500 ${activeTab === index
+              className={`px-2 py-3 rounded-xs text-sm font-medium transition-all duration-500 ${activeTab === index
                 ? "text-white shadow-lg"
                 : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
                 }`}
@@ -261,7 +261,7 @@ export function TabbedShowcase() {
           {/* Large Card - 2/3 width with content on left, mockup on right */}
           <div className="lg:col-span-2">
             <div
-              className="rounded-sm md:pl-10 pl-6 py-14 text-white transition-all duration-700 h-full relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center"
+              className="rounded-xs md:pl-10 pl-6 py-14 text-white transition-all duration-700 h-full relative overflow-hidden flex flex-col lg:flex-row gap-8 items-center"
               style={{
                 backgroundColor: currentTab.color,
               }}
@@ -281,7 +281,7 @@ export function TabbedShowcase() {
                 <p className="text-sm mb-6 text-white/90 text-pretty leading-relaxed">{currentTab.description}</p>
 
                 {/* Button */}
-                <button className="px-7 py-3 cursor-pointer bg-white text-gray-900 rounded-sm font-medium hover:scale-105 transition-transform duration-300 shadow-lg">
+                <button className="px-7 py-3 cursor-pointer bg-white text-gray-900 rounded-xs font-medium hover:scale-105 transition-transform duration-300 shadow-lg">
                   Get Started →
                 </button>
               </div>
@@ -301,7 +301,7 @@ export function TabbedShowcase() {
           <div className="flex flex-col gap-6 h-full">
 
             {/* Stat Card */}
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-sm p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justifycenter">
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xs p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justifycenter">
               {/* <div className="mb-4">
                 <div className="text-sm font-bold text-gray-800 uppercase tracking-wide">
                   {currentTab.testimonial1.company}
@@ -325,7 +325,7 @@ export function TabbedShowcase() {
             </div>
 
             {/* Quote Card */}
-            {/* <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-sm p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justify-between">
+            {/* <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xs p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justify-between">
               <p className="text-gray-700 mb-6 text-pretty leading-relaxed">{currentTab.testimonial2.quote}</p>
               <div className="flex items-center gap-3">
                 <Image

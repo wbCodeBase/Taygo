@@ -8,7 +8,7 @@ export default function LisaCta() {
       <section className="w-full bg-[#C4E5E633] py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Lisa AI Assistant CTA */}
-          <div className="relative max-w-6xl mx-auto bg-linear-to-r from-[#006C5D] via-[#004e43] to-[#002e28] rounded-sm overflow-visible shadow-2xl">
+          <div className="relative max-w-6xl mx-auto bg-linear-to-r from-[#006C5D] via-[#004e43] to-[#002e28] rounded-xs overflow-visible shadow-2xl">
             <div className="grid md:grid-cols-3 gap-6 md:gap-12 items-end p-8 md:p-12">
 
               {/* Lisa Image - extends above container */}
@@ -41,7 +41,7 @@ export default function LisaCta() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="bg-white text-[#006C5D] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+                  <button className="bg-white text-[#006C5D] px-6 py-3 rounded-xs font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
                     Get Started
                     <svg
                       className="w-4 h-4"
@@ -57,7 +57,7 @@ export default function LisaCta() {
                       />
                     </svg>
                   </button>
-                  <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  <button className="border-2 border-white text-white px-6 py-3 rounded-xs font-semibold hover:bg-white/10 transition-colors">
                     Visit our AI Trust Center
                   </button>
                 </div>
@@ -86,7 +86,7 @@ export default function LisaCta() {
                   </p>
                 </div>
 
-                <button className="bg-[#6366F1] text-white px-8 py-3 rounded-sm font-semibold hover:bg-[#5558E3] transition-colors shadow-lg">
+                <button className="bg-[#6366F1] text-white px-8 py-3 rounded-xs font-semibold hover:bg-[#5558E3] transition-colors shadow-lg">
                   Let&apos;s Go!
                 </button>
               </div>

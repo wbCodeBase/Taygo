@@ -46,13 +46,13 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA Button */}
-          {/* <button className="hidden lg:block cursor-pointer bg-white text-teal-600 border-2 border-teal-600 hover:bg-teal-50 font-semibold px-4 xl:px-6 py-2 rounded-lg transition-all text-sm xl:text-base">
+          {/* <button className="hidden lg:block cursor-pointer bg-white text-teal-600 border-2 border-teal-600 hover:bg-teal-50 font-semibold px-4 xl:px-6 py-2 rounded-md transition-all text-sm xl:text-base">
             Get Started
           </button> */}
 
 
 
-          <button className="hidden lg:block relative cursor-pointer bg-gradient-to-r from-teal-600 to-teal-700 text-white font-semibold px-4 xl:px-6 py-2.5 rounded-sm text-sm xl:text-base overflow-hidden group transition-all duration-500 border border-teal-500/20">
+          <button className="hidden lg:block relative cursor-pointer bg-gradient-to-r from-teal-600 to-teal-700 text-white font-semibold px-4 xl:px-6 py-2.5 rounded-xs text-sm xl:text-base overflow-hidden group transition-all duration-500 border border-teal-500/20">
             <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
               <span className="absolute inset-0 bg-gradient-to-br from-transparent via-white/25 to-transparent -translate-x-full -translate-y-full group-hover:translate-x-full group-hover:translate-y-full transition-transform duration-1000 ease-out" style={{ transform: 'rotate(-12deg) scale(1.5)' }}></span>
             </span>
@@ -66,7 +66,7 @@ export function Header() {
 
           <button
             onClick={toggleMenu}
-            className="lg:hidden flex flex-col items-center justify-center w-10 h-10 rounded-sm hover:bg-gray-100 transition-colors relative z-50"
+            className="lg:hidden flex flex-col items-center justify-center w-10 h-10 rounded-xs hover:bg-gray-100 transition-colors relative z-50"
             aria-label="Toggle menu"
           >
             <span
@@ -91,13 +91,13 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className="text-gray-700 hover:text-teal-600 hover:bg-white font-medium py-3 px-4 rounded-lg transition-all"
+                className="text-gray-700 hover:text-teal-600 hover:bg-white font-medium py-3 px-4 rounded-md transition-all"
               >
                 {link.label}
               </Link>
             ))}
             <div className="mt-3 pt-3 border-t border-gray-200">
-              <button className="w-full bg-teal-600 text-white hover:bg-teal-700 font-semibold px-6 py-3 rounded-lg transition-all shadow-lg shadow-teal-600/20">
+              <button className="w-full bg-teal-600 text-white hover:bg-teal-700 font-semibold px-6 py-3 rounded-md transition-all shadow-lg shadow-teal-600/20">
                 Get Started
               </button>
             </div>
@@ -153,7 +153,7 @@ export function Header() {
 //           </nav>
 
 //           {/* CTA Button */}
-//           <button className="bg-white cursor-pointer text-teal-600 border-2 border-teal-600 hover:bg-teal-50 font-semibold px-6 py-2 rounded-lg transition-all">
+//           <button className="bg-white cursor-pointer text-teal-600 border-2 border-teal-600 hover:bg-teal-50 font-semibold px-6 py-2 rounded-md transition-all">
 //             Get Started
 //           </button>
 //         </div>

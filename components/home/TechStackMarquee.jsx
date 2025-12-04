@@ -68,29 +68,29 @@ const toolsAndDbs = [
 export default function TechStackMarquee() {
   return (
     <>
-      <section className='lg:max-w-4xl w-full'>
+      <section className='lg:max-w-5xl w-full'>
         <div className="flex flex-col gap-4 overflow-hidden py-2 text-gray-600">
 
-          <div className='flex justify-between items-center rounded-lg border'>
-            <div className='text-xl text-nowrap font-medium  px-4 py-6 rounded-l-lg bg-[#006C5D] w-54 text-white'>Social Media</div>
+          <div className='flex justify-between items-center rounded-xs border'>
+            <div className='text-xl text-nowrap font-medium  px-4 py-6 rounded-l-xs bg-[#006C5D] w-54 text-white'>Social Media</div>
             <MarqueeRow direction="right" techArr={frontend} />
           </div>
 
 
-          <div className='flex justify-between items-center rounded-lg border'>
-            <div className='text-xl text-nowrap font-medium  px-4 py-6 rounded-l-lg bg-[#006C5D] w-54 text-white'>Point of Sales</div>
+          <div className='flex justify-between items-center rounded-xs border'>
+            <div className='text-xl text-nowrap font-medium  px-4 py-6 rounded-l-xs bg-[#006C5D] w-54 text-white'>Point of Sales</div>
             <MarqueeRow direction="left" techArr={backend} />
           </div>
 
 
-          <div className='flex justify-between items-center rounded-lg border'>
-            <div className='text-xl text-nowrap font-medium  px-4 py-6 border bg-[#006C5D] rounded-l-lg w-54 text-white'>Price Engine</div>
+          <div className='flex justify-between items-center rounded-xs border'>
+            <div className='text-xl text-nowrap font-medium  px-4 py-6 border bg-[#006C5D] rounded-l-xs w-54 text-white'>Price Engine</div>
             <MarqueeRow direction="right" techArr={frontend} />
           </div>
 
 
-          <div className='flex justify-between items-center rounded-lg border'>
-            <div className='text-xl text-nowrap font-medium  px-4 py-6 border bg-[#006C5D] rounded-l-lg w-[15rem] text-white'>Real Estate</div>
+          <div className='flex justify-between items-center rounded-xs border'>
+            <div className='text-xl text-nowrap font-medium  px-4 py-6 border bg-[#006C5D] rounded-l-xs w-[15rem] text-white'>Real Estate</div>
             <MarqueeRow direction="right" techArr={toolsAndDbs} />
           </div>
 
@@ -124,7 +124,7 @@ function MarqueeRow({ direction, techArr }) {
 
 function TechIcon({ name, icon }) {
   return (
-    <div className="flex flex-col items-center bg-gray-50 px-6 rounded-lg justify-center mx-2">
+    <div className="flex flex-col items-center bg-gray-50 px-6 rounded-md justify-center mx-2">
       <div className="relative w-16 h-16 mb2">
         <Image src={icon} alt={`${name} icon`} fill={true} style={{ objectFit: "contain" }} />
       </div>
