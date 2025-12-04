@@ -1,15 +1,15 @@
-import { Lato } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
-// const inter = Inter({
-//   subsets: ["latin"],
-// });
-
-const lato = Lato({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
 });
+
+// const lato = Lato({
+//   subsets: ["latin"],
+//   weight: ["100", "300", "400", "700", "900"],
+// });
 
 
 export const metadata = {
@@ -20,8 +20,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${lato.className} antialiased`}
+      <body className={`${inter.className} antialiased`}
+      // <body className={`${lato.className} antialiased`}
       >
         {children}
 

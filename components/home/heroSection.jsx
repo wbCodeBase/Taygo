@@ -4,10 +4,10 @@ import { SyncedCRMDashboard } from './SyncedCRMDashboard';
 
 export function HeroSection() {
   const features = [
-    { icon: Sparkles, text: 'Mortgage CRM', gradient: 'from-teal to-teal-light' },
-    { icon: TrendingUp, text: 'Lead Management', gradient: 'from-teal to-teal-light' },
-    { icon: Zap, text: 'Auto Follow-ups', gradient: 'from-teal to-teal-light' },
-    { icon: Sparkles, text: 'Document Processing', gradient: 'from-teal to-teal-light' },
+    { icon: Sparkles, text: 'CRM', gradient: 'from-teal to-teal-light' },
+    { icon: TrendingUp, text: 'Loan Origination', gradient: 'from-teal to-teal-light' },
+    { icon: Zap, text: 'Marketing Automation', gradient: 'from-teal to-teal-light' },
+    { icon: Sparkles, text: 'File Management', gradient: 'from-teal to-teal-light' },
   ];
 
   return (
@@ -40,7 +40,10 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-20 md:mt-12">
+      <div className="relative max-w7xl w-full mx-auto px-6 md:px-26 pt-20 pb-20 md:mt-12">
+
+
+
         {/* Top Section - Full Width Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -48,6 +51,11 @@ export function HeroSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-6 max-w-5xl mx-auto"
         >
+
+
+          <div className="absolute top1/4 left-1/4 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl" />
+          <div className="absolute bottom1/4 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl" />
+
           {/* Badge */}
           {/* <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -61,13 +69,14 @@ export function HeroSection() {
 
           {/* Main Headline */}
           <div className="space-y-4 my-4">
-            <h1 className="lg:text-5xl text-4xl text-gray-900 leading-tight" style={{ fontWeight: 700 }}>
+            <h1 className="lg:text-5xl text-4xl text-gray-900 font-bold leading-tight">
+              {/* <h1 className="lg:text-5xl text-4xl text-gray-900 leading-tight" style={{ fontWeight: 700 }}> */}
               {/* Meet{' '} */}
-              <span className="bg-gradient-to-r from-[#0D9488] to-[#14B8A6] bg-clip-text text-transparent">
+              {/* <span className="bg-gradient-to-r from-[#0D9488] to-[#14B8A6] bg-clip-text text-transparent">
                 AI-Powered
               </span>
-              {' '}
-              Operating System for the Modern Mortgage Business
+              {' '} */}
+              AI-Powered Operating System for the Modern Mortgage Business
 
             </h1>
             {/* <h2 className="text-2xl lg:text-3xl text-gray-700 leading-tight">
@@ -80,25 +89,27 @@ export function HeroSection() {
             Everything your brokers, lenders, and loan officers need powered by AI, all in one platform.
           </p>
 
+
+
           {/* Feature Pills */}
-          {/* <div className="flex flex-wrap gap-3 justify-center mb-8">
+          <div className="flex flex-wrap gap-5 justify-center my-6">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 + index * 0.1 }}
-                className="flex items-center gap-2 bg-white px-3 py-2 rounded-sm shadow-md border border-gray-200"
+                className="flex items-center gap-3 bg-white z-10 px-3 py-2 rounded-sm shadow-md border border-gray-200"
               >
-                <div className={`w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-700 ${feature.gradient} rounded-sm flex items-center justify-center`}>
+                {/* <div className={`w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-700 ${feature.gradient} rounded-sm flex items-center justify-center`}>
                   <feature.icon className="w-4 h-4 text-white" />
-                </div>
-                <span className="text-sm text-gray-700" style={{ fontWeight: 500 }}>{feature.text}</span>
+                </div> */}
+                <span className="text-md text-gray-700" style={{ fontWeight: 500 }}>{feature.text}</span>
               </motion.div>
             ))}
-          </div> */}
+          </div>
 
-           <div className="text-md md:text-2xl font-medium text-teal-700 my-3 flex flex-wrap items-center justify-center gap-2">
+          {/* <div className="text-md md:text-2xl font-medium text-teal-700 my-3 flex flex-wrap items-center justify-center gap-2">
             <span>CRM</span>
             <span>|</span>
             <span>Loan Origination</span>
@@ -106,7 +117,7 @@ export function HeroSection() {
             <span>Marketing Automation</span>
             <span>|</span>
             <span>File Management</span>
-          </div>
+          </div> */}
 
           {/* CTA Button */}
           <motion.button

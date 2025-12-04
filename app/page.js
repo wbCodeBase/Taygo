@@ -10,7 +10,7 @@ import { TabbedShowcase } from "@/components/home/tabbed-showcase"
 import LisaCta from "@/components/home/lisaCta"
 import Stats3D from "@/components/home/StatsBarSection"
 import TechStackExpertise from "@/components/home/TechStackExpertise"
-// import IntegrationTools from "@/components/home/IntegrationTools"
+// import IntegrationsSection from "@/components/home/IntegrationsSection"
 
 export default function Home() {
 
@@ -21,14 +21,14 @@ export default function Home() {
         <HeroSection />
         <AnimatedShowcase />
         <Stats3D />
-        
+
         {/* <StatsSection /> */}
 
         <TabbedShowcase />
 
-        {/* <IntegrationTools /> */}
-
         <TechStackExpertise />
+
+        {/* <IntegrationsSection /> */}
 
         {/* <TrustedBrands /> */}
 
