@@ -86,7 +86,7 @@ export default function LisaCta() {
                   </p>
                 </div>
 
-                <button className="bg-[#6366F1] text-white px-8 py-3 rounded-xs font-semibold hover:bg-[#5558E3] transition-colors shadow-lg">
+                <button className="bg-[#7B69E5] cursor-pointer text-white px-8 py-3 rounded-xs font-semibold hover:bg-[#745ef1] transition-colors shadow-lg">
                   Let&apos;s Go!
                 </button>
               </div>

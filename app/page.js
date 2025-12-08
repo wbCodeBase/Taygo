@@ -26,7 +26,7 @@ export default function Home() {
 
         <TabbedShowcase />
 
-        <TechStackExpertise />
+        {/* <TechStackExpertise /> */}
 
         {/* <IntegrationsSection /> */}
 
