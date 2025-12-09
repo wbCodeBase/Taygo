@@ -32,6 +32,7 @@ export function CtaSection() {
                 experience.
               </p>
 
+
               <button className="group cursor-pointer inline-flex items-center gap-2 px-8 py-4 bg-white text-[#163D40] font-semibold rounded-xs hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
                 Schedule a Demo
                 <svg
