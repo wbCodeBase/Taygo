@@ -11,6 +11,7 @@ import LisaCta from "@/components/home/lisaCta"
 import Stats3D from "@/components/home/StatsBarSection"
 import TechStackExpertise from "@/components/home/TechStackExpertise"
 import { IntegrationsSection } from "@/components/home/IntegrationsSection"
+import VideoHeroSection from "@/components/videoHero"
 // import IntegrationsSection from "@/components/home/IntegrationsSection"
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
         <AnimatedShowcase />
         <Stats3D />
 
-        {/* <StatsSection /> */}
+        <VideoHeroSection />
 
         <TabbedShowcase />
 
