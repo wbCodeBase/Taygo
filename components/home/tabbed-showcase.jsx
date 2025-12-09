@@ -176,18 +176,18 @@ const tabs = [
       avatar: "/placeholder.svg?height=48&width=48",
     },
     features: [
-"Co-branded partner profiles",
-"Shared leads & milestones",
-"Auto updates from your AI agent",
-"Partner activity tracking",
-"Referral pipeline",
-]
+      "Co-branded partner profiles",
+      "Shared leads & milestones",
+      "Auto updates from your AI agent",
+      "Partner activity tracking",
+      "Referral pipeline",
+    ]
   },
 ]
 
-export function TabbedShowcase() {  
+export function TabbedShowcase() {
 
-    const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
   const currentTab = tabs[activeTab];
 
   // Auto-switch tabs every 5 seconds
@@ -200,7 +200,7 @@ export function TabbedShowcase() {
     return () => clearInterval(interval);
   }, []);
 
-    const handleTabClick = (index) => {
+  const handleTabClick = (index) => {
     setActiveTab(index);
   };
 
@@ -225,20 +225,20 @@ export function TabbedShowcase() {
   }
 
   return (
-    <section className="md:py-20 py-10 px-4 bg-gradient-to-b from-white to-[#C4E5E633]"> 
-      <div className="max-w-6xl mx-auto">
+    <section className="md:py-20 py-10 px-4 bg-gradient-to-b from-white to-[#C4E5E633]">
+      <div className="max-w7xl max-w-screen-2xl md:px-16 px-3 mx-auto">
         {/* heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 text-balance">
+        <div className="text-center mb-12 max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 textbalance leading-tight">
             Everything brokers and loan officers need in one intelligent platform.
           </h2>
-          <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">
+          <p className="text-base md:text-lg font-medium mb-4 text-balance mx-auto text-gray-700">
             Explore how TAYGO™ unites CRM, LOS, automation, marketing, and integrations to simplify every part of your mortgage business.
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        {/* <div className="flex flex-wrap justify-center gap-3 mb-12">
           {tabs.map((tab, index) => (
             <button
               key={tab.id}
@@ -254,10 +254,31 @@ export function TabbedShowcase() {
               {tab.label}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* 3 Card Grid Layout */}
-        <div className="grid lg:grid-cols-3 gap-6 items-stretch">
+        {/* <div className="grid lg:grid-cols-4 gap-6 items-stretch"> */}
+        <div className="flex gap-6 items-start justify-between">
+
+          {/* Tabs */}
+          <div className="flex flex-col max-w-64 text-nowrap gap-3">
+            {tabs.map((tab, index) => (
+              <button
+                key={tab.id}
+                onClick={() => handleTabClick(index)}
+                className={`px-8 py-4 rounded-xs text-left text-sm cursor-pointer font-medium transition-all duration-500 ${activeTab === index
+                  ? "text-white shadow-lg"
+                  : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
+                  }`}
+                style={{
+                  backgroundColor: activeTab === index ? tab.color : undefined,
+                }}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
           {/* Large Card - 2/3 width with content on left, mockup on right */}
           <div className="lg:col-span-2">
             <div
@@ -268,7 +289,7 @@ export function TabbedShowcase() {
             >
 
               {/* Left Side - Content */}
-              <div className="relative z-10 shrink-0 lg:w-[30%]">
+              <div className="relative z-10 shrink-0 lg:w-[35%]">
                 {/* heading */}
                 <div className="flex items-center gap-2 mb-6">
                   <span className="text-3xl font-semibold">{currentTab.heading}</span>
@@ -287,7 +308,7 @@ export function TabbedShowcase() {
               </div>
 
               {/* Right Side - Mockup Container */}
-              <div className="relative z-10 flex-1 lg:w-[70%]">
+              <div className="relative z-10 flex-1 lg:w-[65%]">
                 {/* Mockup */}
                 <div className="bg-white rounded2xl overflow-hidden shadow-2xl transition-opacity duration-500">
                   {renderMockup()}
@@ -298,7 +319,7 @@ export function TabbedShowcase() {
           </div>
 
           {/* Right Side - 2 Stacked Cards with matching height */}
-          <div className="flex flex-col gap-6 h-full">
+          <div className="flex flex-col gap-6 md:min-w-[25%] h-full">
 
             {/* Stat Card */}
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xs p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justifycenter">
@@ -343,6 +364,7 @@ export function TabbedShowcase() {
             </div> */}
 
           </div>
+
         </div>
       </div>
     </section>
@@ -355,9 +377,9 @@ function ProjectsMockup() {
       <Image
         src="/images/taygo-crm-contacts.png"
         alt="TAYGO CRM Dashboard"
-        width={700}
-        height={500}
-        className="w-full h-full rounded-x-sm object-cover object-left"
+        width={650}
+        height={650}
+        className="wfull hfull rounded-x-sm object-cover object-left"
       />
     </div>
   )
@@ -369,8 +391,8 @@ function SalesMockup() {
       <Image
         src="/images/taygo-crm-contacts.png"
         alt="TAYGO CRM Contacts Dashboard"
-        width={700}
-        height={500}
+        width={650}
+        height={650}
         className="w-full h-full object-cover object-left"
       />
     </div>
@@ -383,8 +405,8 @@ function MarketingMockup() {
       <Image
         src="/images/taygo-crm-contacts.png"
         alt="TAYGO CRM Dashboard"
-        width={700}
-        height={500}
+        width={650}
+        height={650}
         className="w-full h-full object-cover object-left"
       />
     </div>
@@ -397,8 +419,8 @@ function ITOpsMockup() {
       <Image
         src="/images/taygo-crm-contacts.png"
         alt="TAYGO CRM Dashboard"
-        width={700}
-        height={500}
+        width={650}
+        height={650}
         className="w-full h-full object-cover object-left"
       />
     </div>
@@ -411,8 +433,8 @@ function ProductEngineeringMockup() {
       <Image
         src="/images/taygo-crm-contacts.png"
         alt="TAYGO CRM Dashboard"
-        width={700}
-        height={500}
+        width={650}
+        height={650}
         className="w-full h-full object-cover object-left"
       />
     </div>
@@ -425,8 +447,8 @@ function LeadershipMockup() {
       <Image
         src="/images/taygo-crm-contacts.png"
         alt="TAYGO CRM Dashboard"
-        width={700}
-        height={500}
+        width={650}
+        height={650}
         className="w-full h-full object-cover object-left"
       />
     </div>
