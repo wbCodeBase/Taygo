@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function CtaSection() {
   return (
-    <section className="py-16 bg-[#C4E5E633] to-white">
+    <section className="pt-8">
       <div className="maxw-6xl mxauto">
         {/* <div className="relative bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-700 rounded-xs p-12 md:p-16 overflow-hidden shadow-2xl"> */}
         <div className="relative bg-[#163D40] rounded-xs p-12 md:p-16 overflow-hidden shadow-2xl">
