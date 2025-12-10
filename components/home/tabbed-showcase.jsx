@@ -375,7 +375,8 @@ function ProjectsMockup() {
   return (
     <div className="w-full h-full">
       <Image
-        src="/images/taygo-crm-contacts.png"
+        src="/images/taygo-leads-zoom.jpg"
+        // src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Dashboard"
         width={650}
         height={650}
@@ -389,7 +390,7 @@ function SalesMockup() {
   return (
     <div className="w-full h-full">
       <Image
-        src="/images/taygo-crm-contacts.png"
+        src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Contacts Dashboard"
         width={650}
         height={650}
@@ -403,7 +404,7 @@ function MarketingMockup() {
   return (
     <div className="w-full h-full">
       <Image
-        src="/images/taygo-crm-contacts.png"
+        src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Dashboard"
         width={650}
         height={650}
@@ -417,7 +418,7 @@ function ITOpsMockup() {
   return (
     <div className="w-full h-full">
       <Image
-        src="/images/taygo-crm-contacts.png"
+        src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Dashboard"
         width={650}
         height={650}
@@ -431,7 +432,7 @@ function ProductEngineeringMockup() {
   return (
     <div className="w-full h-full">
       <Image
-        src="/images/taygo-crm-contacts.png"
+        src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Dashboard"
         width={650}
         height={650}
@@ -445,7 +446,7 @@ function LeadershipMockup() {
   return (
     <div className="w-full h-full">
       <Image
-        src="/images/taygo-crm-contacts.png"
+        src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Dashboard"
         width={650}
         height={650}
