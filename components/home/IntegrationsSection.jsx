@@ -45,7 +45,7 @@ export default function IntegrationsSection() {
 
           {/* Left Content */}
           <div className="flex flex-col justify-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-2xl md:text-[2.7rem] font-bold text-white mb-6 leading-tight">
               Your AI agent works wherever your data lives
             </h2>
             <p className="text-xl md:lg text-white/90 mb-8 leading-relaxed">

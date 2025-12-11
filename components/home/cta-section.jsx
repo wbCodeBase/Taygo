@@ -25,7 +25,7 @@ export function CtaSection() {
 
           <div className="relative z-10 max-w-7xl gap-10 mx-auto flex justify-between items-center">
             <div className="max-w-xl">
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">Supercharge your sales with Lisa Agents</h2>
+              <h2 className="text-2xl md:text-[2.7rem] font-bold text-white mb-4 leading-tight">Supercharge your sales with Lisa Agents</h2>
 
               <p className="text-lg md:text-xl text-teal-50 mb-8">
                 Harness the power of a multi-agent platform that delivers the best of artificial intelligence and human

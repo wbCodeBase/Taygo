@@ -68,7 +68,7 @@ export function HeroSection() {
 
           {/* Main Headline */}
           <div className="space-y-4 my-4">
-            <h1 className="lg:text-5xl text-4xl text-gray-900 font-bold leading-tight">
+            <h1 className="sm:text-[3rem] text-3xl text-gray-900 font-bold leading-snug">
               {/* <h1 className="lg:text-5xl text-4xl text-gray-900 leading-tight" style={{ fontWeight: 700 }}> */}
               {/* Meet{' '} */}
               {/* <span className="bg-gradient-to-r from-[#0D9488] to-[#14B8A6] bg-clip-text text-transparent">
@@ -84,7 +84,7 @@ export function HeroSection() {
           </div>
 
           {/* Description */}
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="md:text-xl text-lg text-gray-800 leading-relaxed">
             Everything your brokers, lenders, and loan officers need powered by AI, all in one platform.
           </p>
 

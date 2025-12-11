@@ -22,7 +22,7 @@ export default function VideoHeroSection() {
                                 Other CRMs Give You To-Dos. TAYGO™ Gets Them Done
                             </h2>
 
-                            <p className="text-base md:text-lg text-neutral-700 max-w-xl text-pretty">
+                            <p className="text-md md:text-lg text-neutral-700 max-w-xl text-pretty">
                                 See how TAYGO™ automates the tasks that slow you down: pipeline reviews, POS guidance, partner updates, qualification, nurturing - all done without manual effort.
                             </p>
 

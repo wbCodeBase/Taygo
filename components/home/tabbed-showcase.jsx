@@ -23,7 +23,7 @@ const tabs = [
     },
     testimonial2: {
       quote:
-        "monday.com gives us the visibility to get everyone on the same page and track all the moving parts of our projects.",
+        "taygo.ai gives us the visibility to get everyone on the same page and track all the moving parts of our projects.",
       author: "Jason Doan",
       role: "VP of Operations, HOLT CAT",
       avatar: "/placeholder.svg?height=48&width=48",
@@ -225,14 +225,14 @@ export function TabbedShowcase() {
   }
 
   return (
-    <section className="md:py-18 py-10 px-4 bg-gradient-to-b from-white to-[#C4E5E633]">
-      <div className="max-w7xl max-w-screen-2xl md:px-8 px-3 mx-auto">
+    <section className="md:py-18 py-10 px-8 bg-gradient-to-b from-white to-[#C4E5E633]">
+      <div className="max-w7xl max-w-screen-3xl md:px-8 px-3 mx-auto">
         {/* heading */}
         <div className="text-center mb-12 max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 textbalance leading-tight">
+          <h2 className="text-2xl md:text-[2.7rem] font-semibold text-gray-900 mb-6 textbalance leading-tight">
             Everything brokers and loan officers need in one intelligent platform.
           </h2>
-          <p className="text-base md:text-lg font-medium mb-4 text-balance mx-auto text-gray-700">
+          <p className="text-lg md:text-xl font-medium mb-4 text-balance mx-auto text-gray-700">
             Explore how TAYGO™ unites CRM, LOS, automation, marketing, and integrations to simplify every part of your mortgage business.
           </p>
         </div>

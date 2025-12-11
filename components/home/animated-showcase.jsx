@@ -107,10 +107,10 @@ export function AnimatedShowcase() {
         <div className="mx-auto">
 
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4 text-balance">
+            <h2 className="text-2xl md:text-[2.7rem] font-semibold text-gray-900 mb-4 text-balance">
               Ask TAYGO™ how it works. Get an instant answer.
             </h2>
-            <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">
+            <p className="text-lg md:text-xl font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">
               Type any workflow, issue, or task and see exactly how TAYGO™ handles it with AI.
             </p>
           </div>
@@ -170,7 +170,7 @@ export function AnimatedShowcase() {
 
 
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4 text-balance">
+          <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 mb-4 text-balance">
             Ask TAYGO™ how it works. Get an instant answer.
           </h2>
           <p className="text-base md:text-lg font-medium mb-4 text-balance max-w-5xl mx-auto text-gray-700">
