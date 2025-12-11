@@ -491,10 +491,10 @@ export function SyncedCRMDashboard() {
                 <Sparkles className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="text-sm" style={{ fontWeight: 600 }}>Lisa AI Agent</h3>
+                <h3 className="text-sm" style={{ fontWeight: 600 }}>Lisa</h3>
                 <div className="flex items-center gap-1 mt-1">
                   <div className="w-1.5 h-1.5 bg-green-300 rounded-full animate-pulse" />
-                  <span className="text-xs text-teal-50">Automating</span>
+                  <span className="text-xs text-teal-50">Active</span>
                 </div>
               </div>
             </div>
