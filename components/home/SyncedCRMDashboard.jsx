@@ -116,7 +116,7 @@ export function SyncedCRMDashboard() {
           className="col-span-2 bg-gray-900 p-4 flex flex-col"
         >
           <div className="mb-8">
-            <h3 className="text-white text-md" style={{ fontWeight: 600 }}>TAYGO CRM</h3>
+            <h3 className="text-white text-md" style={{ fontWeight: 600 }}>TAYGO™ CRM</h3>
             <p className="text-gray-400 text-xs mt-1">Mortgage Dashboard</p>
           </div>
 

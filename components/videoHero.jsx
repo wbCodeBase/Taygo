@@ -19,11 +19,11 @@ export default function VideoHeroSection() {
                         {/* Left Content */}
                         <div className="space-y-6">
                             <h2 className="text-2xl md:text-4xl font-semibold text-gray-800 leading-tight">
-                                Other CRMs Give You To-Dos. Taygo Gets Them Done
+                                Other CRMs Give You To-Dos. TAYGO™ Gets Them Done
                             </h2>
 
                             <p className="text-base md:text-lg text-neutral-700 max-w-xl text-pretty">
-                                See how Taygo automates the tasks that slow you down: pipeline reviews, POS guidance, partner updates, qualification, nurturing - all done without manual effort.
+                                See how TAYGO™ automates the tasks that slow you down: pipeline reviews, POS guidance, partner updates, qualification, nurturing - all done without manual effort.
                             </p>
 
                             <Button

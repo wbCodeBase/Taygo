@@ -14,7 +14,7 @@ const tabs = [
     heading: "Lead Management",
     title: "Capture, enrich, and convert leads across your entire pipeline.",
     description:
-      "Taygo centralizes every lead from forms, websites, ads, partners, and inbound channels  enriched automatically with AI to reduce manual data entry.",
+      "TAYGO™ centralizes every lead from forms, websites, ads, partners, and inbound channels  enriched automatically with AI to reduce manual data entry.",
     badge: "Prioritize projects",
     testimonial1: {
       company: "HOLT CAT",
