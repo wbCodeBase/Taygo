@@ -166,7 +166,7 @@ const tabs = [
     badge: "Strategic planning",
     testimonial1: {
       company: "Global Enterprises",
-      stat: "2×",
+      stat: "2X",
       statSuffix: "faster partner collaboration with transparent deal tracking",
     },
     testimonial2: {
@@ -331,7 +331,7 @@ export function TabbedShowcase() {
                 </div>
               </div> */}
 
-              <div className="font-semibold text-gray-800"><span className="text-xl font-bold textgray-900" style={{
+              <div className="font-semibold text-gray-800"><span className="text-3xl font-bold textgray-900" style={{
                 color: currentTab.color,
               }} >{currentTab.testimonial1.stat}</span> {currentTab.testimonial1.statSuffix}</div>
             </div>
