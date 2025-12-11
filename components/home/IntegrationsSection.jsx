@@ -40,7 +40,7 @@ export default function IntegrationsSection() {
     <section className="p-20">
 
    
-      <div className="bg-linear-to-r from-[#7B69E5] to-[#7864eb] rounded-3xl p-8 md:p-12 lg:p-16">
+      <div className="bg-linear-to-r from-[#7B69E5] to-[#7864eb] rounded-xs p-8 md:p-12 lg:p-16">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
@@ -68,7 +68,7 @@ export default function IntegrationsSection() {
                 {col.items.map((logo) => (
                   <div
                     key={logo.id}
-                    className="w-18 h-18 bg-white rounded-xl flex items-center justify-center shadow-lg"
+                    className="w-18 h-18 bg-white rounded-xs flex items-center justify-center shadow-lg"
                   >
                     <Image
                       src={logo.src}
