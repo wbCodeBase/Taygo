@@ -33,7 +33,7 @@ export function CtaSection() {
               </p>
 
 
-              <button className="group cursor-pointer inline-flex items-center gap-2 px-8 py-4 bg-white text-[#163D40] font-semibold rounded-xs hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+              <button className="group cursor-pointer font-semibold inline-flex items-center gap-2 px-8 py-4 bg-white text-[#163D40] rounded-xs hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
                 Schedule a Demo
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform"

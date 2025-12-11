@@ -18,8 +18,8 @@ const tabs = [
     badge: "Prioritize projects",
     testimonial1: {
       company: "HOLT CAT",
-      stat: "$4M saved",
-      statSuffix: "with optimized processes",
+      stat: "30%",
+      statSuffix: "more leads converted with unified capture & AI enrichment",
     },
     testimonial2: {
       quote:
@@ -50,8 +50,8 @@ const tabs = [
     badge: "Detect client's sentiment",
     testimonial1: {
       company: "KC Petroleum, LLC",
-      stat: "18x",
-      statSuffix: "ROI achieved in the first year",
+      stat: "45%",
+      statSuffix: "faster loan processing with real-time, seamless data sync",
     },
     testimonial2: {
       quote:
@@ -80,8 +80,8 @@ const tabs = [
     badge: "Campaign analytics",
     testimonial1: {
       company: "Digital Agency Inc",
-      stat: "3x",
-      statSuffix: "faster campaign launches",
+      stat: "60%",
+      statSuffix: "increase in response rates with automated, multi-channel outreach",
     },
     testimonial2: {
       quote: "The platform transformed how we manage campaigns, giving us clarity and speed we never had before.",
@@ -109,8 +109,8 @@ const tabs = [
     badge: "Incident management",
     testimonial1: {
       company: "Tech Solutions Co",
-      stat: "60%",
-      statSuffix: "reduction in response time",
+      stat: "70%",
+      statSuffix: "fewer manual tasks through intelligent automations",
     },
     testimonial2: {
       quote: "Our IT team can now handle twice as many requests with the same resources thanks to automation.",
@@ -137,8 +137,8 @@ const tabs = [
     badge: "Prioritize bugs",
     testimonial1: {
       company: "VISTRA",
-      stat: "28%",
-      statSuffix: "faster time to market",
+      stat: "24/7",
+      statSuffix: "follow-up, 5× more conversations powered by AI agents",
     },
     testimonial2: {
       quote:
@@ -166,8 +166,8 @@ const tabs = [
     badge: "Strategic planning",
     testimonial1: {
       company: "Global Enterprises",
-      stat: "100%",
-      statSuffix: "visibility across teams",
+      stat: "2×",
+      statSuffix: "faster partner collaboration with transparent deal tracking",
     },
     testimonial2: {
       quote: "Finally, we have a single source of truth that connects our strategy to day-to-day execution.",
@@ -302,7 +302,7 @@ export function TabbedShowcase() {
                 <p className="text-sm mb-6 text-white/90 text-pretty leading-relaxed">{currentTab.description}</p>
 
                 {/* Button */}
-                <button className="px-7 py-3 cursor-pointer bg-white text-gray-900 rounded-xs font-medium hover:scale-105 transition-transform duration-300 shadow-lg">
+                <button className="px-7 py-3 font-semibold cursor-pointer bg-white text-gray-900 rounded-xs font-medium hover:scale-105 transition-transform duration-300 shadow-lg">
                   Get Started →
                 </button>
               </div>
@@ -324,14 +324,16 @@ export function TabbedShowcase() {
 
 
             {/* Stat Card */}
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xs p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justifycenter">
-              <div className="mb-4">
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xs px-8 py-6 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justifycenter">
+              {/* <div className="mb-4">
                 <div className="text-sm font-bold text-gray-800 uppercase tracking-wide">
                   {currentTab.testimonial1.company}
                 </div>
-              </div>
-              <div className="text-4xl font-bold text-gray-900 mb-1">{currentTab.testimonial1.stat}</div>
-              <div className="text-base text-gray-700">{currentTab.testimonial1.statSuffix}</div>
+              </div> */}
+
+              <div className="font-semibold text-gray-800"><span className="text-xl font-bold textgray-900" style={{
+                color: currentTab.color,
+              }} >{currentTab.testimonial1.stat}</span> {currentTab.testimonial1.statSuffix}</div>
             </div>
 
 

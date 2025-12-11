@@ -125,7 +125,7 @@ export function HeroSection() {
             transition={{ delay: 0.8 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#0D9488] hover:bg-[#0c8077] text-white px-8 py-4 cursor-pointer rounded-xs transition-all shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 inline-flex items-center gap-2 my-4"
+            className="bg-[#0D9488] hover:bg-[#0c8077] font-semibold text-white px-8 py-4 cursor-pointer rounded-xs transition-all shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 inline-flex items-center gap-2 my-4"
             style={{ fontWeight: 600 }}
           >
             View Demo

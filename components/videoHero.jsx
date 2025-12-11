@@ -28,7 +28,7 @@ export default function VideoHeroSection() {
 
                             <Button
                                 size="lg"
-                                className="bg-teal-600 hover:bg-teal-700 text-white rounded-xs px-8 py-6 text-base font-medium"
+                                className="bg-teal-600 font-semibold hover:bg-teal-700 text-white rounded-xs px-8 py-6 text-base"
                             >
                                 Start my free trial
                             </Button>

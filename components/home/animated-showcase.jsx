@@ -131,7 +131,7 @@ export function AnimatedShowcase() {
                   placeholder="Ask Lisa anything..."
                 />
 
-                <button className="absolute cursor-pointer text-white font-semibold text-xs px-4 p-3 right-4 top-1/2 -translate-y-1/2  bg-[#006C5D] hover:bg-[#006558] rounded-xs flex items-center justify-center transition-colors">
+                <button className="absolute font-semibold cursor-pointer text-white text-xs px-4 p-3 right-4 top-1/2 -translate-y-1/2  bg-[#006C5D] hover:bg-[#006558] rounded-xs flex items-center justify-center transition-colors">
                   Ask TAYGO™
                 </button>
 
@@ -196,7 +196,7 @@ export function AnimatedShowcase() {
 
 
         <div className="flex mt-8 flex-col sm:flex-row items-center gap-4">
-          <button onClick={() => setIsPopupOpen(true)} className="group relative cursor-pointer px-6 py-2 bg-[#006C5D] hover:bg-[#006558] text-white font-medium rounded-xs shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
+          <button onClick={() => setIsPopupOpen(true)} className="group font-semibold relative cursor-pointer px-6 py-2 bg-[#006C5D] hover:bg-[#006558] text-white rounded-xs shadow-lg shadow-[#6161FF]/50 hover:shadow-xl hover:shadow-[#6161FF]/60 transition-all duration-300 hover:scale-105 active:scale-100">
             <span className="flex items-center gap-2 text-md">
               Ask TAYGO™
             </span>
