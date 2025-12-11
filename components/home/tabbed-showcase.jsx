@@ -233,7 +233,7 @@ export function TabbedShowcase() {
             Everything brokers and loan officers need in one intelligent platform.
           </h2>
           <p className="text-lg md:text-xl font-medium mb-4 text-balance mx-auto text-gray-700">
-            Explore how TAYGO™ unites CRM, LOS, automation, marketing, and integrations to simplify every part of your mortgage business.
+            Explore how TAYGO™ unites CRM, LOS, AUTOMATION, MARKETING, and integrations to simplify every part of your mortgage business.
           </p>
         </div>
 

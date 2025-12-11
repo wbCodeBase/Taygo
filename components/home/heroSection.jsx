@@ -4,10 +4,10 @@ import { SyncedCRMDashboard } from './SyncedCRMDashboard';
 
 export function HeroSection() {
   const features = [
-    { icon: Sparkles, text: 'CRM', gradient: 'from-teal to-teal-light' },
-    { icon: TrendingUp, text: 'Loan Origination', gradient: 'from-teal to-teal-light' },
+    { icon: Sparkles, text: 'AI LO Assistant', gradient: 'from-teal to-teal-light' },
+    { icon: TrendingUp, text: 'Pipeline Autopilot', gradient: 'from-teal to-teal-light' },
     { icon: Zap, text: 'Marketing Automation', gradient: 'from-teal to-teal-light' },
-    { icon: Sparkles, text: 'File Management', gradient: 'from-teal to-teal-light' },
+    { icon: Sparkles, text: 'Auto Follow-Ups', gradient: 'from-teal to-teal-light' },
   ];
 
   return (
