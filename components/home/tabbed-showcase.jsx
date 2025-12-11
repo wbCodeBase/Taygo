@@ -225,8 +225,8 @@ export function TabbedShowcase() {
   }
 
   return (
-    <section className="md:py-20 py-10 px-4 bg-gradient-to-b from-white to-[#C4E5E633]">
-      <div className="max-w7xl max-w-screen-2xl md:px-16 px-3 mx-auto">
+    <section className="md:py-18 py-10 px-4 bg-gradient-to-b from-white to-[#C4E5E633]">
+      <div className="max-w7xl max-w-screen-2xl md:px-8 px-3 mx-auto">
         {/* heading */}
         <div className="text-center mb-12 max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 textbalance leading-tight">
@@ -238,7 +238,7 @@ export function TabbedShowcase() {
         </div>
 
         {/* Tabs */}
-        {/* <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {tabs.map((tab, index) => (
             <button
               key={tab.id}
@@ -254,14 +254,14 @@ export function TabbedShowcase() {
               {tab.label}
             </button>
           ))}
-        </div> */}
+        </div>
 
         {/* 3 Card Grid Layout */}
         {/* <div className="grid lg:grid-cols-4 gap-6 items-stretch"> */}
-        <div className="flex gap-6 items-start justify-between">
+        <div className="flex gap-6 itemsstart justify-between">
 
           {/* Tabs */}
-          <div className="flex flex-col max-w-64 text-nowrap gap-3">
+          {/* <div className="flex flex-col max-w-64 text-nowrap gap-3">
             {tabs.map((tab, index) => (
               <button
                 key={tab.id}
@@ -277,7 +277,7 @@ export function TabbedShowcase() {
                 {tab.label}
               </button>
             ))}
-          </div>
+          </div> */}
 
           {/* Large Card - 2/3 width with content on left, mockup on right */}
           <div className="lg:col-span-2">
@@ -321,8 +321,23 @@ export function TabbedShowcase() {
           {/* Right Side - 2 Stacked Cards with matching height */}
           <div className="flex flex-col gap-6 md:min-w-[25%] h-full">
 
+
+
             {/* Stat Card */}
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xs p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justifycenter">
+              <div className="mb-4">
+                <div className="text-sm font-bold text-gray-800 uppercase tracking-wide">
+                  {currentTab.testimonial1.company}
+                </div>
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-1">{currentTab.testimonial1.stat}</div>
+              <div className="text-base text-gray-700">{currentTab.testimonial1.statSuffix}</div>
+            </div>
+
+
+
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xs p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justifycenter">
+
               {/* <div className="mb-4">
                 <div className="text-sm font-bold text-gray-800 uppercase tracking-wide">
                   {currentTab.testimonial1.company}
@@ -330,6 +345,8 @@ export function TabbedShowcase() {
               </div>
               <div className="text-4xl font-bold text-gray-900 mb-1">{currentTab.testimonial1.stat}</div>
               <div className="text-base text-gray-700">{currentTab.testimonial1.statSuffix}</div> */}
+
+
               <div className="flex justify-center items-center mb-6">
                 <Image src={taygoLogo} alt="TAYGO Logo" width={140} height={60} />
               </div>
@@ -376,10 +393,9 @@ function ProjectsMockup() {
     <div className="w-full h-full">
       <Image
         src="/images/taygo-leads-zoom.jpg"
-        // src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Dashboard"
         width={650}
-        height={650}
+        height={600}
         className="wfull hfull rounded-x-sm object-cover object-left"
       />
     </div>
@@ -393,7 +409,7 @@ function SalesMockup() {
         src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Contacts Dashboard"
         width={650}
-        height={650}
+        height={600}
         className="w-full h-full object-cover object-left"
       />
     </div>
@@ -407,7 +423,7 @@ function MarketingMockup() {
         src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Dashboard"
         width={650}
-        height={650}
+        height={600}
         className="w-full h-full object-cover object-left"
       />
     </div>
@@ -421,7 +437,7 @@ function ITOpsMockup() {
         src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Dashboard"
         width={650}
-        height={650}
+        height={600}
         className="w-full h-full object-cover object-left"
       />
     </div>
@@ -435,7 +451,7 @@ function ProductEngineeringMockup() {
         src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Dashboard"
         width={650}
-        height={650}
+        height={600}
         className="w-full h-full object-cover object-left"
       />
     </div>
@@ -449,7 +465,7 @@ function LeadershipMockup() {
         src="/images/taygo-leads-zoom.jpg"
         alt="TAYGO CRM Dashboard"
         width={650}
-        height={650}
+        height={600}
         className="w-full h-full object-cover object-left"
       />
     </div>

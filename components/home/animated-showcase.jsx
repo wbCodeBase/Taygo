@@ -103,8 +103,8 @@ export function AnimatedShowcase() {
   return (
     <>
 
-      <section className="pb-20  md:-mt16 hidden md:block lg:-mt24 mt-16 px-6">
-        <div className="mx-auto max-w7xl">
+      <section className="pb-20 hidden md:block lg:-mt24 mt-16 px-6">
+        <div className="mx-auto">
 
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4 text-balance">
@@ -115,7 +115,7 @@ export function AnimatedShowcase() {
             </p>
           </div>
 
-          <div className="relative md:mx-20 rounded-xs px-8 pt-8 shadow-2xl overflow-hidden transition-all duration-700 ease-in-out bg-[#006C5D]"
+          <div className="relative md:mx-7 rounded-xs px-8 pt-8 shadow-2xl overflow-hidden transition-all duration-700 ease-in-out bg-[#006C5D]"
           // style={{ backgroundColor: currentData.bgColor }}
           >
             <div className="relative max-w-4xl mx-auto mb-16">

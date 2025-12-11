@@ -40,8 +40,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative max-w7xl w-full mx-auto px-6 md:px-26 pt-20 pb-20 md:mt-12">
-
+      <div className="relative w-full mx-auto px-6 md:px-12 pt-20 pb-20 md:mt-12">
 
 
         {/* Top Section - Full Width Header */}

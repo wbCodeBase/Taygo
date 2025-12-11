@@ -18,7 +18,7 @@ export default function VideoHeroSection() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left Content */}
                         <div className="space-y-6">
-                            <h2 className="text-2xl md:text-4xl font-semibold text-gray-800 text-balance">
+                            <h2 className="text-2xl md:text-4xl font-semibold text-gray-800 leading-tight">
                                 Other CRMs Give You To-Dos. Taygo Gets Them Done
                             </h2>
 
