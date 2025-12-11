@@ -40,7 +40,7 @@ export default function IntegrationsSection() {
     <section className="p-20">
 
    
-      <div className="bg-linear-to-r from-purple-600 to-purple-500 rounded-3xl p-8 md:p-12 lg:p-16">
+      <div className="bg-linear-to-r from-[#7B69E5] to-[#7864eb] rounded-3xl p-8 md:p-12 lg:p-16">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
