@@ -5,20 +5,20 @@ const logos = [
   { id: 1, src: "/integrationToolsLogo/facebook.png", alt: "Facebook" },
   { id: 2, src: "/integrationToolsLogo/linkedin.png", alt: "LinkedIn" },
   { id: 3, src: "/integrationToolsLogo/elliemae.png", alt: "Elliemae" },
-  { id: 4, src: "/integrationToolsLogo/optimalBlue.png", alt: "Optimal Blue" },
+  { id: 4, src: "/integrationToolsLogo/homescout.png", alt: "Home Scout" },
   { id: 5, src: "/integrationToolsLogo/Velocify.png", alt: "Velocify" },
   { id: 6, src: "/integrationToolsLogo/floify.png", alt: "Floify" },
   { id: 7, src: "/integrationToolsLogo/blend.png", alt: "Blend" },
   { id: 8, src: "/integrationToolsLogo/mls.png", alt: "Mls" },
-  { id: 9, src: "/integrationToolsLogo/simpleNexus.png", alt: "Simple Nexus" },
+  { id: 9, src: "/integrationToolsLogo/google.png", alt: "Google" },
   { id: 10, src: "/integrationToolsLogo/zillow.png", alt: "Zillow" },
   { id: 11, src: "/integrationToolsLogo/pinterest.png", alt: "Pinterest" },
   { id: 12, src: "/integrationToolsLogo/realtor.png", alt: "Realtor" },
   { id: 13, src: "/integrationToolsLogo/outlook.png", alt: "Outlook" },
   { id: 14, src: "/integrationToolsLogo/twitter.png", alt: "Twitter" },
   { id: 15, src: "/integrationToolsLogo/lenderprice.png", alt: "lender Price" },
-  { id: 16, src: "/integrationToolsLogo/homescout.png", alt: "Home Scout" },
-  { id: 18, src: "/integrationToolsLogo/google.png", alt: "Google" },
+  { id: 16, src: "/integrationToolsLogo/optimalBlue.png", alt: "Optimal Blue" },
+  { id: 17, src: "/integrationToolsLogo/simpleNexus.png", alt: "Simple Nexus" },
 ];
 
 
@@ -68,13 +68,13 @@ export default function IntegrationsSection() {
                 {col.items.map((logo) => (
                   <div
                     key={logo.id}
-                    className="w-18 h-18 bg-white rounded-xs flex items-center justify-center shadow-lg"
+                    className="w-20 h-16 bg-white rounded-xs flex items-center justify-center shadow-lg"
                   >
                     <Image
                       src={logo.src}
                       alt={logo.alt}
-                      width={48}
-                      height={48}
+                      width={54}
+                      height={54}
                       className="object-contain"
                     />
                   </div>
