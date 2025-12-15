@@ -1,9 +1,11 @@
+"use client"
 import { Sparkles, TrendingUp, Zap, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SyncedCRMDashboard } from './SyncedCRMDashboard';
 
-export function HeroSection() {
+export default function HeroSection() {
   const features = [
+    { icon: Sparkles, text: 'CRM', gradient: 'from-teal to-teal-light' },
     { icon: Sparkles, text: 'AI LO Assistant', gradient: 'from-teal to-teal-light' },
     { icon: TrendingUp, text: 'Pipeline Autopilot', gradient: 'from-teal to-teal-light' },
     { icon: Zap, text: 'Marketing Automation', gradient: 'from-teal to-teal-light' },
@@ -84,7 +86,7 @@ export function HeroSection() {
           </div>
 
           {/* Description */}
-          <p className="md:text-xl text-lg text-gray-800 leading-relaxed">
+          <p className="md:text-xl text-lg text-gray-800">
             Everything your brokers, lenders, and loan officers need powered by AI, all in one platform.
           </p>
 
@@ -98,7 +100,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 + index * 0.1 }}
-                className="flex items-center gap-3 bg-white z-10 px-3 py-2 rounded-xs shadow-md border border-gray-200"
+                className="flex items-center gap-3 bg-white z-10 px-3 py-2 rounded-sm shadow-md border border-gray-200"
               >
                 {/* <div className={`w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-700 ${feature.gradient} rounded-xs flex items-center justify-center`}>
                   <feature.icon className="w-4 h-4 text-white" />
@@ -125,7 +127,7 @@ export function HeroSection() {
             transition={{ delay: 0.8 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#0D9488] hover:bg-[#0c8077] font-semibold text-white px-8 py-4 cursor-pointer rounded-xs transition-all shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 inline-flex items-center gap-2 my-4"
+            className="bg-btn-green hover:bg-btn-green-hover font-semibold text-white px-8 py-4 cursor-pointer rounded-xs transition-all shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 inline-flex items-center gap-2 my-4"
             style={{ fontWeight: 600 }}
           >
             View Demo

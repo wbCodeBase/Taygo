@@ -39,6 +39,9 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
+  --btn-green: #0D9488;
+  --btn-green-hover: #0c8077;
+  --crm-green: #0C5F5C;
 }
 
 .dark {
@@ -115,7 +118,11 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-btn-green: var(--btn-green);
+  --color-btn-green-hover: var(--btn-green-hover);
+  --color-crm-green: var(--crm-green);
 }
+
 
 @layer base {
   * {

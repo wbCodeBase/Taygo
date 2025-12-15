@@ -5,7 +5,7 @@ export function CtaSection() {
     <section className="pt-8">
       <div className="maxw-6xl mxauto">
         {/* <div className="relative bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-700 rounded-xs p-12 md:p-16 overflow-hidden shadow-2xl"> */}
-        <div className="relative bg-[#163D40] rounded-xs p-12 md:p-16 overflow-hidden shadow-2xl">
+        <div className="relative bg-crm-green rounded-xs p-12 md:p-16 overflow-hidden shadow-2xl">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl" />
             <div className="absolute bottom-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl" />
@@ -31,7 +31,6 @@ export function CtaSection() {
                 Harness the power of a multi-agent platform that delivers the best of artificial intelligence and human
                 experience.
               </p>
-
 
               <button className="group cursor-pointer font-semibold inline-flex items-center gap-2 px-8 py-4 bg-white text-[#163D40] rounded-xs hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
                 Schedule a Demo

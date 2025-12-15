@@ -15,8 +15,9 @@ export function Header() {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Product</a>
+            <a href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
+            <a href="product
+            " className="text-gray-600 hover:text-gray-900 transition-colors">Product</a>
             <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
             <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">AI Agents</a>
             <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Integrations</a>
@@ -26,7 +27,7 @@ export function Header() {
           </nav>
 
           {/* CTA Button */}
-          <button className="bg-[#0D9488] font-semibold hover:bg-[#0c8077] cursor-pointer text-white px-6 py-2.5 rounded-xs transition-all hover:shadow-lg hover:shadow-teal-500/30 flex items-center gap-2">
+          <button className="bg-btn-green font-semibold hover:bg-btn-green-hover cursor-pointer text-white px-6 py-2.5 rounded-xs transition-all hover:shadow-lg hover:shadow-teal-500/30 flex items-center gap-2">
             Get Started
             <ArrowRight className="w-4 h-4" />
           </button>

@@ -113,50 +113,50 @@ export function SyncedCRMDashboard() {
         <motion.div
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          className="col-span-2 bg-gray-900 p-4 flex flex-col"
+          className="col-span-2 bg-gray900 bg-crm-green p-4 flex flex-col"
         >
           <div className="mb-8">
             <h3 className="text-white text-md" style={{ fontWeight: 600 }}>TAYGO™ CRM</h3>
-            <p className="text-gray-400 text-xs mt-1">Mortgage Dashboard</p>
+            <p className="text-gray-200 text-xs mt-1">Mortgage Dashboard</p>
           </div>
 
           <nav className="space-y-2 flex-1">
             <button
               onClick={() => setCurrentView('analytics')}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors ${currentView === 'analytics' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'analytics' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
                 }`}
             >
               <BarChart3 className="w-4 h-4" />
-              <span className="text-sm">Analytics</span>
+              <span className="text-md">Analytics</span>
             </button>
             <button
               onClick={() => setCurrentView('leads')}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors ${currentView === 'leads' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'leads' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
                 }`}
             >
               <Users className="w-4 h-4" />
-              <span className="text-sm">Leads</span>
+              <span className="text-md">Leads</span>
             </button>
             <button
               onClick={() => setCurrentView('calling')}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors ${currentView === 'calling' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'calling' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
                 }`}
             >
               <Phone className="w-4 h-4" />
-              <span className="text-sm">Calls</span>
+              <span className="text-md">Calls</span>
             </button>
             <button
               onClick={() => setCurrentView('email')}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors ${currentView === 'email' ? 'bg-teal text-white' : 'text-gray-300 hover:bg-gray-800'
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'email' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
                 }`}
             >
               <Mail className="w-4 h-4" />
-              <span className="text-sm">Emails</span>
+              <span className="text-md">Emails</span>
             </button>
           </nav>
 
-          <div className="mt-auto pt-4 border-t border-gray-800">
-            <div className="flex items-center gap-2 text-gray-400 text-xs">
+          <div className="mt-auto pt-4 border-t border-gray-300">
+            <div className="flex items-center gap-2 text-gray-200 text-xs">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
               <span>Lisa Active</span>
             </div>
@@ -485,7 +485,7 @@ export function SyncedCRMDashboard() {
 
         {/* Lisa Chat Panel */}
         <div className="col-span-3 bg-white border-l border-gray-200 flex flex-col">
-          <div className="bg-gradient-to-r from-[#0D9488] to-[#14B8A6] p-4 text-white">
+          <div className="bg-crm-green p-4 text-white">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                 <Sparkles className="w-5 h-5" />
@@ -572,9 +572,9 @@ export function SyncedCRMDashboard() {
               <input
                 type="text"
                 placeholder="Ask Lisa..."
-                className="flex-1 px-3 py-2 text-xs bg-gray-50 border border-gray-200 rounded-xs focus:outline-none focus:ring-2 focus:ring-[#0D9488]"
+                className="flex-1 px-3 py-2 text-xs bg-gray-50 border border-gray-200 rounded-xs focus:outline-none focus:ring-2 focus:ring-btn-green"
               />
-              <button className="bg-[#0D9488] text-white p-2 rounded-xs hover:bg-[#0c8077] transition-colors">
+              <button className="bg-btn-green text-white p-2 rounded-xs hover:bg-btn-green-hover transition-colors">
                 <Send className="w-4 h-4" />
               </button>
             </div>

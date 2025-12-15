@@ -115,7 +115,7 @@ export function AnimatedShowcase() {
             </p>
           </div>
 
-          <div className="relative md:mx-7 rounded-xs px-8 pt-8 shadow-2xl overflow-hidden transition-all duration-700 ease-in-out bg-[#006C5D]"
+          <div className="relative md:mx-7 rounded-xs px-8 pt-8 shadow-2xl overflow-hidden transition-all duration-700 ease-in-out bg-crm-green"
           // style={{ backgroundColor: currentData.bgColor }}
           >
             <div className="relative max-w-4xl mx-auto mb-16">
@@ -131,7 +131,7 @@ export function AnimatedShowcase() {
                   placeholder="Ask Lisa anything..."
                 />
 
-                <button className="absolute font-semibold cursor-pointer text-white text-xs px-4 p-3 right-4 top-1/2 -translate-y-1/2  bg-[#006C5D] hover:bg-[#006558] rounded-xs flex items-center justify-center transition-colors">
+                <button className="absolute font-semibold cursor-pointer text-white text-xs px-4 p-3 right-4 top-1/2 -translate-y-1/2  bg-btn-green hover:bg-btn-green-hover rounded-xs flex items-center justify-center transition-colors">
                   Ask TAYGO™
                 </button>
 
