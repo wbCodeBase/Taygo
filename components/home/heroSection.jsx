@@ -42,7 +42,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative w-full mx-auto px-6 md:px-12 pt-20 pb-20 md:mt-12">
+      <div className="relative w-full mx-auto px-6 md:px-12 pb-14 mt-10">
 
 
         {/* Top Section - Full Width Header */}
@@ -50,12 +50,13 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-6 max-w-5xl mx-auto"
+          className="text-center mb-6 max-w-5xl mx-auto space-y-6"
         >
 
 
-          <div className="absolute top1/4 left-1/4 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl" />
-          <div className="absolute bottom1/4 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl" />
+          <div className="absolute top1/4 left-1/4 w-96 h-96 bg-teal-200/10 rounded-full blur-3xl" />
+          <div className="absolute bottom1/4 right-1/4 w-96 h-96 bg-emerald-200/10 rounded-full blur-3xl" />
+          <div className="absolute bottom1/4 right-2/4 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl" />
 
           {/* Badge */}
           {/* <motion.div
@@ -69,7 +70,7 @@ export default function HeroSection() {
           </motion.div> */}
 
           {/* Main Headline */}
-          <div className="space-y-4 my-4">
+          <div className="space-y4">
             <h1 className="sm:text-[3rem] text-3xl text-gray-900 font-bold leading-snug">
               {/* <h1 className="lg:text-5xl text-4xl text-gray-900 leading-tight" style={{ fontWeight: 700 }}> */}
               {/* Meet{' '} */}
@@ -102,9 +103,9 @@ export default function HeroSection() {
                 transition={{ delay: 0.4 + index * 0.1 }}
                 className="flex items-center gap-3 bg-white z-10 px-3 py-2 rounded-sm shadow-md border border-gray-200"
               >
-                {/* <div className={`w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-700 ${feature.gradient} rounded-xs flex items-center justify-center`}>
+                <div className={`w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-700 ${feature.gradient} rounded-xs flex items-center justify-center`}>
                   <feature.icon className="w-4 h-4 text-white" />
-                </div> */}
+                </div>
                 <span className="text-md text-gray-700" style={{ fontWeight: 500 }}>{feature.text}</span>
               </motion.div>
             ))}
@@ -127,7 +128,7 @@ export default function HeroSection() {
             transition={{ delay: 0.8 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-btn-green hover:bg-btn-green-hover font-semibold text-white px-8 py-4 cursor-pointer rounded-xs transition-all shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 inline-flex items-center gap-2 my-4"
+            className="bg-btn-green hover:bg-btn-green-hover font-semibold text-white px-8 py-4 cursor-pointer rounded-xs transition-all inline-flex items-center gap-2 my-4"
             style={{ fontWeight: 600 }}
           >
             View Demo
