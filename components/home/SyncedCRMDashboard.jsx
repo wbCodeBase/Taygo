@@ -119,9 +119,10 @@ export function SyncedCRMDashboard() {
           animate={{ x: 0, opacity: 1 }}
           className="col-span-2 bg-gray900 bg-crm-green p-4 flex flex-col"
         >
-          <div className="mb-8">
-            <h3 className="text-white text-md" style={{ fontWeight: 600 }}>TAYGO™ CRM</h3>
-            <p className="text-gray-200 text-xs mt-1">Mortgage Dashboard</p>
+            {/* <h3 className="text-white text-md" style={{ fontWeight: 600 }}>TAYGO™ CRM</h3> */}
+          <div className="mb-6 p-2">
+            <Image src="/logo/TaygoLogoWhite.png" alt='logo' width={100} height={20} />
+            {/* <p className="text-gray-200 text-xs mt-1">Mortgage Dashboard</p>  */}
           </div>
 
           <nav className="flex-1">

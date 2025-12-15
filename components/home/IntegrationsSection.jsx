@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 
+import inteImg from "@/public/images/inteImg.png"
+
 const logos = [
   { id: 1, src: "/integrationToolsLogo/facebook.png", alt: "Facebook" },
   { id: 2, src: "/integrationToolsLogo/linkedin.png", alt: "LinkedIn" },
@@ -39,7 +41,7 @@ export default function IntegrationsSection() {
   return (
     <section className="py-20 px-13">
 
-      <div className="bg-linear-to-r from-[#7B69E5] to-[#7864eb] rounded-xs p-8 md:p-12 lg:p-16">
+      <div className="bg-linear-to-r from-[#7B69E5] to-[#7864eb] rounded-xs p-8 md:px-12 lg:px-16">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
@@ -62,7 +64,7 @@ export default function IntegrationsSection() {
           {/* Right Content */}
           <div className="flex justify-center gap-10">
 
-            {columns.map((col, idx) => (
+            {/* {columns.map((col, idx) => (
               <div key={idx} className={`flex flex-col gap-10 ${col.marginTop}`}>
                 {col.items.map((logo) => (
                   <div
@@ -79,7 +81,9 @@ export default function IntegrationsSection() {
                   </div>
                 ))}
               </div>
-            ))}
+            ))} */}
+
+            <Image src={inteImg} className="w-full" alt="integration section image" width={1000} height={900} />
 
           </div>
 

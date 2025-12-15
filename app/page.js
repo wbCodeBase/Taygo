@@ -6,7 +6,8 @@ import { TabbedShowcase } from "@/components/home/tabbed-showcase"
 import Stats3D from "@/components/home/StatsBarSection"
 import IntegrationsSection from "@/components/home/IntegrationsSection"
 import VideoHeroSection from "@/components/videoHero"
-import MortgageProducts from "@/components/product/MortgageProducts"
+import MortgageProducts from "@/components/home/MortgageProducts"
+import Versus from "@/components/home/Versus"
 // import { TrustedBrands } from "@/components/home/trusted-brands"
 
 export default function Home() {
@@ -17,9 +18,9 @@ export default function Home() {
 
         <HeroSection />
 
-        <MortgageProducts />
-
         <AnimatedShowcase />
+
+        <MortgageProducts />
 
         <Stats3D />
 
@@ -33,6 +34,9 @@ export default function Home() {
 
         {/* <LisaCta /> */}
         <CtaSection />
+
+        <Versus />
+
       </main>
 
 

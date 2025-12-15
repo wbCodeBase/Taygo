@@ -81,11 +81,11 @@ const MortgageProducts = () => {
                                 </AccordionTrigger>
                                 <AccordionContent className="text-[16px] text-gray-700 my-6">
                                     <p className="mb-4 leading-relaxed">{product.description}</p>
-                                    <Link 
-                                        href={product.ctaLink} 
+                                    <Link
+                                        href={product.ctaLink}
                                         className="inline-flex items-center text-btn-green hover:text-btn-green-hover font-semibold transition-colors"
                                     >
-                                        {product.ctaText} 
+                                        {product.ctaText}
                                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                         </svg>
@@ -97,9 +97,9 @@ const MortgageProducts = () => {
                 </div>
 
                 <div className="lg:w-[40%] w-full">
-                    <Image 
-                        src='https://www.insightly.com/wp-content/uploads/2025/03/CRM-Software-1.png' 
-                        width={800} 
+                    <Image
+                        src='https://www.insightly.com/wp-content/uploads/2025/03/Customer-Service-1.png'
+                        width={800}
                         height={600}
                         alt="Mortgage Products"
                     />
