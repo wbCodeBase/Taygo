@@ -11,10 +11,10 @@ import { useRouter } from 'next/navigation'
 
 const menuItems = [
   // { title: 'Home', slug: '/', hasSubmenu: false }, 
-  { title: 'Products', slug: '/products', hasSubmenu: true },
+  { title: 'Products', slug: '/leadflow', hasSubmenu: true },
   // { title: 'Hire', slug: '/hire/node-developer', hasSubmenu: true },
-  { title: 'Solutions', slug: '/about-us', hasSubmenu: false },
-  { title: 'Pricing', slug: '/contact-us', hasSubmenu: false },
+  { title: 'Solutions', slug: '#', hasSubmenu: false },
+  { title: 'Pricing', slug: '/pricing', hasSubmenu: false },
   { title: 'Contact', slug: '/contact-us', hasSubmenu: false },
 ]
 
@@ -37,14 +37,14 @@ const product = {
       ],
       hiring: [
         {
-          title: 'Staff Augmentation',
-          slug: 'staff-augmentation',
-          description: 'Access top technical resources on-demand',
+          title: 'AI Decision Engine',
+          slug: 'ai-engine',
+          description: 'Turn pipeline data into real-time actions and prioritization',
         },
         {
-          title: 'Hire Software Developer',
-          slug: 'hire-software-developer-india',
-          description: 'Work with skilled & dedicated developers',
+          title: 'AI Compliance & Risk Monitor',
+          slug: 'ai-compliance-risk-monitor',
+          description: 'Proactively detect issues before they impact loans or audits',
         },
 
       ],
@@ -154,7 +154,7 @@ export default function Header() {
 
                 <div className="grid md:grid-cols-2 gap-2">
                   {product.content[activeCategory].products.map((tech, index) => (
-                    <Link href={`/hire/${tech.slug}`} key={index} onClick={() => { setActiveMenu(''); setActiveCategory(''); setIsMobileMenuOpen(false) }} className="p-4 borde space-y-2 rounded-md transition-colors duration-200 font-medium cursor-pointer hover:bg-teal-50">
+                    <Link href={`/${tech.slug}`} key={index} onClick={() => { setActiveMenu(''); setActiveCategory(''); setIsMobileMenuOpen(false) }} className="p-4 borde space-y-2 rounded-md transition-colors duration-200 font-medium cursor-pointer hover:bg-teal-50">
                       <div className='flex gap-3'>
                         <Image src="https://www.insightly.com/wp-content/uploads/2025/03/CRM-Icon.svg" width={20} height={20} alt='crmIcon' /> {tech.name}
                       </div>
@@ -167,12 +167,12 @@ export default function Header() {
               <div className="w-full lg:w-5/12 p-6 border-l">
 
                 <div className="mb-4 borderb py-4">
-                  <span className='text-lg font-semibold text-gray-700'>More solutions by Taygo™</span>
-                  <p className="text-xs text-gray-700 mt-1">Build faster with on-demand team</p>
+                  <span className='text-lg font-semibold text-gray-700'>More from Taygo™</span>
+                  <p className="text-xs text-gray-700 mt-1">Advanced AI capabilities that improve CRM intelligence and control</p>
                 </div>
 
                 {product.content[activeCategory].hiring.map((item, index) => (
-                  <Link href={`/hire/${item.slug}`} key={index}>
+                  <Link href={`/${item.slug}`} key={index}>
                     <div className="mb-4 hover:border hover:bg-teal-50 rounded-lg p-3 cursor-pointer">
                       <h3 className="font-medium mb-2 flex items-center gap-3">
                         <Image src="https://www.insightly.com/wp-content/uploads/2025/03/unbounce-Symbol.svg" width={20} height={20} alt='crmIcon' /> 

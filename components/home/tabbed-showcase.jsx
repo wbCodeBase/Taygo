@@ -229,7 +229,7 @@ export function TabbedShowcase() {
       <div className="max-w7xl max-w-screen-3xl md:px-8 px-3 mx-auto">
         {/* heading */}
         <div className="text-center mb-12 max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-[2.7rem] font-semibold text-gray-900 mb-6 textbalance leading-tight">
+          <h2 className="text-2xl md:text-[2.7rem] font-semibold text-gray-900 mb-6 leading-tight">
             Everything brokers and loan officers need in one intelligent platform.
           </h2>
           <p className="text-lg md:text-xl font-medium mb-4 text-balance mx-auto text-gray-700">
@@ -243,9 +243,9 @@ export function TabbedShowcase() {
             <button
               key={tab.id}
               onClick={() => handleTabClick(index)}
-              className={`px-2 py-3 rounded-xs text-sm font-medium transition-all duration-500 ${activeTab === index
+              className={`p-3 rounded-xs text-md font-semibold transition-all duration-500 ${activeTab === index
                 ? "text-white shadow-lg"
-                : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
+                : "bg-white text-gray-600 cursor-pointer hover:bg-gray-50 border border-gray-200"
                 }`}
               style={{
                 backgroundColor: activeTab === index ? tab.color : undefined,
@@ -325,11 +325,6 @@ export function TabbedShowcase() {
 
             {/* Stat Card */}
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xs px-8 py-6 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justifycenter">
-              {/* <div className="mb-4">
-                <div className="text-sm font-bold text-gray-800 uppercase tracking-wide">
-                  {currentTab.testimonial1.company}
-                </div>
-              </div> */}
 
               <div className="font-semibold text-gray-800"><span className="text-3xl font-bold textgray-900" style={{
                 color: currentTab.color,
@@ -339,15 +334,6 @@ export function TabbedShowcase() {
 
 
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xs p-8 border border-indigo-100 transition-all duration-700 flex-1 flex flex-col justifycenter">
-
-              {/* <div className="mb-4">
-                <div className="text-sm font-bold text-gray-800 uppercase tracking-wide">
-                  {currentTab.testimonial1.company}
-                </div>
-              </div>
-              <div className="text-4xl font-bold text-gray-900 mb-1">{currentTab.testimonial1.stat}</div>
-              <div className="text-base text-gray-700">{currentTab.testimonial1.statSuffix}</div> */}
-
 
               <div className="flex justify-center items-center mb-6">
                 <Image src={taygoLogo} alt="TAYGO Logo" width={140} height={60} />

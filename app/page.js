@@ -1,4 +1,3 @@
-"use client"
 
 import HeroSection from "@/components/home/heroSection"
 import { AnimatedShowcase } from "@/components/home/animated-showcase"
@@ -7,6 +6,7 @@ import { TabbedShowcase } from "@/components/home/tabbed-showcase"
 import Stats3D from "@/components/home/StatsBarSection"
 import IntegrationsSection from "@/components/home/IntegrationsSection"
 import VideoHeroSection from "@/components/videoHero"
+import MortgageProducts from "@/components/product/MortgageProducts"
 // import { TrustedBrands } from "@/components/home/trusted-brands"
 
 export default function Home() {
@@ -16,6 +16,8 @@ export default function Home() {
       <main className="min-h-screen">
 
         <HeroSection />
+
+        <MortgageProducts />
 
         <AnimatedShowcase />
 

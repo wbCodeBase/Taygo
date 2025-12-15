@@ -1,9 +1,13 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { User, Phone, Mail, DollarSign, TrendingUp, Users, CheckCircle, Clock, Sparkles, Send, BarChart3, PhoneCall, MailOpen, X, Check } from 'lucide-react';
+import { User, Phone, Mail, DollarSign, TrendingUp, Users, CheckCircle, Sparkles, Send, BarChart3, PhoneCall, MailOpen, X, Check } from 'lucide-react';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 import ChatUserAbhi from "@/public/images/userAvatar.png";
+import { LayoutPanelLeft } from 'lucide-react';
+import { Shell } from 'lucide-react';
+import { HandCoins } from 'lucide-react';
+import { Brain } from 'lucide-react';
 
 
 export function SyncedCRMDashboard() {
@@ -120,39 +124,74 @@ export function SyncedCRMDashboard() {
             <p className="text-gray-200 text-xs mt-1">Mortgage Dashboard</p>
           </div>
 
-          <nav className="space-y-2 flex-1">
+          <nav className="flex-1">
             <button
               onClick={() => setCurrentView('analytics')}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'analytics' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
                 }`}
             >
               <BarChart3 className="w-4 h-4" />
-              <span className="text-md">Analytics</span>
+              <span className="text-md">Dashboard</span>
             </button>
+
             <button
               onClick={() => setCurrentView('leads')}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'leads' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
-                }`}
-            >
-              <Users className="w-4 h-4" />
-              <span className="text-md">Leads</span>
-            </button>
-            <button
-              onClick={() => setCurrentView('calling')}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'calling' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
                 }`}
             >
+              <Users className="w-4 h-4" />
+              <span className="text-md">LeadFlow</span>
+            </button>
+
+            <button
+              // onClick={() => setCurrentView('email')}
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'email' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
+                }`}
+            >
+              <LayoutPanelLeft className="w-4 h-4" />
+              <span className="text-md">AppFlow (POS)</span>
+            </button>
+            <button
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'email' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
+                }`}
+            >
+              <Shell className="w-4 h-4" />
+              <span className="text-md">Refi Pipeline Builder</span> 
+            </button>
+            <button
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'email' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
+                }`}
+            >
               <Phone className="w-4 h-4" />
-              <span className="text-md">Calls</span>
+              <span className="text-md">Call Center</span>
             </button>
             <button
               onClick={() => setCurrentView('email')}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'email' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
                 }`}
             >
-              <Mail className="w-4 h-4" />
-              <span className="text-md">Emails</span>
+              <HandCoins className="w-4 h-4" />
+              <span className="text-md">Loans</span>
             </button>
+            
+
+            <button
+              onClick={() => setCurrentView('email')}
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'email' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
+                }`}
+            >
+              <Brain className="w-4 h-4" />
+              <span className="text-md">Automation</span>
+            </button>
+            <button
+              onClick={() => setCurrentView('email')}
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'email' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
+                }`}
+            >
+              <LayoutPanelLeft className="w-4 h-4" />
+              <span className="text-md">Apps</span>
+            </button>
+
           </nav>
 
           <div className="mt-auto pt-4 border-t border-gray-300">
@@ -356,10 +395,16 @@ export function SyncedCRMDashboard() {
                               : 'bg-gray-100'
                             }`}>
                             {callingLeads.includes(lead.id) ? (
+
                               <motion.div
-                                animate={{ rotate: 360 }}
-                                transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                                animate={{ rotate: [-5, 5, -5, 5, 0] }}
+                                transition={{
+                                  duration: 0.5,
+                                  repeat: Infinity,
+                                  repeatDelay: 2
+                                }}
                               >
+
                                 <Phone className="w-6 h-6 text-blue-600" />
                               </motion.div>
                             ) : calledLeads.includes(lead.id) ? (

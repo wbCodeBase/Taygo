@@ -1,19 +1,19 @@
 "use client"
-import { Sparkles, TrendingUp, Zap, ArrowRight } from 'lucide-react';
+import { Workflow, Shell, Users, Handshake, Brain, ArrowRight, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SyncedCRMDashboard } from './SyncedCRMDashboard';
 
 export default function HeroSection() {
   const features = [
-    { icon: Sparkles, text: 'CRM', gradient: 'from-teal to-teal-light' },
-    { icon: Sparkles, text: 'AI LO Assistant', gradient: 'from-teal to-teal-light' },
-    { icon: TrendingUp, text: 'Pipeline Autopilot', gradient: 'from-teal to-teal-light' },
-    { icon: Zap, text: 'Marketing Automation', gradient: 'from-teal to-teal-light' },
-    { icon: Sparkles, text: 'Auto Follow-Ups', gradient: 'from-teal to-teal-light' },
-  ];
+    { icon: BarChart3, text: 'CRM', gradient: 'from-teal to-teal-light' },
+    { icon: Users, text: 'AI LO Assistant', gradient: 'from-teal to-teal-light' },
+    { icon: Shell, text: 'Pipeline Autopilot', gradient: 'from-teal to-teal-light' },
+    { icon: Brain, text: 'Marketing Automation', gradient: 'from-teal to-teal-light' },
+    { icon: Workflow, text: 'Auto Follow-Ups', gradient: 'from-teal to-teal-light' },
+  ];<Brain />
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-gray-50 via-white to-teal-50/30 overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
