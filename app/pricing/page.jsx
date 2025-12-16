@@ -151,9 +151,10 @@ export default function PricingPage() {
             {/* CTA Section */}
             <div className="md:py-20 py-10">
                 <div className="w-full mx-auto">
-                    <div className="bg-teal-500 text-white p-12 text-center">
+                    <div className="bg-linear-to-r from-[#006C5D] via-[#004e43] to-[#002e28]  text-white p-12 text-center">
                         <h2 className="text-3xl sm:text-5xl font-extrabold mb-4">Close More Loans with Less Work</h2>
-                        <p className="text-2xl font-semibold text-white/90 mb-10">Get a custom AI-powered plan that fits your team's pipeline and workflow</p>  <Link href="#" size="lg" className="bg-white text-black/90 rounded-full hover:bg-gray-100 font-bold group text-lg px-10 py-4 mt-12">
+                        <p className="text-2xl font-semibold text-white/90 mb-10">Get a custom AI-powered plan that fits your team's pipeline and workflow</p>  
+                        <Link href="#" size="lg" className="bg-white text-black/90 rounded-xs hover:bg-gray-100 font-bold group text-lg px-10 py-4 mt-12">
                             Get in Touch
                         </Link>
                     </div>

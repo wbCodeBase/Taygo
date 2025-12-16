@@ -1,8 +1,5 @@
 import React from 'react'
 import Image from 'next/image';
-import { MdShield } from "react-icons/md";
-import { FaClipboardCheck } from "react-icons/fa6";
-import { FaLaptopCode } from "react-icons/fa";
 import Link from 'next/link';
 
 const BuildConvertMort = () => {
@@ -95,26 +92,26 @@ const BuildConvertMort = () => {
 
 
                         <div className="rounded-xl px4">
-                            <h2 className='font-medium sm:text-3xl mt-5 text-2xl text-gray-900 my-2'>Sales pipeline & lead management </h2>
-                            <p className='text-md text-gray-800 my-8'>Start acting on leads the moment they arrive — and keep every opportunity moving.</p>
+                            <h2 className='font-medium sm:text-3xl mt-5 text-2xl text-gray-900 my-2'>Lead tracking & opportunity management (Mortgage stages)</h2>
+                            <p className='text-md text-gray-800 my-8'>Create velocity through every stage of your mortgage process.</p>
 
 
                             <ul className='mt-6 space-y-4 px-4'>
                                 <li className='flex items-center gap-3'>
                                     <span className='w-1.5 h-1.5 bg-gray-800 rounded-full flex-shrink-0'></span>
-                                    <p className='text-gray-800 font-medium'>Capture and unify leads from forms, referrals, campaigns, and partners</p>
+                                    <p className='text-gray-800 font-medium'>Custom mortgage pipelines (Purchase, Refi, HELOC, etc.)</p>
                                 </li>
                                 <li className='flex items-center gap-3'>
                                     <span className='w-1.5 h-1.5 bg-gray-800 rounded-full flex-shrink-0'></span>
-                                    <p className='text-gray-800 font-medium'>Auto-assign leads by location, loan type, language, or availability</p>
+                                    <p className='text-gray-800 font-medium'>Deal risk signals: stalled stage, missing docs, no-response borrowers</p>
                                 </li>
                                 <li className='flex items-center gap-3'>
                                     <span className='w-1.5 h-1.5 bg-gray-800 rounded-full flex-shrink-0'></span>
-                                    <p className='text-gray-800 font-medium'>Real-time view of every lead stage, next step, and SLA risk</p>
+                                    <p className='text-gray-800 font-medium'>Priority sorting: “Call now”, “Docs pending”, “Rate-sensitive refi”</p>
                                 </li>
                                 <li className='flex items-center gap-3'>
                                     <span className='w-1.5 h-1.5 bg-gray-800 rounded-full flex-shrink-0'></span>
-                                    <p className='text-gray-800 font-medium'>One timeline for calls, texts, emails, notes, and documents</p>
+                                    <p className='text-gray-800 font-medium'>Partner visibility: which agent/referral source drives the best loans</p>
                                 </li>
                             </ul>
 
@@ -135,7 +132,7 @@ const BuildConvertMort = () => {
                         </div>
 
                         <div className="borde rounded-xl p4 flex justify-center items-center flex-col text-center relative">
-                            <Image src='https://www.insightly.com/wp-content/uploads/2025/03/img_01_desktop.png' className='rounded-xl' alt="component image" width={600} height={460} />
+                            <Image src='https://www.insightly.com/wp-content/uploads/2025/03/img_02_desktop.png' className='rounded-xl' alt="component image" width={600} height={460} />
                         </div>
 
 

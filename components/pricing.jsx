@@ -35,7 +35,7 @@ const PricingTable = ({ currency }) => {
   return (
     <div>
       <div className="md:px-20 py-10 sm:px-6 lg:px-8 bg-gray-50 relative flex justify-center">
-        <div className="max-w-7xl mx-auto border p-4 bg-white md:rounded-2xl md:shadow-xl">
+        <div className="max-w-7xl mx-auto border p-4 bg-white md:rounded-xs md:shadow-xl">
 
 
           {/* Currency & Billing Period Toggle */}
@@ -68,11 +68,11 @@ const PricingTable = ({ currency }) => {
             </div> */}
 
 
-            <div className="bg-white rounded-xl p-1 shadow-lg flex">
+            <div className="bg-white p-1 shadow-lg flex rounded-xs">
               <button
                 onClick={() => setBillingPeriod("monthly")}
                 className={cn(
-                  "px-6 py-3 rounded-lg font-semibold cursor-pointer transition-all",
+                  "px-6 py-3 font-semibold cursor-pointer transition-all rounded-xs",
                   billingPeriod === "monthly"
                     ? "bg-teal-600 text-white shadow-md"
                     : "text-gray-600 hover:text-gray-900"
@@ -94,7 +94,7 @@ const PricingTable = ({ currency }) => {
               <button
                 onClick={() => setBillingPeriod("yearly")}
                 className={cn(
-                  "px-6 py-3 rounded-lg font-semibold cursor-pointer transition-all",
+                  "px-6 py-3 rounded-xs font-semibold cursor-pointer transition-all",
                   billingPeriod === "yearly"
                     ? "bg-teal-600 text-white shadow-md"
                     : "text-gray-600 hover:text-gray-900"
@@ -115,7 +115,7 @@ const PricingTable = ({ currency }) => {
               return (
                 <div
                   key={planIndex}
-                  className={`col-span-1 rounded-2xl border px-4 ${plan.recommended && "bg-teal-100"}`}
+                  className={`col-span-1 rounded-xs border px-4 ${plan.recommended && "bg-teal-100"}`}
                 >
                   <div className="p-6 rounded-2xl">
                     <h3 className="text-3xl font-extrabold mb-2 text-gray-800">
@@ -148,7 +148,7 @@ const PricingTable = ({ currency }) => {
 
                             <Button
                               size="lg"
-                              className="w-full cursor-pointer font-semibold group bg-teal-500 hover:bg-teal-600 text-white"
+                              className="w-full cursor-pointer rounded-xs font-semibold group bg-btn-green hover:bg-btn-green-hover text-white"
                             >
                               Subscribe
                               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />

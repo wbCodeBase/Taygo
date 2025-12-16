@@ -24,12 +24,12 @@ const HeaderBase = () => {
 
     return (
         <>
-            <section className="bg-linear-to-r relative from-teal-500 via-teal-550 to-teal-600">
+            <section className="bg-linear-to-r relative">
                 <div className="mx-auto p-6 sm:p-10 lg:p-18 px-4 sm:px-6 lg:px-8">
 
                     {/* heading */}
                     <div className="text-center mb-12 mx-auto">
-                        <h2 className="text-2xl md:text-[2.7rem] font-semibold text-gray-50 mb-6 textbalance leading-tight">
+                        <h2 className="text-2xl md:text-[2.7rem] font-semibold mb-6 leading-tight">
                             Why Choose us
                         </h2>
                         {/* <p className="text-lg md:text-xl font-medium mb-4 text-balance mx-auto text-gray-50">
@@ -43,12 +43,12 @@ const HeaderBase = () => {
                             return (
                                 <div
                                     key={index}
-                                    className='flex-1 space-y-4 text-base sm:text-base lg:text-lg border-ar-gray-600 text-gray-50 rounded-4xl p-4'
+                                    className='flex-1 space-y-4 text-base sm:text-base lg:text-lg border-ar-gray-600 rounded-4xl p-4'
                                 >
-                                    <IconComponent className="w-10 h-10 text-gray-50" />
+                                    <IconComponent className="w-10 h-10" />
 
-                                    <div className='font-medium text-lg md:text-2xl text-gray-50'>{card.title}</div>
-                                    <div className='text-md lg:text-md text-gray-100'>
+                                    <div className='font-medium text-lg md:text-2xl'>{card.title}</div>
+                                    <div className='text-md lg:text-md'>
                                         {card.description}
                                     </div>
                                 </div>
