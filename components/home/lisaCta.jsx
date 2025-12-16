@@ -41,7 +41,7 @@ export default function LisaCta() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="bg-white text-[#006C5D] px-6 py-3 rounded-xs font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+                  <button className="bg-white cursor-pointer text-[#006C5D] px-6 py-3 rounded-xs font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
                     Get Started
                     <svg
                       className="w-4 h-4"
@@ -57,7 +57,7 @@ export default function LisaCta() {
                       />
                     </svg>
                   </button>
-                  <button className="border-2 border-white text-white px-6 py-3 rounded-xs font-semibold hover:bg-white/10 transition-colors">
+                  <button className="border-2 cursor-pointer border-white text-white px-6 py-3 rounded-xs font-semibold hover:bg-white/10 transition-colors">
                     Visit our AI Trust Center
                   </button>
                 </div>
