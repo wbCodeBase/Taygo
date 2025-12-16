@@ -48,14 +48,14 @@ export default function IntegrationsSection() {
 
           {/* Left Content */}
           <div className="flex flex-col justify-center">
-            <h2 className="text-2xl md:text-[2.2rem] font-bold text-gray-800 mb-6 leading-tight">
-              AI reviews the entire pipeline every day and identifies exactly what needs to happen next.
+           <h2 className="text-2xl md:text-[2.7rem] font-bold textwhite mb-6 leading-tight">
+              Your AI agent works wherever your data lives
             </h2>
-            {/* <p className="text-xl md:lg textwhite/90 mb-8 leading-relaxed">
+            <p className="text-xl md:lg textwhite/90 mb-8 leading-relaxed">
               Integrated with top mortgage platforms for smooth, automated workflows.
-            </p> */}
+            </p>
             <div>
-              {/* <button className="px-6 py-3 cursor-pointer text-white border-2 border-white rounded-lg hover:bg-white/10 transition-all duration-300">
+              {/* <button className="px-6 py-3 cursor-pointer textwhite border-2 borderwhite rounded-lg hover:bg-white/10 transition-all duration-300">
                 Explore all integrations
               </button> */}
             </div>
