@@ -6,9 +6,9 @@ export default function LisaCta() {
     <>
 
       <section className="w-full bg-[#C4E5E633] py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-screen-2xl mx-auto">
           {/* Lisa AI Assistant CTA */}
-          <div className="relative max-w-6xl mx-auto bg-linear-to-r from-[#006C5D] via-[#004e43] to-[#002e28] rounded-xs overflow-visible shadow-2xl">
+          <div className="relative mx-auto bg-linear-to-r from-[#006C5D] via-[#004e43] to-[#002e28] rounded-xs overflow-visible shadow-2xl">
             <div className="grid md:grid-cols-3 gap-6 md:gap-12 items-end p-8 md:p-12">
 
               {/* Lisa Image - extends above container */}
@@ -70,45 +70,50 @@ export default function LisaCta() {
 
 
 
-      <section className="w-full py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {/* TAYGO Digital Shop CTA */}
-          <div className="bg-white rounded-2xl max-w-6xl mx-auto p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              {/* Content */}
-              <div className="space-y-6">
-                <div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-semibold text-gray-900 mb-4">
-                    Set up your digital shop with TAYGO™
-                  </h2>
-                  <p className="text-base md:text-lg text-gray-700">
-                    We help your business look better online, look better do better!
-                  </p>
-                </div>
-
-                <button className="bg-[#7B69E5] cursor-pointer text-white px-8 py-3 rounded-xs font-semibold hover:bg-[#745ef1] transition-colors shadow-lg">
-                  Let&apos;s Go!
-                </button>
-              </div>
-
-              {/* House Icon */}
-              <div className="flex justify-center md:justify-end">
-                <div className="relative w-48 h-48 md:w-64 md:h-64">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-green-50 to-pink-100 rounded-full opacity-30 blur-2xl"></div>
-                  <img
-                    src="/images/IconCta.png"
-                    alt="TAYGO House Icon"
-                    className="relative w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
 
 
     </>
   )
 }
+
+
+
+
+
+
+
+
+      // <section className="w-full py-12 px-4 sm:px-6 lg:px-8">
+      //   <div className="max-w-7xl mx-auto">
+      //     <div className="bg-white rounded-2xl max-w-6xl mx-auto p-8 md:p-12">
+      //       <div className="grid md:grid-cols-2 gap-8 items-center">
+      //         <div className="space-y-6">
+      //           <div>
+      //             <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-semibold text-gray-900 mb-4">
+      //               Set up your digital shop with TAYGO™
+      //             </h2>
+      //             <p className="text-base md:text-lg text-gray-700">
+      //               We help your business look better online, look better do better!
+      //             </p>
+      //           </div>
+
+      //           <button className="bg-[#7B69E5] cursor-pointer text-white px-8 py-3 rounded-xs font-semibold hover:bg-[#745ef1] transition-colors shadow-lg">
+      //             Let&apos;s Go!
+      //           </button>
+      //         </div>
+
+      //         <div className="flex justify-center md:justify-end">
+      //           <div className="relative w-48 h-48 md:w-64 md:h-64">
+      //             <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-green-50 to-pink-100 rounded-full opacity-30 blur-2xl"></div>
+      //             <img
+      //               src="/images/IconCta.png"
+      //               alt="TAYGO House Icon"
+      //               className="relative w-full h-full object-contain"
+      //             />
+      //           </div>
+      //         </div>
+      //       </div>
+      //     </div>
+
+      //   </div>
+      // </section>

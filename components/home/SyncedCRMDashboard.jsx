@@ -119,7 +119,7 @@ export function SyncedCRMDashboard() {
           animate={{ x: 0, opacity: 1 }}
           className="col-span-2 bg-gray900 bg-crm-green p-4 flex flex-col"
         >
-            {/* <h3 className="text-white text-md" style={{ fontWeight: 600 }}>TAYGO™ CRM</h3> */}
+          {/* <h3 className="text-white text-md" style={{ fontWeight: 600 }}>TAYGO™ CRM</h3> */}
           <div className="mb-6 p-2">
             <Image src="/logo/TaygoLogoWhite.png" alt='logo' width={100} height={20} />
             {/* <p className="text-gray-200 text-xs mt-1">Mortgage Dashboard</p>  */}
@@ -157,7 +157,7 @@ export function SyncedCRMDashboard() {
                 }`}
             >
               <Shell className="w-4 h-4" />
-              <span className="text-md">Refi Pipeline Builder</span> 
+              <span className="text-md">Refi Pipeline Builder</span>
             </button>
             <button
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-xs transition-colors cursor-pointer ${currentView === 'email' ? 'text-white' : 'text-gray-200 hover:bg-teal-700'
@@ -174,7 +174,7 @@ export function SyncedCRMDashboard() {
               <HandCoins className="w-4 h-4" />
               <span className="text-md">Loans</span>
             </button>
-            
+
 
             <button
               onClick={() => setCurrentView('email')}
@@ -534,7 +534,10 @@ export function SyncedCRMDashboard() {
           <div className="bg-crm-green p-4 text-white">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                <Sparkles className="w-5 h-5" />
+                {/* <Sparkles className="w-5 h-5" /> */}
+
+                <Image src="/images/lisa.png" alt="Lisa Icon" width={32} height={32} className="rounded-full" />
+
               </div>
               <div>
                 <h3 className="text-sm" style={{ fontWeight: 600 }}>Lisa</h3>

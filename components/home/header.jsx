@@ -29,11 +29,11 @@ const product = {
       slug: 'products',
       description: 'Our Products',
       products: [
-        { name: 'Taygo LeadFlow™', slug: 'leadflow', description: "Mortgage CRM & Lead Automation" },
-        { name: 'Taygo PipelineOS™', slug: 'pipeline-os', description: "Mortgage Pipeline & Refinance Workflow Automation" },
-        { name: 'Taygo BorrowerHub™', slug: 'borrowerhub', description: "Mortgage POS & Borrower Portal" },
-        { name: 'Taygo VoiceAI™', slug: 'voice-aI', description: "AI Call Center & Phone Automation" },
-        { name: 'Taygo LoanCore™', slug: 'loan-core', description: "Loan Management & Tracking System" },
+        { name: 'Taygo™ LeadFlow', slug: 'leadflow', description: "Mortgage CRM & Lead Automation" },
+        { name: 'Taygo™ PipelineOS', slug: 'pipeline-os', description: "Mortgage Pipeline & Refinance Workflow Automation" },
+        { name: 'Taygo™ BorrowerHub', slug: 'borrowerhub', description: "Mortgage POS & Borrower Portal" },
+        { name: 'Taygo™ VoiceAI', slug: 'voice-aI', description: "AI Call Center & Phone Automation" },
+        { name: 'Taygo™ LoanCore', slug: 'loan-core', description: "Loan Management & Tracking System" },
       ],
       hiring: [
         {
@@ -175,7 +175,7 @@ export default function Header() {
                   <Link href={`/${item.slug}`} key={index}>
                     <div className="mb-4 hover:border hover:bg-teal-50 rounded-lg p-3 cursor-pointer">
                       <h3 className="font-medium mb-2 flex items-center gap-3">
-                        <Image src="https://www.insightly.com/wp-content/uploads/2025/03/unbounce-Symbol.svg" width={20} height={20} alt='crmIcon' /> 
+                        <Image src="https://www.insightly.com/wp-content/uploads/2025/03/unbounce-Symbol.svg" width={20} height={20} alt='crmIcon' />
                         {item.title}
                       </h3>
                       <p className="text-xs text-gray-700">{item.description}</p>

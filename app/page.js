@@ -8,6 +8,7 @@ import IntegrationsSection from "@/components/home/IntegrationsSection"
 import VideoHeroSection from "@/components/videoHero"
 import MortgageProducts from "@/components/home/MortgageProducts"
 import Versus from "@/components/home/Versus"
+import LisaCta from "@/components/home/lisaCta"
 // import { TrustedBrands } from "@/components/home/trusted-brands"
 
 export default function Home() {
@@ -22,6 +23,8 @@ export default function Home() {
 
         <MortgageProducts />
 
+        <LisaCta />
+
         <Stats3D />
 
         <VideoHeroSection />
@@ -32,7 +35,7 @@ export default function Home() {
 
         {/* <TrustedBrands /> */}
 
-        {/* <LisaCta /> */}
+
         <CtaSection />
 
         <Versus />

@@ -4,7 +4,8 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
 
-import videoThumbnail from "@/public/videoThumbnail.webp"
+// import videoThumbnail from "@/public/videoThumbnail.webp"
+import videoThumbnail from "@/public/lisaThumbnail.png"
 // import taygo from "@/public/taygo.mp4"
 import Image from "next/image"
 

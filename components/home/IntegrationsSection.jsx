@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 
-import inteImg from "@/public/images/inteImg.png"
+// import inteImg from "@/public/images/inteImg.png"
+import inteImg from "@/public/images/integraGif.gif"
 
 const logos = [
   { id: 1, src: "/integrationToolsLogo/facebook.png", alt: "Facebook" },
@@ -39,20 +40,20 @@ export default function IntegrationsSection() {
   ];
 
   return (
-    <section className="py-20 px-13">
+    <section className="py20 px-13">
 
-      <div className="bg-linear-to-r from-[#7B69E5] to-[#7864eb] rounded-xs p-8 md:px-12 lg:px-16">
+      <div className="bg-linear-tor borde from[#7B69E5] to[#7864eb] rounded-xs p-8 md:px-12 lg:px-16">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
           {/* Left Content */}
           <div className="flex flex-col justify-center">
-            <h2 className="text-2xl md:text-[2.7rem] font-bold text-white mb-6 leading-tight">
-              Your AI agent works wherever your data lives
+            <h2 className="text-2xl md:text-[2.2rem] font-bold text-gray-800 mb-6 leading-tight">
+              AI reviews the entire pipeline every day and identifies exactly what needs to happen next.
             </h2>
-            <p className="text-xl md:lg text-white/90 mb-8 leading-relaxed">
+            {/* <p className="text-xl md:lg textwhite/90 mb-8 leading-relaxed">
               Integrated with top mortgage platforms for smooth, automated workflows.
-            </p>
+            </p> */}
             <div>
               {/* <button className="px-6 py-3 cursor-pointer text-white border-2 border-white rounded-lg hover:bg-white/10 transition-all duration-300">
                 Explore all integrations

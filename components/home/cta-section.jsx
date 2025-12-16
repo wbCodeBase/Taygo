@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export function CtaSection() {
   return (
-    <section className="pt-8">
+    <section>
       <div className="maxw-6xl mxauto">
         {/* <div className="relative bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-700 rounded-xs p-12 md:p-16 overflow-hidden shadow-2xl"> */}
-        <div className="relative bg-crm-green rounded-xs p-12 md:p-16 overflow-hidden shadow-2xl">
+        <div className="relative bg-crm-green rounded-xs px-12 py-5 md:px-16 overflow-hidden shadow-2xl">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl" />
             <div className="absolute bottom-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl" />
@@ -25,11 +25,10 @@ export function CtaSection() {
 
           <div className="relative z-10 max-w-7xl gap-10 mx-auto flex justify-between items-center">
             <div className="max-w-xl">
-              <h2 className="text-2xl md:text-[2.7rem] font-bold text-white mb-4 leading-tight">Supercharge your sales with Lisa Agents</h2>
+              <h2 className="text-2xl md:text-[2.7rem] font-bold text-white mb-4 leading-tight">Activate Your AI Sales Workforce</h2>
 
               <p className="text-lg md:text-xl text-teal-50 mb-8">
-                Harness the power of a multi-agent platform that delivers the best of artificial intelligence and human
-                experience.
+                Harness a multi-agent system that plans, executes, and reports combining AI precision with human approval.
               </p>
 
               <button className="group cursor-pointer font-semibold inline-flex items-center gap-2 px-8 py-4 bg-white text-[#163D40] rounded-xs hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
