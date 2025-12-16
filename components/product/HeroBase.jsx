@@ -24,12 +24,13 @@ const HeaderBase = () => {
 
     return (
         <>
-            <section className="bg-linear-to-r relative">
-                <div className="mx-auto p-6 sm:p-10 lg:p-18 px-4 sm:px-6 lg:px-8">
+            {/* <section className="relative bg-[#006C5D] text-white"> */}
+            <section className="relative bg-linear-to-r from-[#006C5D] via-[#004e43] to-[#002e28] text-white">
+                <div className="mx-auto p-6 sm:p-10  px-4 sm:px-6 lg:px-8">
 
                     {/* heading */}
                     <div className="text-center mb-12 mx-auto">
-                        <h2 className="text-2xl md:text-[2.7rem] font-semibold mb-6 leading-tight">
+                        <h2 className="text-2xl md:text-[2.7rem] font-semibold mb-2 leading-tight">
                             Why Choose us
                         </h2>
                         {/* <p className="text-lg md:text-xl font-medium mb-4 text-balance mx-auto text-gray-50">
@@ -43,7 +44,7 @@ const HeaderBase = () => {
                             return (
                                 <div
                                     key={index}
-                                    className='flex-1 space-y-4 text-base sm:text-base lg:text-lg border-ar-gray-600 rounded-4xl p-4'
+                                    className='flex-1 border space-y-4 text-base sm:text-base lg:text-lg border-ar-gray-600 rounded-sm p-4'
                                 >
                                     <IconComponent className="w-10 h-10" />
 
@@ -58,8 +59,8 @@ const HeaderBase = () => {
 
                 </div>
 
-                <Image src={checkArrow} alt='watermarks' width={130} height={130} className='absolute opacity-60 top-0 left-0 hidden md:block' />
-                <Image src={checkArrow} alt='watermarks' width={100} height={100} className='absolute opacity-60 bottom-0 right-0 hidden md:block' />
+                <Image src={checkArrow} alt='watermarks' width={130} height={130} className='absolute opacity-50 top-0 left-0 hidden md:block' />
+                <Image src={checkArrow} alt='watermarks' width={100} height={100} className='absolute opacity-40 bottom-0 right-0 hidden md:block' />
 
             </section>
         </>

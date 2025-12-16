@@ -1,4 +1,5 @@
 // import HeroSectionAutomatedPipeline from "@/components/product/HeroAutomativePipeline";
+import AIFeaturesSection from "@/components/product/AiFeatures";
 import BuildConvertMort from "@/components/product/BuildConvertMort";
 import HeaderBase from "@/components/product/HeroBase";
 import HeroSection from "@/components/product/HeroSection";
@@ -16,6 +17,8 @@ export default function Product() {
       <BuildConvertMort />
 
       <IncreaseProductivity />
+
+      <AIFeaturesSection />
 
 
     </>
