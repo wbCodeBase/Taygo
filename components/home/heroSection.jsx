@@ -196,8 +196,7 @@ export default function HeroSection() {
 
             <video
               ref={videoRef}
-              width="270"
-              height="240"
+              width="250" height="470"
               controls
               playsInline
               autoPlay
