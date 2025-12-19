@@ -2,6 +2,10 @@
 import { Workflow, Shell, Users, Handshake, Brain, ArrowRight, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SyncedCRMDashboard } from './SyncedCRMDashboard';
+// import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+// import lisaLand from "@/public/video/lisaLand.gif"
+// import lisaPort from "@/public/video/lisaPort.mp4"
 
 export default function HeroSection() {
   const features = [
@@ -10,7 +14,70 @@ export default function HeroSection() {
     { icon: Shell, text: 'Pipeline Autopilot', gradient: 'from-teal to-teal-light' },
     { icon: Brain, text: 'Marketing Automation', gradient: 'from-teal to-teal-light' },
     { icon: Workflow, text: 'Auto Follow-Ups', gradient: 'from-teal to-teal-light' },
-  ];<Brain />
+  ]; <Brain />
+
+  const heading = "AI-Powered Operating System for the Modern Mortgage Business";
+  const para = "Everything your brokers, lenders, and loan officers need powered by AI, all in one platform."
+
+
+  const videoRef = useRef(null);
+
+  const [headingText, setHeadingText] = useState("");
+  const [paraText, setParaText] = useState("");
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // 🔹 Typing logic (controlled)
+  const startTyping = () => {
+    let i = 0;
+    let j = 0;
+
+    const headingInterval = setInterval(() => {
+      setHeadingText(heading.slice(0, i + 1));
+      i++;
+
+      if (i === heading.length) {
+        clearInterval(headingInterval);
+
+        const paraInterval = setInterval(() => {
+          setParaText(para.slice(0, j + 1));
+          j++;
+
+          if (j === para.length) {
+            clearInterval(paraInterval);
+          }
+        }, 40);
+      }
+    }, 80);
+  };
+
+  // 🔹 Play video when page renders
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.play();
+    setIsPlaying(true);
+    startTyping();
+  }, []);
+
+  // 🔹 Sync typing with video controls
+  const handlePlay = () => {
+    if (!isPlaying) {
+      if (videoRef.current) {
+        videoRef.current.muted = false;
+      }
+      setParaText("");
+
+      setIsPlaying(true);
+      startTyping();
+    }
+  };
+
+  const handlePause = () => {
+    setIsPlaying(false);
+  };
+
+
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -42,24 +109,132 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative w-full mx-auto px-6 md:px-12 pb-14 mt-10">
+      <div className={`relative wfull  mx-auto px-6 md:px-12 pb-14 mt-10`}>
+
+        <div className='flex justify-center gap-10 items-center py-6'>
 
 
-        {/* Top Section - Full Width Header */}
+          {/* Top Section - Full Width Header */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className={`text-center relative my-2 max-w-5xl mxauto space-y-6`}
+          >
+
+            {paraText && <>
+              <div className="absolute top1/4 left-1/4 w-96 h-96 bg-teal-200/10 rounded-full blur-3xl" />
+              <div className="absolute bottom1/4 right-1/4 w-96 h-96 bg-emerald-200/10 rounded-full blur-3xl" />
+              <div className="absolute bottom1/4 right-2/4 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl" />
+            </>}
+
+
+
+            <div>
+
+
+              {/* Main Headline */}
+              <div className="space-y4">
+                <h1 className="sm:text-[3rem] text-3xl text-gray-900 font-bold leading-snug">
+
+                  {headingText}
+                  {/* AI-Powered Operating System for the Modern Mortgage Business */}
+
+                </h1>
+
+              </div>
+
+              {/* Description */}
+              <p className="md:text-xl text-lg text-gray-800 my-6">
+                {paraText}
+                {/* Everything your brokers, lenders, and loan officers need powered by AI, all in one platform. */}
+              </p>
+
+
+              {/* Feature Pills */}
+              {paraText ? <>
+                < div className="flex flex-wrap gap-5 justify-center my-6 pt-6">
+                  {features.map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 + index * 0.1 }}
+                      className="flex items-center gap-3 bg-white z-10 px-3 py-2 rounded-sm shadow-md border border-gray-200"
+                    >
+                      <div className={`w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-700 ${feature.gradient} rounded-xs flex items-center justify-center`}>
+                        <feature.icon className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-md text-gray-700" style={{ fontWeight: 500 }}>{feature.text}</span>
+                    </motion.div>
+                  ))}
+                </div>
+
+                <motion.button
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-btn-green hover:bg-btn-green-hover relative font-semibold text-white px-8 py-4 cursor-pointer rounded-xs transition-all inline-flex items-center gap-2 my-4"
+                  style={{ fontWeight: 600 }}
+                >
+                  View Demo
+                  <ArrowRight className="w-5 h-5" />
+                </motion.button>
+              </>
+                : null}
+
+            </div>
+
+
+          </motion.div>
+
+
+          {/* Right Video Section  */}
+          <div>
+
+            <video
+              ref={videoRef}
+              width="270"
+              height="240"
+              controls
+              playsInline
+              autoPlay
+              muted
+              onPlay={handlePlay}
+              onPause={handlePause}
+              onEnded={() => setIsPlaying(false)}
+            >
+              <source src="/video/LisaVid.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+          </div>
+
+
+        </div>
+
+        {/* Bottom Section - Full Width CRM Dashboard */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-6 max-w-5xl mx-auto space-y-6"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="w-full"
         >
+          <SyncedCRMDashboard />
+        </motion.div>
+      </div >
+    </div >
+  );
+}
 
 
-          <div className="absolute top1/4 left-1/4 w-96 h-96 bg-teal-200/10 rounded-full blur-3xl" />
-          <div className="absolute bottom1/4 right-1/4 w-96 h-96 bg-emerald-200/10 rounded-full blur-3xl" />
-          <div className="absolute bottom1/4 right-2/4 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl" />
 
-          {/* Badge */}
-          {/* <motion.div
+
+
+{/* Badge */ }
+{/* <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
@@ -69,49 +244,13 @@ export default function HeroSection() {
             <span className="text-sm" style={{ fontWeight: 500 }}>AI-Powered Platform</span>
           </motion.div> */}
 
-          {/* Main Headline */}
-          <div className="space-y4">
-            <h1 className="sm:text-[3rem] text-3xl text-gray-900 font-bold leading-snug">
-              {/* <h1 className="lg:text-5xl text-4xl text-gray-900 leading-tight" style={{ fontWeight: 700 }}> */}
-              {/* Meet{' '} */}
-              {/* <span className="bg-gradient-to-r from-[#0D9488] to-[#14B8A6] bg-clip-text text-transparent">
-                AI-Powered
-              </span>
-              {' '} */}
-              AI-Powered Operating System for the Modern Mortgage Business
-
-            </h1>
-            {/* <h2 className="text-2xl lg:text-3xl text-gray-700 leading-tight">
-              Automate Your Entire Mortgage CRM Workflow
-            </h2> */}
-          </div>
-
-          {/* Description */}
-          <p className="md:text-xl text-lg text-gray-800">
-            Everything your brokers, lenders, and loan officers need powered by AI, all in one platform.
-          </p>
 
 
 
-          {/* Feature Pills */}
-          <div className="flex flex-wrap gap-5 justify-center my-6">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + index * 0.1 }}
-                className="flex items-center gap-3 bg-white z-10 px-3 py-2 rounded-sm shadow-md border border-gray-200"
-              >
-                <div className={`w-8 h-8 bg-gradient-to-r from-teal-600 to-teal-700 ${feature.gradient} rounded-xs flex items-center justify-center`}>
-                  <feature.icon className="w-4 h-4 text-white" />
-                </div>
-                <span className="text-md text-gray-700" style={{ fontWeight: 500 }}>{feature.text}</span>
-              </motion.div>
-            ))}
-          </div>
 
-          {/* <div className="text-md md:text-2xl font-medium text-teal-700 my-3 flex flex-wrap items-center justify-center gap-2">
+
+
+{/* <div className="text-md md:text-2xl font-medium text-teal-700 my-3 flex flex-wrap items-center justify-center gap-2">
             <span>CRM</span>
             <span>|</span>
             <span>Loan Origination</span>
@@ -121,22 +260,13 @@ export default function HeroSection() {
             <span>File Management</span>
           </div> */}
 
-          {/* CTA Button */}
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-btn-green hover:bg-btn-green-hover font-semibold text-white px-8 py-4 cursor-pointer rounded-xs transition-all inline-flex items-center gap-2 my-4"
-            style={{ fontWeight: 600 }}
-          >
-            View Demo
-            <ArrowRight className="w-5 h-5" />
-          </motion.button>
 
-          {/* Stats */}
-          {/* <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200 max-w-2xl mx-auto">
+
+
+
+
+{/* Stats */ }
+{/* <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200 max-w-2xl mx-auto">
             <div>
               <div className="text-3xl text-gray-900" style={{ fontWeight: 700 }}>80%</div>
               <div className="text-sm text-gray-600 mt-1">Tasks Automated</div>
@@ -150,18 +280,3 @@ export default function HeroSection() {
               <div className="text-sm text-gray-600 mt-1">Lead Response</div>
             </div>
           </div> */}
-        </motion.div>
-
-        {/* Bottom Section - Full Width CRM Dashboard */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="w-full"
-        >
-          <SyncedCRMDashboard />
-        </motion.div>
-      </div>
-    </div>
-  );
-}
