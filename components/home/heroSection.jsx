@@ -22,43 +22,43 @@ export default function HeroSection() {
 
   // const videoRef = useRef(null);
 
-  const [headingText, setHeadingText] = useState("");
-  const [paraText, setParaText] = useState("");
+  // const [headingText, setHeadingText] = useState("");
+  // const [paraText, setParaText] = useState("");
   // const [isPlaying, setIsPlaying] = useState(false);
 
   // 🔹 Typing logic (controlled)
-  const startTyping = () => {
-    let i = 0;
-    let j = 0;
+  // const startTyping = () => {
+  //   let i = 0;
+  //   let j = 0;
 
-    const headingInterval = setInterval(() => {
-      setHeadingText(heading.slice(0, i + 1));
-      i++;
+  //   const headingInterval = setInterval(() => {
+  //     setHeadingText(heading.slice(0, i + 1));
+  //     i++;
 
-      if (i === heading.length) {
-        clearInterval(headingInterval);
+  //     if (i === heading.length) {
+  //       clearInterval(headingInterval);
 
-        const paraInterval = setInterval(() => {
-          setParaText(para.slice(0, j + 1));
-          j++;
+  //       const paraInterval = setInterval(() => {
+  //         setParaText(para.slice(0, j + 1));
+  //         j++;
 
-          if (j === para.length) {
-            clearInterval(paraInterval);
-          }
-        }, 40);
-      }
-    }, 80);
-  };
+  //         if (j === para.length) {
+  //           clearInterval(paraInterval);
+  //         }
+  //       }, 40);
+  //     }
+  //   }, 80);
+  // };
 
   // 🔹 Play video when page renders
-  useEffect(() => {
+  // useEffect(() => {
     // const video = videoRef.current;
     // if (!video) return;
 
     // video.play();
     // setIsPlaying(true);
-    startTyping();
-  }, []);
+  //   startTyping();
+  // }, []);
 
   // 🔹 Sync typing with video controls
   // const handlePlay = () => {
@@ -137,7 +137,8 @@ export default function HeroSection() {
               <div className="space-y4">
                 <h1 className="sm:text-[3rem] text-3xl text-gray-900 font-bold leading-snug">
 
-                  {headingText}
+                  {/* {headingText} */}
+                  {heading}
                   {/* AI-Powered Operating System for the Modern Mortgage Business */}
 
                 </h1>
@@ -146,7 +147,8 @@ export default function HeroSection() {
 
               {/* Description */}
               <p className="md:text-xl text-lg text-gray-800 my-6">
-                {paraText}
+                {para}
+                {/* {paraText} */}
                 {/* Everything your brokers, lenders, and loan officers need powered by AI, all in one platform. */}
               </p>
 
