@@ -1,5 +1,5 @@
 "use client"
-import { Workflow, Shell, Users, Handshake, Brain, ArrowRight, BarChart3 } from 'lucide-react';
+import { Workflow, Shell, Users, Brain, ArrowRight, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SyncedCRMDashboard } from './SyncedCRMDashboard';
 // import Image from 'next/image';
@@ -20,11 +20,11 @@ export default function HeroSection() {
   const para = "Everything your brokers, lenders, and loan officers need powered by AI, all in one platform."
 
 
-  const videoRef = useRef(null);
+  // const videoRef = useRef(null);
 
   const [headingText, setHeadingText] = useState("");
   const [paraText, setParaText] = useState("");
-  const [isPlaying, setIsPlaying] = useState(false);
+  // const [isPlaying, setIsPlaying] = useState(false);
 
   // 🔹 Typing logic (controlled)
   const startTyping = () => {
@@ -52,30 +52,30 @@ export default function HeroSection() {
 
   // 🔹 Play video when page renders
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
+    // const video = videoRef.current;
+    // if (!video) return;
 
-    video.play();
-    setIsPlaying(true);
+    // video.play();
+    // setIsPlaying(true);
     startTyping();
   }, []);
 
   // 🔹 Sync typing with video controls
-  const handlePlay = () => {
-    if (!isPlaying) {
-      if (videoRef.current) {
-        videoRef.current.muted = false;
-      }
-      setParaText("");
+  // const handlePlay = () => {
+  //   if (!isPlaying) {
+  //     if (videoRef.current) {
+  //       videoRef.current.muted = false;
+  //     }
+  //     setParaText("");
 
-      setIsPlaying(true);
-      startTyping();
-    }
-  };
+  //     setIsPlaying(true);
+  //     startTyping();
+  //   }
+  // };
 
-  const handlePause = () => {
-    setIsPlaying(false);
-  };
+  // const handlePause = () => {
+  //   setIsPlaying(false);
+  // };
 
 
 
@@ -122,11 +122,11 @@ export default function HeroSection() {
             className={`text-center relative my-2 max-w-5xl mxauto space-y-6`}
           >
 
-            {paraText && <>
+            {/* {paraText && <> */}
               <div className="absolute top1/4 left-1/4 w-96 h-96 bg-teal-200/10 rounded-full blur-3xl" />
               <div className="absolute bottom1/4 right-1/4 w-96 h-96 bg-emerald-200/10 rounded-full blur-3xl" />
               <div className="absolute bottom1/4 right-2/4 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl" />
-            </>}
+            {/* </>} */}
 
 
 
@@ -152,7 +152,7 @@ export default function HeroSection() {
 
 
               {/* Feature Pills */}
-              {paraText ? <>
+              {/* {paraText ? <> */}
                 < div className="flex flex-wrap gap-5 justify-center my-6 pt-6">
                   {features.map((feature, index) => (
                     <motion.div
@@ -182,8 +182,8 @@ export default function HeroSection() {
                   View Demo
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
-              </>
-                : null}
+              {/* </>
+                : null} */}
 
             </div>
 
@@ -192,7 +192,7 @@ export default function HeroSection() {
 
 
           {/* Right Video Section  */}
-          <div>
+          {/* <div>
 
             <video
               ref={videoRef}
@@ -209,7 +209,7 @@ export default function HeroSection() {
               Your browser does not support the video tag.
             </video>
 
-          </div>
+          </div> */}
 
 
         </div>
