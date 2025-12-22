@@ -205,7 +205,7 @@ export default function HeroSection() {
               onPause={handlePause}
               onEnded={() => setIsPlaying(false)}
             >
-              <source src="/video/LisaVid.mp4" type="video/mp4" />
+              <source src="/video/Lisavid.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
