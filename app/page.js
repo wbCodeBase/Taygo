@@ -1,5 +1,5 @@
 
-import HeroSection from "@/components/home/heroSection"
+import HeroSection, { HeroSectionTwo } from "@/components/home/heroSection"
 import { AnimatedShowcase } from "@/components/home/animated-showcase"
 import { CtaSection } from "@/components/home/cta-section"
 import { TabbedShowcase } from "@/components/home/tabbed-showcase"
@@ -16,6 +16,8 @@ export default function Home() {
   return (
     <>
       <main className="min-h-screen">
+
+        <HeroSectionTwo />
 
         <HeroSection />
 
