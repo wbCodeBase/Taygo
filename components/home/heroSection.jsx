@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import { SyncedCRMDashboard } from './SyncedCRMDashboard';
 // import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-// import lisaLand from "@/public/video/lisaLand.gif"
-// import lisaPort from "@/public/video/lisaPort.mp4"
 
 export default function HeroSection() {
   const features = [
@@ -22,59 +20,170 @@ export default function HeroSection() {
 
   const videoRef = useRef(null);
 
-  const [headingText, setHeadingText] = useState("");
-  const [paraText, setParaText] = useState("");
+  const [headingText, setHeadingText] = useState(heading);
+  const [paraText, setParaText] = useState(para);
   const [isPlaying, setIsPlaying] = useState(false);
 
   // 🔹 Typing logic (controlled)
+  // const startTyping = () => {
+  //   let i = 0;
+  //   let j = 0;
+
+  //   const headingInterval = setInterval(() => {
+  //     setHeadingText(heading.slice(0, i + 1));
+  //     i++;
+
+  //     if (i === heading.length) {
+  //       clearInterval(headingInterval);
+
+  //       const paraInterval = setInterval(() => {
+  //         setParaText(para.slice(0, j + 1));
+  //         j++;
+
+  //         if (j === para.length) {
+  //           clearInterval(paraInterval);
+  //         }
+  //       }, 40);
+  //     }
+  //   }, 80);
+  // };
+
+  // // 🔹 Play video when page renders
+  // useEffect(() => {
+  //   const video = videoRef.current;
+  //   if (!video) return;
+
+  //   // video.play();
+  //   setIsPlaying(true);
+  //   startTyping();
+  // }, []);
+
+  // 🔹 Sync typing with video controls
+  // const handlePlay = () => {
+  //   if (!isPlaying) {
+  //     if (videoRef.current) {
+  //       videoRef.current.muted = false;
+  //     }
+  //     setParaText("");
+
+  //     setIsPlaying(true);
+  //     startTyping();
+  //   }
+  // };
+
+  // const handlePause = () => {
+  //   setIsPlaying(false);
+  // };
+
+
+
+
+  const headingIntervalRef = useRef(null);
+  const paraIntervalRef = useRef(null);
+  const headingIndexRef = useRef(0);
+  const paraIndexRef = useRef(0);
+
+
+  const [hasStarted, setHasStarted] = useState(false);
+
+  // 🔹 Start typing animation
   const startTyping = () => {
-    let i = 0;
-    let j = 0;
+    headingIndexRef.current = 0;
+    paraIndexRef.current = 0;
+    setHeadingText("");
+    setParaText("");
 
-    const headingInterval = setInterval(() => {
-      setHeadingText(heading.slice(0, i + 1));
-      i++;
+    headingIntervalRef.current = setInterval(() => {
+      if (headingIndexRef.current < heading.length) {
+        setHeadingText(heading.slice(0, headingIndexRef.current + 1));
+        headingIndexRef.current++;
+      } else {
+        clearInterval(headingIntervalRef.current);
 
-      if (i === heading.length) {
-        clearInterval(headingInterval);
-
-        const paraInterval = setInterval(() => {
-          setParaText(para.slice(0, j + 1));
-          j++;
-
-          if (j === para.length) {
-            clearInterval(paraInterval);
+        paraIntervalRef.current = setInterval(() => {
+          if (paraIndexRef.current < para.length) {
+            setParaText(para.slice(0, paraIndexRef.current + 1));
+            paraIndexRef.current++;
+          } else {
+            clearInterval(paraIntervalRef.current);
           }
         }, 40);
       }
     }, 80);
   };
 
-  // 🔹 Play video when page renders
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
+  // 🔹 Pause typing animation
+  const pauseTyping = () => {
+    if (headingIntervalRef.current) clearInterval(headingIntervalRef.current);
+    if (paraIntervalRef.current) clearInterval(paraIntervalRef.current);
+  };
 
-    video.play();
-    setIsPlaying(true);
-    startTyping();
-  }, []);
+  // 🔹 Resume typing animation
+  const resumeTyping = () => {
+    if (headingIndexRef.current < heading.length) {
+      headingIntervalRef.current = setInterval(() => {
+        if (headingIndexRef.current < heading.length) {
+          setHeadingText(heading.slice(0, headingIndexRef.current + 1));
+          headingIndexRef.current++;
+        } else {
+          clearInterval(headingIntervalRef.current);
 
-  // 🔹 Sync typing with video controls
-  const handlePlay = () => {
-    if (!isPlaying) {
-      if (videoRef.current) {
-        videoRef.current.muted = false;
-      }
-      setParaText("");
-
-      setIsPlaying(true);
-      startTyping();
+          paraIntervalRef.current = setInterval(() => {
+            if (paraIndexRef.current < para.length) {
+              setParaText(para.slice(0, paraIndexRef.current + 1));
+              paraIndexRef.current++;
+            } else {
+              clearInterval(paraIntervalRef.current);
+            }
+          }, 40);
+        }
+      }, 80);
+    } else if (paraIndexRef.current < para.length) {
+      paraIntervalRef.current = setInterval(() => {
+        if (paraIndexRef.current < para.length) {
+          setParaText(para.slice(0, paraIndexRef.current + 1));
+          paraIndexRef.current++;
+        } else {
+          clearInterval(paraIntervalRef.current);
+        }
+      }, 40);
     }
   };
 
+  // 🔹 Cleanup intervals on unmount
+  useEffect(() => {
+    return () => {
+      if (headingIntervalRef.current) clearInterval(headingIntervalRef.current);
+      if (paraIntervalRef.current) clearInterval(paraIntervalRef.current);
+    };
+  }, []);
+
+  // 🔹 Handle video play - only trigger animation if user clicked
+  const handlePlay = () => {
+    setIsPlaying(true);
+    if (hasStarted) {
+      // Only resume typing if already started by user
+      resumeTyping();
+    }
+  };
+
+  // 🔹 Handle video pause
   const handlePause = () => {
     setIsPlaying(false);
+    if (hasStarted) {
+      pauseTyping();
+    }
+  };
+
+  // 🔹 Handle user clicking play button
+  const handleUserPlay = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = false;
+      setHasStarted(true);
+      setIsPlaying(true);
+      startTyping();
+      videoRef.current.play();
+    }
   };
 
 
@@ -192,12 +301,12 @@ export default function HeroSection() {
 
 
           {/* Right Video Section  */}
-          <div>
+          {/* <div>
 
             <video
               ref={videoRef}
               width="250" height="470"
-              controls
+              // controls
               playsInline
               autoPlay
               muted
@@ -209,6 +318,56 @@ export default function HeroSection() {
               Your browser does not support the video tag.
             </video>
 
+          </div> */}
+
+
+          <div style={{ position: 'relative', width: '250px', height: '470px' }}>
+            <video
+              ref={videoRef}
+              width="250"
+              height="470"
+              playsInline
+              // autoPlay
+              muted
+              onPlay={handleUserPlay}
+              onPause={handlePause}
+              onEnded={() => setIsPlaying(false)}
+            >
+              <source src="/video/Lisavid.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            {/* Play button overlay */}
+            {!isPlaying && (
+              <button
+                onClick={() => {
+                  if (videoRef.current) {
+                    videoRef.current.muted = false;
+                    videoRef.current.play();
+                  }
+                }}
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  width: '60px',
+                  height: '60px',
+                  borderRadius: '50%',
+                  backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '24px',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+                  zIndex: 10
+                }}
+              >
+                ▶
+              </button>
+            )}
           </div>
 
 
