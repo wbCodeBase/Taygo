@@ -1,11 +1,8 @@
 "use client"
-import { Workflow, Shell, Users, Handshake, Brain, ArrowRight, BarChart3 } from 'lucide-react';
+import { Workflow, Shell, Users, Brain, ArrowRight, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SyncedCRMDashboard } from './SyncedCRMDashboard';
-// import Image from 'next/image';
-// import { useEffect, useRef, useState } from 'react';
-// import lisaLand from "@/public/video/lisaLand.gif"
-// import lisaPort from "@/public/video/lisaPort.mp4"
+import Image from 'next/image';
 
 export default function HeroSection() {
   const features = [
@@ -90,6 +87,20 @@ export default function HeroSection() {
               {/* Everything your brokers, lenders, and loan officers need powered by AI, all in one platform. */}
             </p>
 
+
+            <div className="relative inline-block mx-auto mt-4">
+              <Image
+                src="https://cdnsecakmi.kaltura.com/p/1773841/thumbnail/entry_id/1_72zix1fs/width/563"
+                width={500}
+                height={500}
+                alt='crmIcon'
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-20 h-20 bg-gray-800 hover:scale-105 bg-opacity-60 rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all cursor-pointer">
+                  <div className="w-0 h-0 border-t-[15px] border-t-transparent border-l-[25px] border-l-white border-b-[15px] border-b-transparent ml-1"></div>
+                </div>
+              </div>
+            </div>
 
             {/* Feature Pills */}
             < div className="flex flex-wrap gap-5 justify-center my-6 pt-6">

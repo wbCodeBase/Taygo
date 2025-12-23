@@ -13,10 +13,12 @@ const menuItems = [
   // { title: 'Home', slug: '/', hasSubmenu: false }, 
   { title: 'Products', slug: '/leadflow', hasSubmenu: true },
   // { title: 'Hire', slug: '/hire/node-developer', hasSubmenu: true },
-  { title: 'Solutions', slug: '#', hasSubmenu: false },
+  { title: 'Solutions', slug: '#', hasSubmenu: true },
   { title: 'Pricing', slug: '/pricing', hasSubmenu: false },
   { title: 'Contact', slug: '/contact-us', hasSubmenu: false },
 ]
+
+
 
 
 const product = {
@@ -55,6 +57,42 @@ const product = {
 
 }
 
+
+const solution = {
+  categories: [
+    { name: 'Solutions', slug: 'solutions' },
+  ],
+  content: {
+    Products: {
+      title: 'Solutions',
+      slug: 'solutions',
+      description: 'Our Solutions',
+      products: [
+        { name: 'Taygo™ LeadFlow', slug: 'leadflow', description: "Mortgage CRM & Lead Automation" },
+        { name: 'Taygo™ PipelineOS', slug: 'pipeline-os', description: "Mortgage Pipeline & Refinance Workflow Automation" },
+        { name: 'Taygo™ BorrowerHub', slug: 'borrowerhub', description: "Mortgage POS & Borrower Portal" },
+        { name: 'Taygo™ VoiceAI', slug: 'voice-aI', description: "AI Call Center & Phone Automation" },
+        { name: 'Taygo™ LoanCore', slug: 'loan-core', description: "Loan Management & Tracking System" },
+      ],
+      hiring: [
+        {
+          title: 'AI Decision Engine',
+          slug: 'ai-engine',
+          description: 'Turn pipeline data into real-time actions and prioritization',
+        },
+        {
+          title: 'AI Compliance & Risk Monitor',
+          slug: 'ai-compliance-risk-monitor',
+          description: 'Proactively detect issues before they impact loans or audits',
+        },
+
+      ],
+    },
+
+  },
+
+
+}
 
 
 
@@ -106,8 +144,8 @@ export default function Header() {
 
   const handleMenuHover = (menu) => {
     setActiveMenu(menu)
-    // setActiveCategory(menu === 'Service' ? 'Software Development' : 'Backend')
-    setActiveCategory("Products")
+    setActiveCategory(menu) // Products or Solutions
+    // setActiveCategory("Products")
   }
 
   const handleCategoryHover = (category) => {
@@ -194,6 +232,71 @@ export default function Header() {
     </div>
   )
 
+
+  const renderSolutionDropdown = (currentActiveMenu) => (
+    <div onMouseEnter={() => setActiveMenu(currentActiveMenu)}
+      onMouseLeave={() => setActiveMenu('')}
+
+      className="absolute left-0 w-full bg-white shadow-lg z-50 transition-all duration-300 ease-in-out">
+      <div className="max-w-5xl mx-auto flex flex-col lg:flex-row">
+
+        {solution.content[activeCategory] && (
+          <>
+            <div className='flex w-full flex-col lg:flex-row h-screen sm:h-auto overflow-auto'>
+
+              <div className="w-full lg:w-7/12 p-6">
+
+                <div className="mb-4 py-4 flex items-center border-b">
+
+                  <span>
+                    <span className='text-lg font-semibold text-gray-800'> {solution.content[activeCategory].title} </span>
+                  </span>
+                </div>
+
+
+                <div className="grid md:grid-cols-2 gap-2">
+                  {solution.content[activeCategory].products.map((tech, index) => (
+                    <Link href={`/${tech.slug}`} key={index} onClick={() => { setActiveMenu(''); setActiveCategory(''); setIsMobileMenuOpen(false) }} className="p-4 borde space-y-2 rounded-md transition-colors duration-200 font-medium cursor-pointer hover:bg-teal-50">
+                      <div className='flex gap-3'>
+                        <Image src="https://www.insightly.com/wp-content/uploads/2025/03/CRM-Icon.svg" width={20} height={20} alt='crmIcon' /> {tech.name}
+                      </div>
+                      <p className='text-gray-700 font-medium text-xs'>{tech.description}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="w-full lg:w-5/12 p-6 border-l">
+
+                <div className="mb-4 borderb py-4">
+                  <span className='text-lg font-semibold text-gray-700'>More from Taygo™</span>
+                  <p className="text-xs text-gray-700 mt-1">Advanced AI capabilities that improve CRM intelligence and control</p>
+                </div>
+
+                {solution.content[activeCategory].hiring.map((item, index) => (
+                  <Link href={`/${item.slug}`} key={index}>
+                    <div className="mb-4 hover:border hover:bg-teal-50 rounded-lg p-3 cursor-pointer">
+                      <h3 className="font-medium mb-2 flex items-center gap-3">
+                        <Image src="https://www.insightly.com/wp-content/uploads/2025/03/unbounce-Symbol.svg" width={20} height={20} alt='crmIcon' />
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-gray-700">{item.description}</p>
+                    </div>
+                  </Link>
+                ))}
+
+
+              </div>
+
+            </div>
+
+          </>
+        )}
+      </div>
+    </div>
+  )
+
+
   // const renderServicesDropdown = (currentActiveMenu) => (
   //   <div onMouseEnter={() => setActiveMenu(currentActiveMenu)}
   //     onMouseLeave={() => setActiveMenu('')}
@@ -252,6 +355,7 @@ export default function Header() {
   //     </div>
   //   </div>
   // )
+
 
   return (
     // <header className={`${isScrolled ? "bg-[#00214E]" : "bg-white"} shadow-md sm:sticky sm:top-0 left-0 w-full z-40`} ref={dropdownRef}>
@@ -313,8 +417,8 @@ export default function Header() {
 
       {activeMenu && (
         <div className="absolute lg:flex hidden left-0 w-full bg-white shadow-lg z-50 transition-all duration-300 ease-in-out transform translate-y-0 opacity-100">
-          {renderHireDropdown(activeMenu)}
-          {/* {activeMenu === 'Product' && renderHireDropdown(activeMenu)} */}
+          {renderSolutionDropdown(activeMenu)}
+          {/* {activeMenu === 'Products' ? renderHireDropdown(activeMenu) : renderSolutionDropdown(activeMenu)} */}
         </div>
       )}
 
