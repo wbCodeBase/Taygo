@@ -20,7 +20,6 @@ const menuItems = [
 
 
 
-
 const product = {
   categories: [
     { name: 'Products', slug: 'products' },
@@ -63,7 +62,7 @@ const solution = {
     { name: 'Solutions', slug: 'solutions' },
   ],
   content: {
-    Products: {
+    Solutions: {
       title: 'Solutions',
       slug: 'solutions',
       description: 'Our Solutions',
@@ -244,7 +243,7 @@ export default function Header() {
           <>
             <div className='flex w-full flex-col lg:flex-row h-screen sm:h-auto overflow-auto'>
 
-              <div className="w-full lg:w-7/12 p-6">
+              <div className="w-full lg:max-w-3xl mx-auto p-6">
 
                 <div className="mb-4 py-4 flex items-center border-b">
 
@@ -254,7 +253,7 @@ export default function Header() {
                 </div>
 
 
-                <div className="grid md:grid-cols-2 gap-2">
+                <div className="grid md:grid-cols-3 gap-2">
                   {solution.content[activeCategory].products.map((tech, index) => (
                     <Link href={`/${tech.slug}`} key={index} onClick={() => { setActiveMenu(''); setActiveCategory(''); setIsMobileMenuOpen(false) }} className="p-4 borde space-y-2 rounded-md transition-colors duration-200 font-medium cursor-pointer hover:bg-teal-50">
                       <div className='flex gap-3'>
@@ -266,7 +265,7 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className="w-full lg:w-5/12 p-6 border-l">
+              {/* <div className="w-full lg:w-5/12 p-6 border-l">
 
                 <div className="mb-4 borderb py-4">
                   <span className='text-lg font-semibold text-gray-700'>More from Taygo™</span>
@@ -286,7 +285,7 @@ export default function Header() {
                 ))}
 
 
-              </div>
+              </div> */}
 
             </div>
 
@@ -296,65 +295,6 @@ export default function Header() {
     </div>
   )
 
-
-  // const renderServicesDropdown = (currentActiveMenu) => (
-  //   <div onMouseEnter={() => setActiveMenu(currentActiveMenu)}
-  //     onMouseLeave={() => setActiveMenu('')}
-  //     className="absolute left-0 w-full bg-white shadow-lg z-50 transition-all duration-300 ease-in-out">
-  //     <div className="container mx-auto flex flex-col lg:flex-row">
-
-  //       <div className="w-full lg:w-1/4 border-r p-4 hidden md:block">
-  //         {servicesData.categories.map((category, i) => (
-  //           <Link href={`/${category.slug}`} key={i} onClick={() => { setActiveMenu(''); setActiveCategory('') }}>
-  //             <div
-  //               key={category.name}
-  //               className={`py-2.5 px-4 cursor-pointer flex flex-nowrap justify-between items-center my-4 rounded-md transition-colors font-medium duration-200 ${activeCategory === category.name ? 'bg-amber-50 text-amber-600' : ''
-  //                 }`}
-  //               onMouseEnter={() => handleCategoryHover(category.name)}
-  //             >
-  //               <span> {category.name} </span>
-  //               <ChevronRight className="float-right h-5 w-5" />
-  //             </div>
-  //           </Link>
-  //         ))}
-  //       </div>
-
-  //       {/* border border-red-500 */}
-  //       {servicesData.content[activeCategory] && (
-  //         <>
-  //           <div className='flex w-full flex-col lg:flex-row hscreen sm:min-h-96 sm:h-auto overflow-auto'>
-
-  //             <div className="w-full p-6">
-  //               <div className="mb-4 py-4 flex items-center border-b">
-  //                 <span onClick={() => { setActiveMenu(''); setActiveCategory('') }} className="bg-amber-500 p-2 rounded-full mr-3">
-  //                   <TbCodeDots className=' font-semibold text-2xl' />
-  //                 </span>
-  //                 <span>
-  //                   <h2 className='text-xl font-bold'> {servicesData.content[activeCategory].title} </h2>
-  //                   <p className="text-gray-600">{servicesData.content[activeCategory].description}</p>
-  //                 </span>
-  //               </div>
-
-  //               <div className="grid grid-cols-1 md:grid-cols-3 sm:mt-8 gap-2 sm:gap-6">
-  //                 {servicesData.content[activeCategory].products.map((tech, index) => (
-  //                   <Link className="transition-colors duration-200 font-medium cursor-pointer group" href={`/${tech.slug}`} key={index} onClick={() => { setActiveMenu(''); setActiveCategory(''); setIsMobileMenuOpen(false) }}>
-
-  //                     <div className='group-hover:bg-amber-50 py-2 px-4 rounded-md'> {tech.name}
-  //                       {/* <p className="text-sm text-gray-600">Lorem ipsum dolor sit.</p> */}
-  //                     </div>
-
-  //                   </Link>
-  //                 ))}
-  //               </div>
-  //             </div>
-
-
-  //           </div>
-  //         </>
-  //       )}
-  //     </div>
-  //   </div>
-  // )
 
 
   return (
@@ -417,8 +357,8 @@ export default function Header() {
 
       {activeMenu && (
         <div className="absolute lg:flex hidden left-0 w-full bg-white shadow-lg z-50 transition-all duration-300 ease-in-out transform translate-y-0 opacity-100">
-          {renderSolutionDropdown(activeMenu)}
-          {/* {activeMenu === 'Products' ? renderHireDropdown(activeMenu) : renderSolutionDropdown(activeMenu)} */}
+          {/* {renderSolutionDropdown(activeMenu)} */}
+          {activeMenu === 'Products' ? renderHireDropdown(activeMenu) : renderSolutionDropdown(activeMenu)}
         </div>
       )}
 
