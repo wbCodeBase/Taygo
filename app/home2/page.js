@@ -17,12 +17,11 @@ export default function Home() {
     <>
       <main className="min-h-screen">
 
-
-        <HeroSection />
-
-        {/* <HeroSectionTwo />
-
         <HeroSectionFour />
+
+        {/* <HeroSection />
+
+        <HeroSectionTwo />
 
         <HeroSectionThree /> */}
 

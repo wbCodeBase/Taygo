@@ -18,9 +18,9 @@ export default function Home() {
       <main className="min-h-screen">
 
 
-        <HeroSection />
+        <HeroSectionTwo />
 
-        {/* <HeroSectionTwo />
+        {/* <HeroSection />
 
         <HeroSectionFour />
 

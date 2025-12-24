@@ -18,13 +18,14 @@ export default function Home() {
       <main className="min-h-screen">
 
 
-        <HeroSection />
+        <HeroSectionThree />
 
-        {/* <HeroSectionTwo />
+        {/* <HeroSection />
 
-        <HeroSectionFour />
+        <HeroSectionTwo />
 
-        <HeroSectionThree /> */}
+        <HeroSectionFour /> */}
+
 
         <AnimatedShowcase />
 
