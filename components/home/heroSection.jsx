@@ -24,7 +24,7 @@ export default function HeroSection() {
     { icon: Shell, text: 'Pipeline Autopilot', gradient: 'from-teal to-teal-light' },
     { icon: Brain, text: 'Marketing Automation', gradient: 'from-teal to-teal-light' },
     { icon: Workflow, text: 'Auto Follow-Ups', gradient: 'from-teal to-teal-light' },
-  ]; <Brain />
+  ]; 
 
   const heading = "AI-Powered Operating System for the Modern Mortgage Business";
   const para = "Everything your brokers, lenders, and loan officers need powered by AI, all in one platform."
@@ -60,7 +60,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className={`relative wfull  mx-auto px-6 md:px-12 pb-14 mt-10`}>
+      <div className={`relative wfull mx-auto px-6 md:px-12 pb-14 mt-10`}>
 
 
         {/* Top Section - Full Width Header */}
@@ -151,14 +151,14 @@ export default function HeroSection() {
 
 
         {/* Bottom Section - Full Width CRM Dashboard */}
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="w-full"
         >
           <SyncedCRMDashboard />
-        </motion.div> */}
+        </motion.div>
       </div >
     </div >
   );
@@ -173,7 +173,7 @@ export function HeroSectionTwo() {
     { icon: Shell, text: 'Pipeline Autopilot', gradient: 'from-teal to-teal-light' },
     { icon: Brain, text: 'Marketing Automation', gradient: 'from-teal to-teal-light' },
     { icon: Workflow, text: 'Auto Follow-Ups', gradient: 'from-teal to-teal-light' },
-  ]; <Brain />
+  ]; 
 
 
   return (
@@ -339,8 +339,30 @@ export function HeroSectionTwo() {
             </motion.div>
 
           </motion.div>
+
+
         </div>
+
+
       </div>
+
+
+
+
+
+      {/* Bottom Section - Full Width CRM Dashboard */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="w-full mx-auto px-6 md:px-12 mt-10"
+      >
+        <SyncedCRMDashboard />
+      </motion.div>
+
+
+
+
 
 
     </section>
@@ -350,13 +372,7 @@ export function HeroSectionTwo() {
 
 
 export function HeroSectionThree() {
-  // const features = [
-  //   { icon: BarChart3, text: 'CRM', gradient: 'from-teal to-teal-light' },
-  //   { icon: Users, text: 'AI LO Assistant', gradient: 'from-teal to-teal-light' },
-  //   { icon: Shell, text: 'Pipeline Autopilot', gradient: 'from-teal to-teal-light' },
-  //   { icon: Brain, text: 'Marketing Automation', gradient: 'from-teal to-teal-light' },
-  //   { icon: Workflow, text: 'Auto Follow-Ups', gradient: 'from-teal to-teal-light' },
-  // ]; 
+ 
 
   const heading = "AI-Powered Operating System for the Modern Mortgage Business";
   const para = "Everything your brokers, lenders, and loan officers need powered by AI, all in one platform."
@@ -444,7 +460,7 @@ export function HeroSectionThree() {
           <div className="absolute bottom1/4 right-2/4 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl" />
 
 
-          <div className='flex justify-between border-b border-gray-200 gap-16 items-center py-6'>
+          <div className='flex justify-between border-gray-200 gap-16 items-center py-6'>
 
             <div style={{ position: 'relative', width: '450px', height: '470px' }} className='flex justify-center items-center'>
               <video
@@ -699,6 +715,17 @@ export function HeroSectionFour() {
         </motion.div>
 
 
+        {/* Bottom Section - Full Width CRM Dashboard */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="w-full"
+        >
+          <SyncedCRMDashboard />
+        </motion.div>
+
+
       </div >
     </div >
   );
@@ -726,7 +753,7 @@ export function HeroSectionFour() {
 //     { icon: Shell, text: 'Pipeline Autopilot', gradient: 'from-teal to-teal-light' },
 //     { icon: Brain, text: 'Marketing Automation', gradient: 'from-teal to-teal-light' },
 //     { icon: Workflow, text: 'Auto Follow-Ups', gradient: 'from-teal to-teal-light' },
-//   ]; <Brain />
+//   ]; 
 
 //   const heading = "AI-Powered OS for the Modern Mortgage Business";
 //   const para = "Everything your brokers, lenders, and loan officers need powered by AI, all in one platform."
@@ -1038,7 +1065,7 @@ export function HeroSectionFour() {
 //     { icon: Shell, text: 'Pipeline Autopilot', gradient: 'from-teal to-teal-light' },
 //     { icon: Brain, text: 'Marketing Automation', gradient: 'from-teal to-teal-light' },
 //     { icon: Workflow, text: 'Auto Follow-Ups', gradient: 'from-teal to-teal-light' },
-//   ]; <Brain />
+//   ]; 
 
 //   const heading = "AI-Powered OS for the Modern Mortgage Business";
 //   const para = "Everything your brokers, lenders, and loan officers need powered by AI, all in one platform."

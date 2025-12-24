@@ -13,7 +13,7 @@ const menuItems = [
   // { title: 'Home', slug: '/', hasSubmenu: false }, 
   { title: 'Products', slug: '/leadflow', hasSubmenu: true },
   // { title: 'Hire', slug: '/hire/node-developer', hasSubmenu: true },
-  { title: 'Solutions', slug: '#', hasSubmenu: true },
+  { title: 'Features', slug: '#', hasSubmenu: true },
   { title: 'Pricing', slug: '/pricing', hasSubmenu: false },
   { title: 'Contact', slug: '/contact-us', hasSubmenu: false },
 ]
@@ -57,21 +57,66 @@ const product = {
 }
 
 
-const solution = {
+const feature = {
   categories: [
-    { name: 'Solutions', slug: 'solutions' },
+    { name: 'Features', slug: 'features' },
   ],
   content: {
-    Solutions: {
-      title: 'Solutions',
-      slug: 'solutions',
-      description: 'Our Solutions',
+    Features: {
+      title: 'Features',
+      slug: 'features',
+      description: 'Our Features',
       products: [
-        { name: 'Taygo™ LeadFlow', slug: 'leadflow', description: "Mortgage CRM & Lead Automation" },
-        { name: 'Taygo™ PipelineOS', slug: 'pipeline-os', description: "Mortgage Pipeline & Refinance Workflow Automation" },
-        { name: 'Taygo™ BorrowerHub', slug: 'borrowerhub', description: "Mortgage POS & Borrower Portal" },
-        { name: 'Taygo™ VoiceAI', slug: 'voice-aI', description: "AI Call Center & Phone Automation" },
-        { name: 'Taygo™ LoanCore', slug: 'loan-core', description: "Loan Management & Tracking System" },
+        {
+          title: "Lead & Pipeline Intelligence",
+          slug: "lead-pipeline-intelligence",
+          description: "AI-powered lead prioritization and pipeline health monitoring"
+        },
+        {
+          title: "AI Agent Workforce",
+          slug: "ai-agent-workforce",
+          description: "Autonomous AI assistants that review, act, and report"
+        },
+        {
+          title: "Borrower Experience Engine",
+          slug: "borrower-experience-engine",
+          description: "AI-guided applications and borrower journey automation"
+        },
+        {
+          title: "Communication Intelligence",
+          slug: "communication-intelligence",
+          description: "AI voice, SMS, email, and omnichannel engagement"
+        },
+        {
+          title: "Workflow Automation",
+          slug: "workflow-automation",
+          description: "Rules, triggers, and zero-touch task execution"
+        },
+        {
+          title: "Loan & File Intelligence",
+          slug: "loan-file-intelligence",
+          description: "Smart loan tracking, file summaries, and risk detection"
+        },
+        {
+          title: "Partner & Realtor Experience",
+          slug: "partner-realtor-experience",
+          description: "Automated updates and shared loan visibility"
+        },
+        {
+          title: "Insights & Performance",
+          slug: "insights-performance",
+          description: "Conversion analytics and AI productivity reporting"
+        },
+        {
+          title: "Customization & Control",
+          slug: "customization-control",
+          description: "Custom pipelines, roles, and access management"
+        },
+        {
+          title: "Integrations & Extensibility",
+          slug: "integrations-extensibility",
+          description: "LOS sync, APIs, webhooks, and embedded tools"
+        }
       ],
       hiring: [
         {
@@ -143,7 +188,7 @@ export default function Header() {
 
   const handleMenuHover = (menu) => {
     setActiveMenu(menu)
-    setActiveCategory(menu) // Products or Solutions
+    setActiveCategory(menu) // Products or Features
     // setActiveCategory("Products")
   }
 
@@ -179,12 +224,8 @@ export default function Header() {
               <div className="w-full lg:w-7/12 p-6">
 
                 <div className="mb-4 py-4 flex items-center border-b">
-                  {/* <span onClick={() => { setActiveMenu(''); setActiveCategory('') }} className="p-2 rounded-full mr-3">
-                    <TbCodeDots className=' font-semibold text-2xl' />
-                  </span> */}
                   <span>
                     <span className='text-lg font-semibold text-gray-800'> {product.content[activeCategory].title} </span>
-                    {/* <p className="text-gray-600">{product.content[activeCategory].description}</p> */}
                   </span>
                 </div>
 
@@ -239,25 +280,25 @@ export default function Header() {
       className="absolute left-0 w-full bg-white shadow-lg z-50 transition-all duration-300 ease-in-out">
       <div className="max-w-5xl mx-auto flex flex-col lg:flex-row">
 
-        {solution.content[activeCategory] && (
+        {feature.content[activeCategory] && (
           <>
             <div className='flex w-full flex-col lg:flex-row h-screen sm:h-auto overflow-auto'>
 
-              <div className="w-full lg:max-w-3xl mx-auto p-6">
+              <div className="w-full lg:max-w-4xl mx-auto p-6">
 
                 <div className="mb-4 py-4 flex items-center border-b">
-
                   <span>
-                    <span className='text-lg font-semibold text-gray-800'> {solution.content[activeCategory].title} </span>
+                    <span className='text-lg font-semibold text-gray-800'> {feature.content[activeCategory].title} </span>
                   </span>
                 </div>
 
 
                 <div className="grid md:grid-cols-3 gap-2">
-                  {solution.content[activeCategory].products.map((tech, index) => (
+                  {feature.content[activeCategory].products.map((tech, index) => (
                     <Link href={`/${tech.slug}`} key={index} onClick={() => { setActiveMenu(''); setActiveCategory(''); setIsMobileMenuOpen(false) }} className="p-4 borde space-y-2 rounded-md transition-colors duration-200 font-medium cursor-pointer hover:bg-teal-50">
                       <div className='flex gap-3'>
                         <Image src="https://www.insightly.com/wp-content/uploads/2025/03/CRM-Icon.svg" width={20} height={20} alt='crmIcon' /> {tech.name}
+                        {tech.title}
                       </div>
                       <p className='text-gray-700 font-medium text-xs'>{tech.description}</p>
                     </Link>
@@ -265,27 +306,7 @@ export default function Header() {
                 </div>
               </div>
 
-              {/* <div className="w-full lg:w-5/12 p-6 border-l">
 
-                <div className="mb-4 borderb py-4">
-                  <span className='text-lg font-semibold text-gray-700'>More from Taygo™</span>
-                  <p className="text-xs text-gray-700 mt-1">Advanced AI capabilities that improve CRM intelligence and control</p>
-                </div>
-
-                {solution.content[activeCategory].hiring.map((item, index) => (
-                  <Link href={`/${item.slug}`} key={index}>
-                    <div className="mb-4 hover:border hover:bg-teal-50 rounded-lg p-3 cursor-pointer">
-                      <h3 className="font-medium mb-2 flex items-center gap-3">
-                        <Image src="https://www.insightly.com/wp-content/uploads/2025/03/unbounce-Symbol.svg" width={20} height={20} alt='crmIcon' />
-                        {item.title}
-                      </h3>
-                      <p className="text-xs text-gray-700">{item.description}</p>
-                    </div>
-                  </Link>
-                ))}
-
-
-              </div> */}
 
             </div>
 
