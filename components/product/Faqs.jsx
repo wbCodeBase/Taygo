@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
+import Link from "next/link";
 
 
 const faqs = [
@@ -37,6 +38,23 @@ export default function FaqsProductPage() {
 
     return (
         <>
+
+            {/* CTA Section */}
+            <div>
+                <div className="w-full mx-auto">
+                    <div className="bg-[#006C5D]  text-white p-15 text-center">
+                        <h2 className="text-3xl sm:text-4xl font-medium mb-16">Experience Taygo™ LeadFlow for yourself</h2>
+                        {/* <p className="text-2xl font-semibold text-white/90 mb-10">Get a custom AI-powered plan that fits your team's pipeline and workflow</p> */}
+                        <Link href="#" size="lg" className="bg-white text-black/90 rounded-xs hover:bg-gray-100 font-bold group text-lg px-10 py-4 mt-12">
+                            Get a demo
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+
+
+
             <div className="w-full max-w-6xl md:mx-auto py-20 px-4">
 
                 <div className='mb-10 text-center'>
