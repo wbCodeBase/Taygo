@@ -320,7 +320,7 @@ export default function Header() {
 
   return (
     // <header className={`${isScrolled ? "bg-[#00214E]" : "bg-white"} shadow-md sm:sticky sm:top-0 left-0 w-full z-40`} ref={dropdownRef}>
-    <header className={`bg-white ${isScrolled && "shadow-md"} sm:sticky sm:top-0 left-0 w-full z-40`} ref={dropdownRef}>
+    <header className={`bg-white ${isScrolled && "shadow-md"} sm: sticky sm: top-0 left-0 w-full z-40`} ref={dropdownRef}>
 
       <div className="container mx-auto p-4">
         <div className="flex items-center justify-between lg:px-10">
@@ -353,11 +353,14 @@ export default function Header() {
 
 
 
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center gap-8 space-x-4">
+
+            <button className='font-medium text-gray-500 text-lg cursor-pointer hover:text-teal-700'>Login</button>
 
             <Link href="contact-us" className="bg-btn-green font-semibold text-white cursor-pointer  px-6 py-3 rounded-xs text-md hover:bg-btn-green-hover transition-colors duration-300">
-              Get in Touch
+              Get Started
             </Link>
+
           </div>
 
           <div className="lg:hidden flex items-center justify-center">
@@ -431,14 +434,18 @@ export default function Header() {
               ))}
             </div>
 
-            <div className="px-4 py-3 flex items-center justify-center">
+            <div className="px-4 py-3 flex sm:flex-row gap-6 flex-col items-center justify-center">
+
+
+              <button className='font-medium text-gray-500 text-xl cursor-pointer hover:text-teal-700'>Login</button>
+              {/* <button className='font-medium text-teal-600 text-xl cursor-pointer p-2 px-6 rounded-sm border border-teal-600'>Request a demo</button> */}
 
               <Link href="contact-us"
                 onClick={() => {
                   toggleMobileMenu();
                   setActiveMenu("");
-                }} className="bg-btn-green text-white px-4 py-2 rounded-full text-lg font-medium hover:bg-btn-green-hover transition-colors duration-300">
-                Get in Touch
+                }} className="bg-btn-green text-white px-4 py-2 rounded-sm text-xl font-medium hover:bg-btn-green-hover transition-colors duration-300">
+                Get Started
               </Link>
 
             </div>

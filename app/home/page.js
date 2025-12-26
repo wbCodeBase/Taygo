@@ -1,5 +1,5 @@
 
-import HeroSection, { HeroSectionFour, HeroSectionThree, HeroSectionTwo } from "@/components/home/heroSection"
+import { HeroSectionTwo } from "@/components/home/heroSection"
 import { AnimatedShowcase } from "@/components/home/animated-showcase"
 import { CtaSection } from "@/components/home/cta-section"
 import { TabbedShowcase } from "@/components/home/tabbed-showcase"
