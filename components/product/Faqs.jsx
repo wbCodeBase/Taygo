@@ -6,30 +6,8 @@ import { Plus, Minus } from 'lucide-react';
 import Link from "next/link";
 
 
-const faqs = [
-    {
-        question: "What is a mortgage CRM?",
-        answer: "A mortgage CRM helps loan teams manage leads, borrower relationships, pipeline stages, communication, and follow-ups — from first inquiry through closing and beyond."
-    },
-    {
-        question: "How is LeadFlow different from a generic CRM?",
-        answer: "LeadFlow is built around mortgage workflows (applications, docs, milestones, compliance controls) and includes an AI assistant that turns pipeline review into action execution."
-    },
-    {
-        question: "Can LeadFlow automate follow-ups?",
-        answer: "Yes — email/SMS/voice follow-ups can be triggered by stage, time delay, borrower behavior, and missing-document scenarios."
-    },
-    {
-        question: "Does it work with an LOS?",
-        answer: "LeadFlow is designed to integrate with LOS platforms via sync/APIs (exact integrations can be listed on your Integrations page)."
-    },
-    {
-        question: "How does Lisa AI review and manage my pipeline?",
-        answer: "Lisa reviews your entire pipeline daily, identifies stalled loans, prioritizes actions, and recommends next steps for every lead and application. Once you approve, Lisa executes calls, emails, texts, and updates automatically—keeping your deals moving without manual effort."
-    }
-];
 
-export default function FaqsProductPage() {
+export default function FaqsProductPage({ faqs, finalCta }) {
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggleFAQ = (index) => {
@@ -43,10 +21,10 @@ export default function FaqsProductPage() {
             <div>
                 <div className="w-full mx-auto">
                     <div className="bg-[#006C5D]  text-white p-15 text-center">
-                        <h2 className="text-3xl sm:text-4xl font-medium mb-16">Experience Taygo™ LeadFlow for yourself</h2>
+                        <h2 className="text-3xl sm:text-4xl font-medium mb-16">{finalCta.title}</h2>
                         {/* <p className="text-2xl font-semibold text-white/90 mb-10">Get a custom AI-powered plan that fits your team's pipeline and workflow</p> */}
-                        <Link href="#" size="lg" className="bg-white text-black/90 rounded-xs hover:bg-gray-100 font-bold group text-lg px-10 py-4 mt-12">
-                            Get a demo
+                        <Link href={finalCta.cta.link} size="lg" className="bg-white text-black/90 rounded-xs hover:bg-gray-100 font-bold group text-lg px-10 py-4 mt-12">
+                            {finalCta.cta.text}
                         </Link>
                     </div>
                 </div>

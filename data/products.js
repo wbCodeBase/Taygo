@@ -1,3 +1,11 @@
+
+import { Settings, Zap, Eye } from 'lucide-react'
+
+import Lisa from "@/public/images/lisa2.png"
+
+
+
+
 export const productsData = {
     "leadflow": {
         id: 1,
@@ -31,15 +39,18 @@ export const productsData = {
             cards: [
                 {
                     title: "No Lead Left Behind",
-                    description: "Every lead is captured, enriched, and acted on instantly—24/7."
+                    description: "Every lead is captured, enriched, and acted on instantly—24/7.",
+                    icon: Settings
                 },
                 {
                     title: "Speed Wins Deals",
-                    description: "Respond to new inquiries in seconds, not hours."
+                    description: "Respond to new inquiries in seconds, not hours.",
+                    icon: Zap
                 },
                 {
                     title: "Consistency at Scale",
-                    description: "AI-driven follow-ups ensure every lead gets the same attention."
+                    description: "AI-driven follow-ups ensure every lead gets the same attention.",
+                    icon: Eye
                 }
             ]
         },
@@ -51,6 +62,7 @@ export const productsData = {
                 title: "Lead Capture & Intake",
                 headline: "Capture mortgage leads from every source",
                 body: "LeadFlow unifies all your inbound leads into one intelligent system—ready for action the moment they arrive.",
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_01_desktop.png",
                 bullets: [
                     "Capture leads from website forms, chat, landing pages, and referrals",
                     "API intake from lead vendors and partner platforms",
@@ -67,6 +79,7 @@ export const productsData = {
                 title: "AI Lead Qualification & Prioritization",
                 headline: "Know which leads to call first—automatically",
                 body: "Not all leads are equal. LeadFlow uses AI signals to prioritize high-intent borrowers.",
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_02_desktop.png",
                 bullets: [
                     "AI lead scoring based on behavior and response",
                     "Identify hot, warm, and cold leads instantly",
@@ -78,11 +91,34 @@ export const productsData = {
                     link: "/features/ai-qualification"
                 }
             },
+        ],
+
+        // AI Assistant Panel
+        aiAssistant: {
+            name: "Lisa",
+            title: "Meet Lisa",
+            subtitle: "Your AI Lead Assistant",
+            body: "Lisa responds to new leads, follows up across channels, qualifies borrowers, and keeps your pipeline moving—before a loan officer even logs in.",
+            image: Lisa,
+            ctas: [
+                {
+                    text: "Get Started",
+                    link: "/get-started"
+                },
+                {
+                    text: "Visit our AI Trust Center",
+                    link: "/ai-trust"
+                }
+            ]
+        },
+
+        featuresTwo: [
             {
                 id: "automated-followups",
                 title: "Automated Follow-Ups (Email, SMS, Voice)",
                 headline: "Smart follow-ups that never forget",
                 body: "LeadFlow executes consistent, multi-touch follow-ups without manual effort.",
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_01_desktop.png",
                 bullets: [
                     "Instant SMS + email on lead arrival",
                     "Scheduled follow-up sequences",
@@ -99,6 +135,7 @@ export const productsData = {
                 title: "Lead-to-Pipeline Handoff",
                 headline: "Seamless handoff from lead to active pipeline",
                 body: "Once a borrower is qualified, LeadFlow routes them automatically into PipelineOS.",
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_02_desktop.png",
                 bullets: [
                     "Auto-create opportunities in PipelineOS",
                     "Assign ownership to LO or team",
@@ -112,36 +149,26 @@ export const productsData = {
             }
         ],
 
-        // AI Assistant Panel
-        aiAssistant: {
-            name: "Lisa",
-            title: "Meet Lisa",
-            subtitle: "Your AI Lead Assistant",
-            body: "Lisa responds to new leads, follows up across channels, qualifies borrowers, and keeps your pipeline moving—before a loan officer even logs in.",
-            ctas: [
-                {
-                    text: "Get Started",
-                    link: "/get-started"
-                },
-                {
-                    text: "Visit our AI Trust Center",
-                    link: "/ai-trust"
-                }
-            ]
-        },
-
         // AI Differentiation Strip
         aiDifferentiation: {
             title: "Smarter lead conversion starts with AI inside your CRM",
             subtitle: "From first click to application—AI handles the heavy lifting.",
+            image: "https://www.insightly.com/wp-content/uploads/2025/07/CRM-AI-FEATURES.png",
             bullets: [
                 "Named AI Assistant for lead follow-ups",
                 "Zero-touch lead engagement with approval-based execution",
                 "Instant lead summaries and next-action suggestions",
                 "POS Application Shepherd to push leads into applications",
                 "Partner auto-update engine for referral leads"
-            ]
+            ],
+            cta: {
+                text: "Learn more",
+                link: "/features/automated-followups"
+            }
         },
+
+
+
 
         // Insights Section
         insights: {
@@ -152,8 +179,10 @@ export const productsData = {
                 "Conversion from lead → application",
                 "Follow-up performance by LO",
                 "ROI visibility by campaign"
-            ]
+            ],
+            image: "https://www.insightly.com/wp-content/uploads/2025/03/img_01_desktop.png"
         },
+
 
         // Final CTA
         finalCTA: {
@@ -219,21 +248,24 @@ export const productsData = {
             ]
         },
 
-        // Why Section (3 cards)
+
         whySection: {
             title: "Why BorrowerHub",
             cards: [
                 {
-                    title: "Borrowers Never Feel Lost",
-                    description: "Step-by-step guidance replaces confusion and drop-offs."
+                    title: "No Lead Left Behind",
+                    description: "Every lead is captured, enriched, and acted on instantly—24/7.",
+                    icon: Settings
                 },
                 {
-                    title: "Faster Applications, Fewer Chasers",
-                    description: "AI reminders collect documents without manual follow-ups."
+                    title: "Speed Wins Deals",
+                    description: "Respond to new inquiries in seconds, not hours.",
+                    icon: Zap
                 },
                 {
-                    title: "Transparent, Trust-Building Experience",
-                    description: "Borrowers always know what's happening next."
+                    title: "Consistency at Scale",
+                    description: "AI-driven follow-ups ensure every lead gets the same attention.",
+                    icon: Eye
                 }
             ]
         },
@@ -251,6 +283,7 @@ export const productsData = {
                     "Save-and-resume anytime experience",
                     "Fewer incomplete or abandoned applications"
                 ],
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_01_desktop.png",
                 cta: {
                     text: "Learn more",
                     link: "/features/ai-guided-1003"
@@ -261,6 +294,7 @@ export const productsData = {
                 title: "Smart Document Collection",
                 headline: "Collect documents without chasing borrowers",
                 body: "BorrowerHub automates document requests, reminders, and verification workflows.",
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_02_desktop.png",
                 bullets: [
                     "Auto-generated document checklists",
                     "Secure uploads from any device",
@@ -272,38 +306,7 @@ export const productsData = {
                     link: "/features/document-collection"
                 }
             },
-            {
-                id: "realtime-status",
-                title: "Real-Time Status & Updates",
-                headline: "Borrowers always know where they stand",
-                body: "BorrowerHub keeps applicants informed at every stage of the loan journey.",
-                bullets: [
-                    "Live application and loan status updates",
-                    "Automated milestone notifications",
-                    "Reduced inbound status check calls",
-                    "Increased borrower confidence and trust"
-                ],
-                cta: {
-                    text: "Learn more",
-                    link: "/features/realtime-status"
-                }
-            },
-            {
-                id: "pos-pipeline-handoff",
-                title: "POS-to-Pipeline Handoff",
-                headline: "Seamless transition from application to processing",
-                body: "Once the borrower completes their application, BorrowerHub hands off everything to PipelineOS automatically.",
-                bullets: [
-                    "Clean handoff into active pipeline stages",
-                    "All documents and data synced instantly",
-                    "No re-keying or manual uploads",
-                    "Full visibility for LO and operations teams"
-                ],
-                cta: {
-                    text: "Learn more",
-                    link: "/features/pos-pipeline-handoff"
-                }
-            }
+
         ],
 
         // AI Assistant Panel
@@ -324,10 +327,48 @@ export const productsData = {
             ]
         },
 
+        featuresTwo: [
+            {
+                id: "realtime-status",
+                title: "Real-Time Status & Updates",
+                headline: "Borrowers always know where they stand",
+                body: "BorrowerHub keeps applicants informed at every stage of the loan journey.",
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_01_desktop.png",
+                bullets: [
+                    "Live application and loan status updates",
+                    "Automated milestone notifications",
+                    "Reduced inbound status check calls",
+                    "Increased borrower confidence and trust"
+                ],
+                cta: {
+                    text: "Learn more",
+                    link: "/features/realtime-status"
+                }
+            },
+            {
+                id: "pos-pipeline-handoff",
+                title: "POS-to-Pipeline Handoff",
+                headline: "Seamless transition from application to processing",
+                body: "Once the borrower completes their application, BorrowerHub hands off everything to PipelineOS automatically.",
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_02_desktop.png",
+                bullets: [
+                    "Clean handoff into active pipeline stages",
+                    "All documents and data synced instantly",
+                    "No re-keying or manual uploads",
+                    "Full visibility for LO and operations teams"
+                ],
+                cta: {
+                    text: "Learn more",
+                    link: "/features/pos-pipeline-handoff"
+                }
+            }
+        ],
+
         // AI Differentiation Strip
         aiDifferentiation: {
             title: "AI that guides borrowers—and supports loan officers",
             subtitle: "BorrowerHub removes friction without removing the human relationship.",
+            image: "https://www.insightly.com/wp-content/uploads/2025/07/CRM-AI-FEATURES.png",
             bullets: [
                 "POS Application Shepherd to guide borrowers to completion",
                 "Instant application summaries and next-step visibility",
@@ -346,7 +387,8 @@ export const productsData = {
                 "Document submission timelines",
                 "Drop-off points and friction analysis",
                 "Borrower engagement insights"
-            ]
+            ],
+            image: "https://www.insightly.com/wp-content/uploads/2025/03/img_01_desktop.png"
         },
 
         // Final CTA

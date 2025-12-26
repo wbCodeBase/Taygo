@@ -2,109 +2,83 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 
-const IncreaseProductivity = () => {
-    const mortgageData = [
-        {
-            id: 1,
-            title: "Business workflow & process automation",
-            description: "Automate repetitive work so LOs and ops teams can focus on decisions and relationships.",
-            imageUrl: "https://www.insightly.com/wp-content/uploads/2025/03/img_03_desktop.png",
-            imagePosition: "left",
-            features: [
-                "Auto-follow-ups (email/SMS/voice) based on borrower behavior",
-                "Auto-tasks for missing docs, verification steps, and milestones",
-                "Reduce human error with consistent rules and stage gates",
-                "Faster pipeline movement with fewer manual handoffs"
-            ],
-            ctaText: "Learn more",
-            ctaLink: "#"
-        },
-        {
-            id: 2,
-            title: "Validation rules & advanced permissions",
-            description: "Preserve data integrity, reduce compliance risk, and keep teams aligned.",
-            imageUrl: "https://www.insightly.com/wp-content/uploads/2025/03/img_04_desktop.png",
-            imagePosition: "right",
-            features: [
-                "Required fields by stage (e.g., before \"Submit to UW\")",
-                "Role-based access (LO / LOA / Processor / Manager)",
-                "Audit-friendly history of changes and activities",
-                "Standardize best practices across branches"
-            ],
-            ctaText: "Learn more",
-            ctaLink: "#"
-        }
-    ];
-
+const IncreaseProductivity = ({ features, sectionTitle = "Build and convert mortgage pipeline" }) => {
     return (
         <>
             <section className="mx-auto px-4 md:px-6 md:py-16 py-10">
                 {/* heading */}
-                <div className="text-center mb-12 max-w-5xl mx-auto">
+                {/* <div className="text-center mb-12 max-w-5xl mx-auto">
                     <h2 className="text-2xl md:text-[2.7rem] font-semibold text-gray-900 mb-6 leading-tight">
-                        Increase productivity
+                        {sectionTitle}
                     </h2>
-                </div>
+                </div> */}
 
                 <section className='md:space-y-20 space-y-10'>
-                    {mortgageData.map((item) => (
+                    {features.map((feature, index) => (
                         <div 
-                            key={item.id} 
-                            className='grid max-w-7xl mx-auto sm:grid-cols-2 gap-10 grid-cols-1'
+                            key={feature.id} 
+                            className={`grid max-w-7xl mx-auto sm:grid-cols-2 gap-10 grid-cols-1 ${
+                                index % 2 === 1 ? 'sm:grid-flow-dense' : ''
+                            }`}
                         >
-                            {/* Conditionally render image on left or right based on imagePosition */}
-                            {item.imagePosition === "left" && (
-                                <div className="rounded-xl flex justify-center items-center flex-col text-center relative">
+                            {/* Image - Left on even index, Right on odd index */}
+                            <div 
+                                className={`borde rounded-xl p4 flex justify-center items-center flex-col text-center relative ${
+                                    index % 2 === 1 ? 'sm:col-start-2' : ''
+                                }`}
+                            >
+                                {feature.image ? (
                                     <Image 
-                                        src={item.imageUrl} 
+                                        src={feature.image} 
                                         className='rounded-xl' 
-                                        alt={item.title} 
+                                        alt={feature.title} 
                                         width={600} 
                                         height={460} 
                                     />
-                                </div>
-                            )}
+                                ) : (
+                                    <div className="w-full aspect-video bg-gradient-to-br from-teal-50 to-purple-50 rounded-xl flex items-center justify-center">
+                                        <p className="text-gray-400 text-lg">{feature.title}</p>
+                                    </div>
+                                )}
+                            </div>
 
-                            <div className="rounded-xl px4">
+                            {/* Content - Right on even index, Left on odd index */}
+                            <div 
+                                className={`rounded-xl px4 ${
+                                    index % 2 === 1 ? 'sm:col-start-1 sm:row-start-1' : ''
+                                }`}
+                            >
                                 <h2 className='font-medium sm:text-3xl mt-5 text-2xl text-gray-900 my-2'>
-                                    {item.title}
+                                    {feature.title}
                                 </h2>
-                                <p className='text-md text-gray-800 my-8'>
-                                    {item.description}
+                                <p className='text-md text-semibold text-gray-800 my-2'>
+                                    {feature.headline}
+                                </p>
+                                <p className='text-md text-gray-800 my-4'>
+                                    {feature.body}
                                 </p>
 
                                 <ul className='mt-6 space-y-4 px-4'>
-                                    {item.features.map((feature, index) => (
-                                        <li key={index} className='flex items-center gap-3'>
+                                    {feature.bullets.map((bullet, bulletIndex) => (
+                                        <li key={bulletIndex} className='flex items-center gap-3'>
                                             <span className='w-1.5 h-1.5 bg-gray-800 rounded-full flex-shrink-0'></span>
-                                            <p className='text-gray-800 font-medium'>{feature}</p>
+                                            <p className='text-gray-800 font-medium'>{bullet}</p>
                                         </li>
                                     ))}
                                 </ul>
 
-                                <Link
-                                    href={item.ctaLink}
-                                    className="inline-flex text-lg mt-5 px-5 items-center text-green-600 hover:text-green-700 font-semibold transition-colors"
-                                >
-                                    {item.ctaText}
-                                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </Link>
+                                {feature.cta && (
+                                    <Link
+                                        href={feature.cta.link}
+                                        className="inline-flex text-lg mt-5 px-5 items-center text-green-600 hover:text-green-700 font-semibold transition-colors"
+                                    >
+                                        {feature.cta.text}
+                                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </Link>
+                                )}
                             </div>
-
-                            {/* Conditionally render image on right if imagePosition is "right" */}
-                            {item.imagePosition === "right" && (
-                                <div className="rounded-xl flex justify-center items-center flex-col text-center relative">
-                                    <Image 
-                                        src={item.imageUrl} 
-                                        className='rounded-xl' 
-                                        alt={item.title} 
-                                        width={600} 
-                                        height={460} 
-                                    />
-                                </div>
-                            )}
                         </div>
                     ))}
                 </section>
@@ -113,4 +87,130 @@ const IncreaseProductivity = () => {
     )
 }
 
-export default IncreaseProductivity
+export default IncreaseProductivity;
+
+
+
+
+
+
+
+
+
+
+// import React from 'react'
+// import Image from 'next/image';
+// import Link from 'next/link';
+
+// const IncreaseProductivity = () => {
+//     const mortgageData = [
+//         {
+//             id: 1,
+//             title: "Business workflow & process automation",
+//             description: "Automate repetitive work so LOs and ops teams can focus on decisions and relationships.",
+//             imageUrl: "https://www.insightly.com/wp-content/uploads/2025/03/img_03_desktop.png",
+//             imagePosition: "left",
+//             features: [
+//                 "Auto-follow-ups (email/SMS/voice) based on borrower behavior",
+//                 "Auto-tasks for missing docs, verification steps, and milestones",
+//                 "Reduce human error with consistent rules and stage gates",
+//                 "Faster pipeline movement with fewer manual handoffs"
+//             ],
+//             ctaText: "Learn more",
+//             ctaLink: "#"
+//         },
+//         {
+//             id: 2,
+//             title: "Validation rules & advanced permissions",
+//             description: "Preserve data integrity, reduce compliance risk, and keep teams aligned.",
+//             imageUrl: "https://www.insightly.com/wp-content/uploads/2025/03/img_04_desktop.png",
+//             imagePosition: "right",
+//             features: [
+//                 "Required fields by stage (e.g., before \"Submit to UW\")",
+//                 "Role-based access (LO / LOA / Processor / Manager)",
+//                 "Audit-friendly history of changes and activities",
+//                 "Standardize best practices across branches"
+//             ],
+//             ctaText: "Learn more",
+//             ctaLink: "#"
+//         }
+//     ];
+
+//     return (
+//         <>
+//             <section className="mx-auto px-4 md:px-6 md:py-16 py-10">
+//                 {/* heading */}
+//                 <div className="text-center mb-12 max-w-5xl mx-auto">
+//                     <h2 className="text-2xl md:text-[2.7rem] font-semibold text-gray-900 mb-6 leading-tight">
+//                         Increase productivity
+//                     </h2>
+//                 </div>
+
+//                 <section className='md:space-y-20 space-y-10'>
+//                     {mortgageData.map((item) => (
+//                         <div 
+//                             key={item.id} 
+//                             className='grid max-w-7xl mx-auto sm:grid-cols-2 gap-10 grid-cols-1'
+//                         >
+//                             {/* Conditionally render image on left or right based on imagePosition */}
+//                             {item.imagePosition === "left" && (
+//                                 <div className="rounded-xl flex justify-center items-center flex-col text-center relative">
+//                                     <Image 
+//                                         src={item.imageUrl} 
+//                                         className='rounded-xl' 
+//                                         alt={item.title} 
+//                                         width={600} 
+//                                         height={460} 
+//                                     />
+//                                 </div>
+//                             )}
+
+//                             <div className="rounded-xl px4">
+//                                 <h2 className='font-medium sm:text-3xl mt-5 text-2xl text-gray-900 my-2'>
+//                                     {item.title}
+//                                 </h2>
+//                                 <p className='text-md text-gray-800 my-8'>
+//                                     {item.description}
+//                                 </p>
+
+//                                 <ul className='mt-6 space-y-4 px-4'>
+//                                     {item.features.map((feature, index) => (
+//                                         <li key={index} className='flex items-center gap-3'>
+//                                             <span className='w-1.5 h-1.5 bg-gray-800 rounded-full flex-shrink-0'></span>
+//                                             <p className='text-gray-800 font-medium'>{feature}</p>
+//                                         </li>
+//                                     ))}
+//                                 </ul>
+
+//                                 <Link
+//                                     href={item.ctaLink}
+//                                     className="inline-flex text-lg mt-5 px-5 items-center text-green-600 hover:text-green-700 font-semibold transition-colors"
+//                                 >
+//                                     {item.ctaText}
+//                                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+//                                     </svg>
+//                                 </Link>
+//                             </div>
+
+//                             {/* Conditionally render image on right if imagePosition is "right" */}
+//                             {item.imagePosition === "right" && (
+//                                 <div className="rounded-xl flex justify-center items-center flex-col text-center relative">
+//                                     <Image 
+//                                         src={item.imageUrl} 
+//                                         className='rounded-xl' 
+//                                         alt={item.title} 
+//                                         width={600} 
+//                                         height={460} 
+//                                     />
+//                                 </div>
+//                             )}
+//                         </div>
+//                     ))}
+//                 </section>
+//             </section>
+//         </>
+//     )
+// }
+
+// export default IncreaseProductivity

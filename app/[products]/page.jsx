@@ -38,26 +38,34 @@ export default async function Product({ params }) {
         whySection={productData.whySection}
       />
 
-      <HeaderBase />
 
-      <BuildConvertMort />
+      <BuildConvertMort
+        features={productData.features}
+      />
 
-      <LisaCta />
+      <LisaCta
+        aiAssistant={productData.aiAssistant}
+      />
 
-      <IncreaseProductivity />
-
-      <AIFeaturesSection />
-
-
-      <BorrowerRelationships />
-
-
-      <DoMoreVideoSection />
+      <IncreaseProductivity
+        features={productData.featuresTwo}
+      />
 
 
+      <AIFeaturesSection
+        aiDifferentiation={productData.aiDifferentiation}
+      />
 
-      <FaqsProductPage />
+      <BorrowerRelationships
+      insights={productData.insights}
+      />
 
+      {/* <DoMoreVideoSection /> */}
+
+      <FaqsProductPage
+        faqs={productData.faqs}
+        finalCta={productData.finalCTA}
+      />
 
     </>
   )

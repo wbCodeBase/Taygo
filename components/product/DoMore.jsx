@@ -4,7 +4,6 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
 
-// import videoThumbnail from "@/public/videoThumbnail.webp"
 import videoThumbnail from "@/public/lisaThumbnail.png"
 // import taygo from "@/public/taygo.mp4"
 import Image from "next/image"
@@ -17,6 +16,7 @@ export default function DoMoreVideoSection() {
             <section className="w-full bg-neutral-50 py-16 px-6 md:py-24">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        
                         {/* Left Content */}
                         <div className="relative cursor-pointer">
                             <button

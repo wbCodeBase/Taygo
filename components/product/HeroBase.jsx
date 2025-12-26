@@ -1,26 +1,8 @@
 import React from 'react'
-import { Settings, Zap, Eye } from 'lucide-react'
 import checkArrow from "@/public/images/checkArrow.svg"
 import Image from 'next/image';
 
-const HeaderBase = () => {
-    const cardsData = [
-        {
-            title: "System-Level Control",
-            description: "Stages, rules, SLAs, and ownership standardized across teams.",
-            icon: Settings
-        },
-        {
-            title: "Refinance-First Automation",
-            description: "Triggers, tasks, and re-engagement flows tailored for refi cycles.",
-            icon: Zap
-        },
-        {
-            title: "Live Visibility",
-            description: "Know what's stuck, why it's stuck, and who owns the next step.",
-            icon: Eye
-        }
-    ];
+const HeaderBase = ({ whySection }) => {
 
     return (
         <>
@@ -31,7 +13,7 @@ const HeaderBase = () => {
                     {/* heading */}
                     <div className="text-center mb-12 mx-auto">
                         <h2 className="text-2xl md:text-[2.7rem] font-semibold mb-2 leading-tight">
-                            Why Choose us
+                            {whySection?.title}
                         </h2>
                         {/* <p className="text-lg md:text-xl font-medium mb-4 text-balance mx-auto text-gray-50">
                              Explore how TAYGO™ unites CRM, LOS, Automation, Marketing, and Integrations to simplify every part of your mortgage business.
@@ -39,7 +21,7 @@ const HeaderBase = () => {
                     </div>
 
                     <div className='flex flex-col sm:flex-col md:flex-row gap-4 text-ar-gray-700 mx-12'>
-                        {cardsData.map((card, index) => {
+                        {whySection?.cards?.map((card, index) => {
                             const IconComponent = card.icon;
                             return (
                                 <div
