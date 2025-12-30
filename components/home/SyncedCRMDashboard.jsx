@@ -1,3 +1,5 @@
+
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { User, Phone, Mail, DollarSign, TrendingUp, Users, CheckCircle, Sparkles, Send, BarChart3, PhoneCall, MailOpen, X, Check } from 'lucide-react';
 import Image from 'next/image';
