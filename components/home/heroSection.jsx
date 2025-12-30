@@ -455,9 +455,9 @@ export function HeroSectionThree() {
           className={`textcenter relative my-2 max-w-7xl mx-auto space-y-6`}
         >
 
-          <div className="absolute top1/4 left-1/4 w-96 h-96 bg-teal-200/10 rounded-full blur-3xl" />
+          {/* <div className="absolute top1/4 left-1/4 w-96 h-96 bg-teal-200/10 rounded-full blur-3xl" />
           <div className="absolute bottom1/4 right-1/4 w-96 h-96 bg-emerald-200/10 rounded-full blur-3xl" />
-          <div className="absolute bottom1/4 right-2/4 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl" />
+          <div className="absolute bottom1/4 right-2/4 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl" /> */}
 
 
           <div className='flex justify-between border-gray-200 gap-16 items-center py-6'>
