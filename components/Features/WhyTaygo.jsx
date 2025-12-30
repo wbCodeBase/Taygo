@@ -47,12 +47,11 @@ const WhyTaygo = () => {
     return (
         <>
 
-            <section className="container mx-auto px-4 py-2 md:px-12 md:py-22 pt-32 lg:px-20 gradient bg-gradient-to-b from-teal-900 via-teal-900 to-emerald-800">
+            <section className="gradient bg-gradient-to-b from-teal-900 via-teal-900 to-emerald-800">
 
 
-
-                <section className='space-y-30'>
-                    <section>
+                <div className='space-y-30 container mx-auto px-4 py-2 md:px-12 md:py-22 pt-32'>
+                    <div>
 
                         <div className='mb-12 flex justify-between items-center'>
                             <div>
@@ -82,7 +81,7 @@ const WhyTaygo = () => {
                                 </div>
                             ))}
                         </div>
-                    </section>
+                    </div>
 
 
                     {/* <div className='grid sm:grid-cols-2 gap-10 grid-cols-1'>
@@ -117,7 +116,7 @@ const WhyTaygo = () => {
 
 
                     </div> */}
-                </section>
+                </div>
 
 
 

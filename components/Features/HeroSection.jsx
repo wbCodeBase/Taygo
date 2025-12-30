@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button"
 
 export default function HeroSection() {
   return (
-    <section className="w-full overflow-hidden px-4 py-2 md:px-12 md:py-12 lg:px-20 md:pb-20">
+    <section className="w-full overflow-hidden px-4 py-2 md:px-14 md:py-12 md:pb-20">
 
 
-      <div className="container relative z-10 mx-auto bg-gray-100 px-6 py-2 md:px-12 md:py-12 lg:px-20">
+      <div className="container relative z-10 mx-auto rounded-sm bg-gray-100 px-6 py-2 md:px-12 md:py-12 lg:px-18">
         {/* Breadcrumbs */}
         <nav className="mb-2 flex items-center space-x-2 text-sm font-medium text-slate-500">
           <span className="hover:text-slate-900 cursor-pointer transition-colors">Product</span>

@@ -43,9 +43,6 @@ export default function FaqsFeatures() {
     return (
         <>
 
-           
-
-
             <div className="w-full max-w-6xl md:mx-auto py-20 px-4">
 
                 <div className='mb-10 text-center'>

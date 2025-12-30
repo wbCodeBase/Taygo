@@ -5,8 +5,9 @@ const Features = () => {
     return (
         <>
 
-            <section className="container mx-auto px-4 py-2 md:px-12 md:py-12 lg:px-20 gradient bg-gradient-to-b from-teal-900 via-teal-900 to-emerald-800">
+            <section className="gradient bg-gradient-to-b from-teal-900 via-teal-900 to-emerald-800">
 
+<div className='container mx-auto px-4 py-2 md:px-12 md:py-12'>
                 <div className="text-center my-12 py-6">
                     <h2 className="text-2xl md:text-[2.7rem] font-semibold text-white mb-4 text-balance">
                         Stay engaged without overstaying your welcome
@@ -84,7 +85,7 @@ const Features = () => {
 
                     </div>
                 </section>
-
+</div>
 
 
             </section >
