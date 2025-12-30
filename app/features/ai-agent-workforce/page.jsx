@@ -16,9 +16,9 @@ const page = () => {
 
       <FeaturesAlwaysOn />
 
-      <CtaEk />
-
       <WhyTaygo />
+
+      <CtaEk />
 
       <CtaFeature />
 
