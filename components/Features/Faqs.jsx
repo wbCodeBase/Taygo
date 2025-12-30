@@ -49,7 +49,7 @@ export default function FaqsFeatures() {
             <div className="w-full max-w-6xl md:mx-auto py-20 px-4">
 
                 <div className='mb-10 text-center'>
-                    <div className='text-3xl text-gray-700 md:text-4xl font-bold'>FAQs (Mortgage CRM + Lead Automation)</div>
+                    <div className='text-3xl text-gray-700 md:text-4xl font-bold'>FAQs</div>
                     <div className='text-xl text-gray-600 mt-2'>Everything you need to know about AI-powered mortgage automation</div>
                 </div>
 
