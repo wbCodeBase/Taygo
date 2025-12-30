@@ -74,7 +74,7 @@ const feature = {
         },
         {
           title: "AI Agent Workforce",
-          slug: "ai-agent-workforce",
+          slug: "features/ai-agent-workforce",
           description: "Autonomous AI assistants that review, act, and report"
         },
         {
