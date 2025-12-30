@@ -32,8 +32,8 @@ const product = {
       products: [
         { name: 'Taygo™ LeadFlow', slug: 'leadflow', description: "Mortgage CRM & Lead Automation" },
         { name: 'Taygo™ BorrowerHub', slug: 'borrowerhub', description: "Mortgage POS & Borrower Portal" },
-        { name: 'Taygo™ PipelineOS', slug: 'pipeline-os', description: "Mortgage Pipeline & Refinance Workflow Automation" },
-        { name: 'Taygo™ VoiceAI', slug: 'voice-aI', description: "AI Call Center & Phone Automation" },
+        { name: 'Taygo™ PipelineOS', slug: 'pipelineos', description: "Mortgage Pipeline & Refinance Workflow Automation" },
+        { name: 'Taygo™ VoiceAI', slug: 'voiceai', description: "AI Call Center & Phone Automation" },
         { name: 'Taygo™ LoanCore', slug: 'loan-core', description: "Loan Management & Tracking System" },
       ],
       hiring: [

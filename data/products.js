@@ -427,5 +427,219 @@ export const productsData = {
                 answer: "Yes. By automating guidance, reminders, and updates, BorrowerHub significantly reduces manual follow-ups and status calls."
             }
         ]
-    }
+    },
+
+    "pipelineos": {
+        id: 1,
+        slug: "pipelineos",
+        name: "pipelineos",
+        fullName: "Taygo™ PipelineOS",
+
+        // Hero Section
+        hero: {
+            h1: "Mortgage Pipeline Management Software that prevents deal leakage",
+            subhead: "PipelineOS™ automates stages, tasks, SLAs, and refinance workflows—so every file moves forward with visibility and control.",
+            primaryCTA: {
+                text: "Book a Pipeline Demo",
+                link: "/demo"
+            },
+            secondaryCTA: {
+                text: "Watch Pipeline in Action",
+                link: "/watch-demo"
+            },
+            badges: [
+                "Custom stages", "SLA alerts", "Refi workflows"
+            ]
+        },
+
+        // Why Section (3 cards)
+        whySection: {
+            title: "Why Choose Us",
+            cards: [
+                {
+                    title: "System-Level Control",
+                    description: "Stages, rules, SLAs, and ownership standardized across teams.",
+                    icon: Settings
+                },
+                {
+                    title: "Refinance-First Automation",
+                    description: "Triggers, tasks, and re-engagement flows tailored for refi cycles.",
+                    icon: Zap
+                },
+                {
+                    title: "Live Visibility",
+                    description: "Know what's stuck, why it's stuck, and who owns the next step.",
+                    icon: Eye
+                }
+            ]
+        },
+
+        // Core Features
+        features: [
+            {
+                id: "sales-pipeline",
+                title: "Sales pipeline & lead management",
+                headline: "Sales pipeline for mortgage leads from every source",
+                body: "Start acting on leads the moment they arrive — and keep every opportunity moving.",
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_01_desktop.png",
+                bullets: [
+
+                    "Capture and unify leads from forms, referrals, campaigns, and partners",
+                    "Auto-assign leads by location, loan type, language, or availability",
+                    "Real-time view of every lead stage, next step, and SLA risk",
+                    "One timeline for calls, texts, emails, notes, and documents"
+                ],
+                cta: {
+                    text: "Learn more",
+                    link: "/pipelineos/sales-pipeline"
+                }
+            },
+            {
+                id: "lead-tracking",
+                title: "Lead tracking & opportunity management (Mortgage stages)",
+                headline: "Know which leads to call first—automatically",
+                body: "Create velocity through every stage of your mortgage process.",
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_02_desktop.png",
+                bullets: [
+                    "Custom mortgage pipelines (Purchase, Refi, HELOC, etc.)",
+                    "Deal risk signals: stalled stage, missing docs, no-response borrowers",
+                    "Priority sorting: “Call now”, “Docs pending”, “Rate-sensitive refi”",
+                    "Partner visibility: which agent/referral source drives the best loans"
+                ],
+                cta: {
+                    text: "Learn more",
+                    link: "/pipelineos/lead-tracking"
+                }
+            },
+        ],
+
+        // AI Assistant Panel
+        aiAssistant: {
+            name: "Lisa",
+            title: "Meet Lisa",
+            subtitle: "Your 24/7 AI Mortgage Assistant",
+            body: "Lisa isn't just a chatbot—she's your AI-powered teammate who works across every stage of the lending journey. From capturing new leads to assisting borrowers and supporting loan officers, Lisa makes mortgage operations faster, smarter, and effortlessly human.",
+            image: Lisa,
+            ctas: [
+                {
+                    text: "Get Started",
+                    link: "/get-started"
+                },
+                {
+                    text: "Visit our AI Trust Center",
+                    link: "/ai-trust"
+                }
+            ]
+        },
+
+        featuresTwo: [
+            {
+                id: "business-workflow",
+                title: "Business workflow & process automation",
+                headline: "Smart business workflows that keep deals moving",
+                body: "Automate repetitive work so LOs and ops teams can focus on decisions and relationships.",
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_01_desktop.png",
+                bullets: [
+                    "Auto-follow-ups (email/SMS/voice) based on borrower behavior",
+                    "Auto-tasks for missing docs, verification steps, and milestones",
+                    "Reduce human error with consistent rules and stage gates",
+                    "Faster pipeline movement with fewer manual handoffs"
+                ],
+                cta: {
+                    text: "Learn more",
+                    link: "/pipelineos/business-workflow"
+                }
+            },
+            {
+                id: "validation-rules",
+                title: "Validation rules & advanced permissions",
+                headline: "Seamless handoff from lead to active pipeline",
+                body: "Preserve data integrity, reduce compliance risk, and keep teams aligned.",
+                image: "https://www.insightly.com/wp-content/uploads/2025/03/img_02_desktop.png",
+                bullets: [
+                    "Required fields by stage (e.g., before Submit to UW)",
+                    "Role-based access (LO / LOA / Processor / Manager)",
+                    "Audit-friendly history of changes and activities",
+                    "Standardize best practices across branches"
+                ],
+                cta: {
+                    text: "Learn more",
+                    link: "/pipelineos/validation-rules"
+                }
+            }
+        ],
+
+        // AI Differentiation Strip
+        aiDifferentiation: {
+            title: "Smarter mortgage selling starts with AI inside your CRM",
+            subtitle: "Boost conversion and CRM adoption with an AI assistant that turns pipeline review into a daily autopilot workflow.",
+            image: "https://www.insightly.com/wp-content/uploads/2025/07/CRM-AI-FEATURES.png",
+            bullets: [
+                "Name your assistant as you wish (Lisa, Laura, etc.)",
+
+                "Zero-touch pipeline resolution: identifies pipeline problems + fixes them after approval",
+
+                "POS Application Shepherd: guides borrowers to complete applications with less LO effort",
+
+                "Instant file summary everywhere: next steps, risks, and automation suggestions",
+
+                "Partner auto-update engine: keeps Realtors updated automatically",
+            ],
+            cta: {
+                text: "Learn more",
+                link: "/features/automated-followups"
+            }
+        },
+
+
+
+
+        // Insights Section
+        insights: {
+            title: "Do more, better, faster with pipeline insights",
+            bullets: [
+                "Increase productivity by automating and orchestrating workflow tasks across communication and records.",
+                "Improve pipeline visibility with real-time dashboards and reports that highlight bottlenecks and opportunities.",
+                "Enhance decision-making with AI-driven insights that identify high-risk deals and suggest next best actions.",
+                "Boost compliance and reduce risk with audit trails and automated validation rules.",
+                "Optimize resource allocation by tracking team performance and workload distribution."
+            ],
+            image: "https://www.insightly.com/wp-content/uploads/2025/03/img_01_desktop.png"
+        },
+
+
+        // Final CTA
+        finalCTA: {
+            title: "Experience Taygo™ LeadFlow for yourself",
+            cta: {
+                text: "Get a Demo",
+                link: "/demo"
+            }
+        },
+
+        // FAQs
+        faqs: [
+            {
+                question: "What is a mortgage CRM?",
+                answer: "A mortgage CRM helps loan teams manage leads, borrower relationships, pipeline stages, communication, and follow-ups — from first inquiry through closing and beyond."
+            },
+            {
+                question: "How is LeadFlow different from a generic CRM?",
+                answer: "LeadFlow is built around mortgage workflows (applications, docs, milestones, compliance controls) and includes an AI assistant that turns pipeline review into action execution."
+            },
+            {
+                question: "Can LeadFlow automate follow-ups?",
+                answer: "Yes — email/SMS/voice follow-ups can be triggered by stage, time delay, borrower behavior, and missing-document scenarios."
+            },
+            {
+                question: "Does it work with an LOS?",
+                answer: "LeadFlow is designed to integrate with LOS platforms via sync/APIs (exact integrations can be listed on your Integrations page)."
+            },
+            {
+                question: "How does Lisa AI review and manage my pipeline?",
+                answer: "Lisa reviews your entire pipeline daily, identifies stalled loans, prioritizes actions, and recommends next steps for every lead and application. Once you approve, Lisa executes calls, emails, texts, and updates automatically—keeping your deals moving without manual effort."
+            },
+          
+        ]
+    },
 };
