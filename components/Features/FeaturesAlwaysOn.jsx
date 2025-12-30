@@ -36,7 +36,7 @@ const FeaturesAlwaysOn = () => {
 
     return (
         <>
-            <section className="container mx-auto  px-4 py-2 md:px-12 md:py-22 lg:px-22">
+            <section className="container mx-auto px-4 py-2 md:px-12 md:py-22 lg:px-22">
 
                 <div className='mb-12'>
                     <h2 className='text-2xl md:text-[2.7rem] font-semibold text-gray-900 mb-4 text-balance'>Always on, even when you log off</h2>

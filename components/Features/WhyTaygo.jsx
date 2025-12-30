@@ -56,8 +56,7 @@ const WhyTaygo = () => {
 
                         <div className='mb-12 flex justify-between items-center'>
                             <div>
-                                <p className='text-lg md:text-xl font-medium mb-4 text-balance max-w-5xl text-gray-100'>AI Agent Workforce keeps execution moving across sales and operational workflows responding, following up, and progressing work even when your team isn’t actively logged in.</p>
-                                <h2 className='text-2xl md:text-[2.7rem] font-semibold text-white mb-4 text-balance'>Always on, even when you log off</h2>
+                                <h2 className='text-2xl md:text-[2.7rem] font-semibold text-white mb-4 text-balance'>We're more than a platform. We're a partner.</h2>
                             </div>
                             <Button
                                 size="lg"
