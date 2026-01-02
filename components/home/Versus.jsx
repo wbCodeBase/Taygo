@@ -72,7 +72,7 @@ export default function Versus() {
                 {/* Logo Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                     <div className="flex justify-center items-center">
-                        <Image src="/logo/taygoLogoWhite.png" alt="taygo Logo" width={150} height={40} className="object-contain" />
+                        <Image src="/logo/TaygoLogoWhite.svg" alt="taygo Logo" width={150} height={40} className="object-contain" />
                     </div>
                     <div className="flex justify-center items-center">
                         <h2 className="text-2xl font-bold text-white">Traditional CRM&apos;s</h2>
