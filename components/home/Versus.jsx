@@ -39,14 +39,10 @@ export default function Versus() {
             taygo: "LO approves decisions and focuses on relationships.",
             traditional: "LO acts as operator, executor, task manager.",
         },
-        // {
-        //     taygo: "AI workforce runs mortgage workflows with approval.",
-        //     traditional: "System of records, reminders, and dashboards.",
-        // },
     ]
 
     return (
-        <div className="min-h-screen bg-[#131716] text-white py-16 px-4">
+        <div className="min-h-screen bg[#131716] bg-crm-green bg[#7B69E5] text-white py-16 px-4">   
 
             <div className="text-center mb-20 max-w-5xl mx-auto">
                 <h2 className="text-2xl md:text-[2.7rem] font-semibold text-gray-50 mb-6 leading-tight">
@@ -111,10 +107,10 @@ export default function Versus() {
                                 <div key={index} className="flex gap-4 px-4 py-1.5 rounded-lg">
                                     <div className="flex-shrink-0 mt-1">
                                         <div className="w-6 h-6 rounded-full flex items-center justify-center">
-                                            <X className="w-4 h-4 text-gray-500" strokeWidth={3} />
+                                            <X className="w-4 h-4 text-gray-400" strokeWidth={3} />
                                         </div>
                                     </div>
-                                    <div>
+                                    <div className="flex items-center">
                                         <p className="text-white text-[15px] opacity-70">{item.traditional}</p>
                                     </div>
                                 </div>
@@ -135,44 +131,3 @@ export default function Versus() {
 }
 
 
-
-
-
-
-
-
-// import React from 'react'
-
-// const Versus = () => {
-//     return (
-//         <>
-
-//             <section className="md:py-18 py-10 px-8 bg-linear-to-b from-white to-[#C4E5E633]">
-//                 <div className="max-w7xl max-w-screen-3xl md:px-8 px-3 mx-auto">
-//                     {/* heading */}
-//                     <div className="text-center mb-12 max-w-5xl mx-auto">
-//                         <h2 className="text-2xl md:text-[2.7rem] font-semibold text-gray-900 mb-6 leading-tight">
-//                             Everything brokers and loan officers need in one intelligent platform.
-//                         </h2>
-//                         <p className="text-lg md:text-xl font-medium mb-4 text-balance mx-auto text-gray-700">
-//                             Explore how taygo™ unites CRM, LOS, Automation, Marketing, and Integrations to simplify every part of your mortgage business.
-//                         </p>
-//                     </div>
-// <section>
-
-
-
-// </section>
-
-
-
-
-
-//                 </div>
-//             </section>
-
-//         </>
-//     )
-// }
-
-// export default Versus

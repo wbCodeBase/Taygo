@@ -5,7 +5,7 @@ export function CtaSection() {
     <section>
       <div className="maxw-6xl mxauto">
         {/* <div className="relative bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-700 rounded-xs p-12 md:p-16 overflow-hidden shadow-2xl"> */}
-        <div className="relative bg-crm-green rounded-xs px-12 py-5 md:px-16 overflow-hidden shadow-2xl">
+        <div className="relative bg-crmgreen bg-[#7B69E5] rounded-xs px-12 py-14 md:px-16 overflow-hidden shadow-2xl">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl" />
             <div className="absolute bottom-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl" />
