@@ -1,8 +1,6 @@
 import Image from "next/image"
 import { Check, X } from "lucide-react"
 
-import taygoLogo from '@/public/logo/taygoLogo.png'
-
 export default function Versus() {
     const comparisons = [
         {
@@ -44,7 +42,7 @@ export default function Versus() {
     ]
 
     return (
-        <div className="min-h-screen bg[#131716] bg-crm-green bg[#7B69E5] text-white py-16 px-4">
+        <div className="min-h-screen bg[#131716] bg-crm-green bg[#7B69E5] text-white py-16 px-4">   
 
             <div className="text-center mb-20 max-w-5xl mx-auto">
                 <h2 className="text-2xl md:text-[2.7rem] font-semibold text-gray-50 mb-6 leading-tight">
@@ -64,14 +62,14 @@ export default function Versus() {
                         <div className="w-10 h-10 text-black rounded-full border border-gray-50 flex bg-white relative z-20 items-center justify-center text-2xl font-bold">
                             vs
                         </div>
-                    </div>
+                    </div> 
                 </div>
 
 
                 {/* Logo Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                     <div className="flex justify-center items-center">
-                        <Image src={taygoLogo} alt="taygo Logo" width={150} height={40} className="object-contain" />
+                        <Image src="/logo/TaygoLogoWhite.svg" alt="taygo Logo" width={150} height={40} className="object-contain" />
                     </div>
                     <div className="flex justify-center items-center">
                         <h2 className="text-2xl font-bold text-white">Traditional CRM&apos;s</h2>
